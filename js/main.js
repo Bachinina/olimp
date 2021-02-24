@@ -158,7 +158,10 @@ $(window).on('load', (function () {
       })
     };
     scrollToTop();
+
   }
+
+
 
   //NUMBER_FORMAT
   function formatNumber(number) {
