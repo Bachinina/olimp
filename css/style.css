@@ -105,6 +105,12 @@ button:active {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
+.bg > img:not(.img-bg) {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .img-bg {
   position: absolute;
   z-index: -2;
@@ -329,6 +335,73 @@ ul {
 ul li::marker {
   color: #F49300;
 }
+.list-ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.list-ol p {
+  margin: 0;
+  font-weight: 600;
+}
+.list-ol li + li {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .list-ol li + li {
+    margin-top: 20px;
+  }
+}
+.list-ol__number {
+  padding: 5px;
+  border: 4px solid #FFFFFF;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .list-ol__number {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+}
+.list-marked-big li + li {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .list-marked-big li + li {
+    margin-top: 20px;
+  }
+}
+.list-marked-big li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  margin-top: 0;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .list-marked-big li {
+    font-size: 16px;
+  }
+}
 .list-unmarked {
   list-style: none;
   padding-left: 0;
@@ -476,6 +549,46 @@ hr {
   padding: 10px;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.list-wrap + .list-wrap ul {
+  margin-top: 20px;
+}
+.list-wrap ul {
+  margin-bottom: 0;
+}
+.list-icon {
+  padding: 0;
+}
+.list-icon li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.list-icon li + li {
+  margin-top: 20px;
+}
+.list-icon span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  .list-icon span {
+    font-size: 16px;
+  }
+}
+.list-icon img {
+  margin: 5px 0;
+}
+@media (max-width: 1199px) {
+  .list-icon img {
+    width: 40px;
+  }
 }
 .btn-def {
   -webkit-transition: 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
@@ -2526,6 +2639,52 @@ textarea {
   min-width: 110px;
   vertical-align: top;
 }
+.num-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.num-item__title {
+  font-size: 100px;
+  font-weight: 700;
+  color: #F49300;
+  margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  .num-item__title {
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+}
+.num-item__text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  margin-top: 0;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .num-item__text {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  .num-item-wrap:not(:last-of-type) {
+    border-right: 1px solid #808080;
+  }
+}
 .banner img {
   width: 100%;
   height: 100%;
@@ -4069,6 +4228,10 @@ textarea {
 }
 .project__img {
   max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1199px) {
   .project__img-wrap {
@@ -4156,6 +4319,12 @@ textarea {
 }
 .preview__text {
   margin-bottom: 0;
+}
+.slide .preview {
+  width: 100%;
+}
+.slide .preview .preview__img img {
+  width: 100%;
 }
 .part {
   position: relative;
