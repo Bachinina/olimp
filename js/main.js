@@ -12,12 +12,11 @@ $(window).on('load', (function () {
   // SCROLLING 
   $('.header').each(function () {
     const header = $(this);
-    const headerHeight = header.height();
-    const onWindowChange = function () {
+    const onWindowScroll = function () {
       if ($(window).width() <= media.XL) {
         if ($(this).scrollTop() > 0) {
           $('main').css({
-            'padding-top': headerHeight
+            'padding-top': header.height()
           });
           header.addClass('fixed');
 
@@ -29,8 +28,26 @@ $(window).on('load', (function () {
         }
       }
     };
-    $(window).on('scroll', onWindowChange);
+
+    const onWindowResize = function () {
+      if ($(window).width() <= media.XL) {
+        onWindowScroll();
+      } else {
+        $('main').css({
+          'padding-top': header.height()
+        });
+      }
+    };
+
+
+    $(window).on('scroll', onWindowScroll);
+    $(window).on('resize', onWindowResize);
+
+    if ($(window).width() > media.XL) {
+      onWindowResize();
+    }
   });
+
 
   $('[data-open-menu]').on('click', function () {
     $('[data-menu]').addClass('active');
@@ -337,4 +354,84 @@ $(window).on('load', (function () {
     $(this).toggleClass('active');
     $('[data-toggle]').not($(this)).removeClass('active');
   });
+
+
+  // MODAL TOGGLE
+  $('[data-toggle-modal]').on('click', function (event) {
+    event.stopPropagation();
+    $('[data-toggle-modal]').not($(this)).removeClass('active');
+    $('[data-modal]').not($(this).attr('data-toggle-modal')).removeClass('active');
+
+    $($(this).attr('data-toggle-modal')).toggleClass('active');
+    $(this).toggleClass('active');
+
+    if (!$(this).hasClass('active')) {
+      $(this).blur();
+    }
+
+    if ($($(this).attr('data-toggle-modal')).hasClass('active')) {
+      document.addEventListener('click', closeAll);
+    }
+  });
+
+  const closeModals = function () {
+    $('[data-modal]').removeClass('active');
+    $('[data-toggle-modal]').removeClass('active');
+    $('[data-toggle-modal]').blur();
+    $('[data-open-modal]').blur();
+    $('[data-modal]').find('form').trigger("reset");
+    $('body').css({
+      'overflow': 'auto',
+    });
+    document.removeEventListener('click', closeAll);
+  }
+
+  const closeAll = function (evt) {
+    if (!evt.target.hasAttribute('data-modal') && evt.target.closest('[data-modal]') === null) {
+      closeModals();
+    }
+  };
+
+
+  // MODAL OPENING
+  $('[data-open-modal]').on('click', function () {
+    const modal = $($(this).attr('data-open-modal'));
+    closeModals();
+    $(this).blur();
+    modal.addClass('active');
+  });
+
+  // MODAL CLOSING
+  const modals = $('[data-modal]');
+  const closeModalsByEsc = (evt) => {
+    if (evt.keyCode === 27) {
+      closeModals();
+    }
+  };
+  modals.each(function () {
+    let modalClose = $(this).find('[data-modal-close]');
+
+    const closeModal = () => {
+      $(this).removeClass('active');
+      $('[data-toggle-modal]').removeClass('active');
+      $('[data-toggle-modal]').blur();
+
+      const form = $(this).find('form');
+      if (form) {
+        // CLEAR FORM
+        form.trigger("reset");
+      }
+      document.removeEventListener('click', closeAll);
+    };
+
+    $(this).on('click', function (e) {
+      if ($(e.target).is($(this)) && $(this).find('[data-modal-container]').length) {
+        closeModal();
+      }
+    });
+
+    modalClose.on('click', closeModal);
+  });
+  $(document).on('keydown', closeModalsByEsc);
+
 }));

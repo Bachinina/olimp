@@ -213,7 +213,7 @@
             </a>
           </div>
   
-          <button class="header__loc btn-icon" aria-label="Выбрать регион">
+          <button class="header__loc btn-icon" aria-label="Выбрать регион" data-open-modal="#select-region">
             <svg width="17" height="23">
               <use xlink:href="#icon-location"></use>
             </svg>
@@ -236,13 +236,13 @@
             </a>
             <div class="cont__body">
               <a href="tel:+74957750077">+7 495 775-00-07</a>
-              <p>Ежедневно с 9:00 до 21:00</p>
+              <p class="d-none d-xxl-block">Ежедневно с 9:00 до 21:00</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="header__nav" data-menu>
+    <div class="header__nav" data-menu data-modal>
       <div class="header__menu-wrap header__container container">
         <div class="header__left">
           <ul class="header__menu menu" data-menu-list>
@@ -443,7 +443,7 @@
         </div>
   
         <div class="header__right">
-          <button class="header__nav-btn active" aria-label="Открыть каталог" data-close-menu>
+          <button class="header__nav-btn active" aria-label="Открыть меню" data-close-menu>
             <span class="btn-burger white" aria-hidden="true">
               <span></span>
               <span></span>
@@ -452,17 +452,18 @@
           </button>
           <ul class="header__btns">
             <li class="header__btn">
-              <button aria-label="Открыть поисковую строку" title="Открыть поисковую строку">
+              <button aria-label="Открыть поисковую строку" title="Открыть поисковую строку"
+                data-toggle-modal="#search-line">
                 <img src="img/icon-search.svg" alt="">
               </button>
             </li>
             <li class="header__btn">
-              <button aria-label="Проверить статус заказа" title="Проверить статус заказа">
+              <button aria-label="Проверить статус заказа" title="Проверить статус заказа" data-open-modal="#check-order">
                 <img src="img/icon-order.svg" alt="">
               </button>
             </li>
             <li class="header__btn">
-              <a href="index.html" aria-label="Перейти к сравнения" title="Перейти на страницу сравнения">
+              <a href="compare.html" aria-label="Перейти к сравнения" title="Перейти на страницу сравнения">
                 <img src="img/icon-compare.svg" alt="">
               </a>
             </li>
@@ -483,6 +484,43 @@
         </div>
       </div>
     </div>
+  
+    <section class="modal-wrap" id="search-line" data-modal>
+      <div class="header__search-line" data-modal-container>
+        <form class="search-line" action="/">
+          <button class="search-line__btn" aria-label="Найти">
+            <img src="img/icon-search-simple.svg" alt="">
+          </button>
+  
+          <input type="text" placeholder="Поиск" required>
+  
+          <div class="search-line__result-wrap active">
+            <div class="search-line__result">
+              <a class="search-line__result-item" href="/">
+                <img src="img/search-result.jpg" alt="">
+                <span>Паркетная доска Coswick Дуб Шамбор (арт.1133-3215) 2,4 м2</span>
+              </a>
+              <a class="search-line__result-item" href="/">
+                <img src="img/search-result.jpg" alt="">
+                <span>Паркетная доска Coswick Дуб Шамбор (арт.1133-3215) 2,4 м2</span>
+              </a>
+              <a class="search-line__result-item" href="/">
+                <img src="img/search-result.jpg" alt="">
+                <span>Паркетная доска Coswick Дуб Шамбор (арт.1133-3215) 2,4 м2</span>
+              </a>
+              <a class="search-line__result-item" href="/">
+                <img src="img/search-result.jpg" alt="">
+                <span>Паркетная доска Coswick Дуб Шамбор (арт.1133-3215) 2,4 м2</span>
+              </a>
+              <a class="search-line__result-item" href="/">
+                <img src="img/search-result.jpg" alt="">
+                <span>Паркетная доска Coswick Дуб Шамбор (арт.1133-3215) 2,4 м2</span>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
   </header>
 
   <main>
@@ -3997,6 +4035,8 @@
     <!-- Материалы -->
 
 
+
+
     <!-- Табы -->
     <section class="block">
       <div class="container container--content pt-0">
@@ -4010,7 +4050,7 @@
             <li class="tabs__toggle" data-tabs-toggle="tab-3"><button aria-hidden="true">Таб-3</button></li>
           </ul>
         </div>
-
+    
         <div class="tabs-cont" data-tabs-content="tabs-5">
           <!-- Таб-1 -->
           <div class="tabs-cont__item" data-tabs-item="tab-1">
@@ -4018,7 +4058,7 @@
             <p>История компании «Олимп Паркета» началась в 2003 году, и сейчас сеть насчитывает более 80 магазинов в 17
               регионах России.
             </p>
-
+    
             <p>Наша цель – постоянное развитие возможностей удовлетворить любые запросы даже самых взыскательных
               клиентов.
               Для этого мы постоянно расширяем ассортимент представленных напольных покрытий, заключаем контракты с
@@ -4031,18 +4071,18 @@
               Традиционная паркетная или инженерная доска, классический паркет-ёлочка или современный техномассив – мы
               сможем подобрать вариант, который близок именно вам. Паркеты Karelia, Polarwood, Tarkett, Royal Parket и
               других ведущих брендов представлены в сети магазинов «Олимп Паркета».</p>
-
+    
           </div>
           <!-- Таб-1 -->
-
+    
           <!-- Таб-2 -->
           <div class="tabs-cont__item" data-tabs-item="tab-2">
             <h3 class="visually-hidden">Таб-2</h3>
-
+    
             <p>История компании «Олимп Паркета» началась в 2003 году, и сейчас сеть насчитывает более 80 магазинов в 17
               регионах России.
             </p>
-
+    
             <p>Наша цель – постоянное развитие возможностей удовлетворить любые запросы даже самых взыскательных
               клиентов.
               Для этого мы постоянно расширяем ассортимент представленных напольных покрытий, заключаем контракты с
@@ -4050,11 +4090,11 @@
               ценовой категории: от элитных до доступных.</p>
           </div>
           <!-- Таб-2 -->
-
+    
           <!-- Таб-3 -->
           <div class="tabs-cont__item" data-tabs-item="tab-3">
             <h3 class="visually-hidden">Таб-3</h3>
-
+    
             <p>Наша цель – постоянное развитие возможностей удовлетворить любые запросы даже самых взыскательных
               клиентов.
               Для этого мы постоянно расширяем ассортимент представленных напольных покрытий, заключаем контракты с
@@ -4065,219 +4105,386 @@
               Для этого мы постоянно расширяем ассортимент представленных напольных покрытий, заключаем контракты с
               ведущими мировыми производителями, чтобы дать вам возможность приобрести только лучшие товары в любой
               ценовой категории: от элитных до доступных.</p>
-
+    
           </div>
           <!-- Таб-3 -->
         </div>
       </div>
     </section>
     <!-- Табы -->
-  </main>
-
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="container">
-        <div class="row">
-          <div class="footer__column col-12 col-md-6 col-xl-3">
-            <div class="footer__head">
-              <div class="footer__logo">
-                <img src="img/logo-white.svg" alt="">
+    
+    
+    <!-- Модальное окно: письмо руководителю -->
+    <section class="modal-wrap" id="mail-to-manager" data-modal>
+      <div class="modal modal-form" data-modal-container>
+        <form class="form in-modal" action="/">
+          <div class="modal__top">
+            <h2 class="modal__title">Письмо руководителю</h2>
+            <div class="modal__close">
+              <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
+                <svg width="15" height="15">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+    
+          <div class="form__row">
+            <div class="form__item">
+              <div class="select">
+                <label for="manag-theme">Тема обращения*</label>
+                <select name="manag-theme" id="manag-theme" required>
+                  <option disabled selected hidden value="">Тема обращения*</option>
+                  <option value="1">Тема 1</option>
+                  <option value="2">Тема 2</option>
+                  <option value="3">Тема 3</option>
+                </select>
+                <span class="select__btn"></span>
               </div>
-              <img src="img/footer-17.svg" alt="">
             </div>
-  
-            <h2 class="footer__title">О компании</h2>
-  
-            <ul class="footer__list">
-              <li>
-                <a href="">О нас</a>
-              </li>
-              <li>
-                <a href="">Отзывы о компании</a>
-              </li>
-              <li>
-                <a href="">Наши проекты</a>
-              </li>
-              <li>
-                <a href="">Новости</a>
-              </li>
-              <li>
-                <a href="">Стать партнером</a>
-              </li>
-              <li>
-                <a href="">Гарантии</a>
-              </li>
-              <li>
-                <a href="conf.html">Политика конфиденциальности</a>
-              </li>
-            </ul>
           </div>
-          <div class="footer__column col-12 col-md-6 col-xl-3">
-            <h2 class="footer__title">Покупателям</h2>
-  
-            <ul class="footer__list">
-              <li>
-                <a href="">Адреса магазинов</a>
-              </li>
-              <li>
-                <a href="">Оплата</a>
-              </li>
-              <li>
-                <a href="">Видео звонок</a>
-              </li>
-              <li>
-                <a href="">Заказ образцов</a>
-              </li>
-              <li>
-                <a href="">Консультация дизайнера</a>
-              </li>
-              <li>
-                <a href="">Укладка</a>
-              </li>
-              <li>
-                <a href="">Стяжка пола</a>
-              </li>
-              <li>
-                <a href="">Доставка</a>
-              </li>
-              <li>
-                <a href="">Рассрочка</a>
-              </li>
-              <li>
-                <a href="">Блог</a>
-              </li>
-              <li>
-                <a href="">Письмо руководителю</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__column col-12 col-md-6 col-xl-3">
-            <h2 class="footer__title">Каталог</h2>
-  
-            <ul class="footer__list">
-              <li>
-                <a href="">Напольные покрытия</a>
-              </li>
-              <li>
-                <a href="">Стеновые панели</a>
-              </li>
-              <li>
-                <a href="">Сопутствующие товары</a>
-              </li>
-              <li>
-                <a href="">Специальное оборудование</a>
-              </li>
-              <li>
-                <a href="">Бренды</a>
-              </li>
-              <li>
-                <a href="">Дизайнерам</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__column col-12 col-md-6 col-xl-3">
-            <h2 class="footer__title">Контакты</h2>
-  
-            <ul class="footer__list">
-              <li class="footer__cont cont">
-                <svg width="30" height="30">
-                  <use xlink:href="#tel"></use>
-                </svg>
-                <div class="cont__body">
-                  <a href="tel:+74957750077">+7 495 775-00-07</a>
-                </div>
-              </li>
-              <li class="footer__cont cont">
-                <svg width="30" height="30">
-                  <use xlink:href="#icon-mail"></use>
-                </svg>
-                <div class="cont__body">
-                  <a href="mailto:info@olimp-parketa.ru">info@olimp-parketa.ru</a>
-                </div>
-              </li>
-              <li class="footer__cont cont">
-                <svg width="30" height="30">
-                  <use xlink:href="#icon-location"></use>
-                </svg>
-                <button class="cont__body btn-def">
-                  Москва
-                </button>
-              </li>
-            </ul>
-  
-            <div class="footer__payment">
-              <span>Принимаем к оплате</span>
-              <img src="img/payments.png" alt="Способы оплаты: MasterCard, Visa">
+    
+          <div class="form__row">
+            <div class="form__item">
+              <label for="fb-comment">Сообщение</label>
+              <textarea name="fb-comment" id="fb-comment" placeholder="Сообщение*" required></textarea>
             </div>
-  
-            <div class="footer__social">
-              <p>Мы в соцсетях:</p>
-              <ul class="social">
-                <li>
-                  <a href="index.html" aria-label="Перейти в инстаграм">
-                    <svg width="20" height="20">
-                      <use xlink:href="#icon-inst"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="index.html" aria-label="Перейти во Вконтакте">
-                    <svg width="20" height="20">
-                      <use xlink:href="#icon-vk"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="index.html" aria-label="Перейти в фейсбук">
-                    <svg width="20" height="20">
-                      <use xlink:href="#icon-fb"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-  
+          </div>
+    
+          <div class="form__row">
+            <div class="form__item">
+              <label for="manag-name">Имя</label>
+              <input type="text" name="b-name" placeholder="ФИО*" id="manag-name" required>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="form__item">
+                <label for="manag-tel">Телефон</label>
+                <input type="tel" name="manag-tel" placeholder="Телефон*" id="manag-tel" required>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form__item">
+                <label for="manag-mail">E-mail</label>
+                <input type="email" name="manag-mail" placeholder="E-mail*" id="manag-mail" required>
+              </div>
+            </div>
+          </div>
+    
+    
+          <div class="form__bottom">
+            <div class="form__conf">
+              <input type="checkbox" id="manag-conf" name="manag-conf" checked required>
+              <label for="manag-conf">
+                <span>Я даю согласие на обработку персональных
+                  данных и соглашаюсь c <a href="conf.html"> политикой конфиденциальности</a>.</span>
+              </label>
+            </div>
+            <button class="form__submit btn-orange">Отправить</button>
+          </div>
+        </form>
+      </div>
+    
+    </section>
+    <!-- Модальное окно: письмо руководителю -->
+    
+    
+    <!-- Модальное окно: выбор региона-->
+    <section class="modal-wrap" id="select-region" data-modal>
+      <div class="modal modal-form" data-modal-container>
+        <div class="modal__top">
+          <h2 class="modal__title">Выберите город</h2>
+          <div class="modal__close">
+            <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
+              <svg width="15" height="15">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+    
+        <div class="checkbox-links">
+          <a href="/" class="checkbox-link active">Москва</a>
+          <a href="/" class="checkbox-link">Санкт-Петербург</a>
+          <a href="/" class="checkbox-link">Сочи</a>
+          <a href="/" class="checkbox-link">Пятигорск</a>
+          <a href="/" class="checkbox-link">Воронеж</a>
+          <a href="/" class="checkbox-link">Краснодар</a>
+          <a href="/" class="checkbox-link">Самара</a>
+          <a href="/" class="checkbox-link">Ростов-на-Дону</a>
+          <a href="/" class="checkbox-link">Уфа</a>
+          <a href="/" class="checkbox-link">Казань</a>
+          <a href="/" class="checkbox-link">Ставрополь</a>
+          <a href="/" class="checkbox-link">Нижний Новгород</a>
+          <a href="/" class="checkbox-link">Калуга</a>
+          <a href="/" class="checkbox-link">Брянск</a>
+          <a href="/" class="checkbox-link">Черкесск</a>
+          <a href="/" class="checkbox-link">Владикавказ</a>
+          <a href="/" class="checkbox-link">Саратов</a>
+          <a href="/" class="checkbox-link">Челябинск</a>
+        </div>
+    
+        <div class="modal__top">
+          <h2 class="modal__title mr-0">Или найдите свой город</h2>
+        </div>
+        <div class="search-line">
+          <input type="text" placeholder="Начните вводить город" required>
+    
+          <div class="search-line__result-wrap active">
+            <div class="search-line__result">
+              <a href="/">Воронежская область</a>
+              <a href="/">Воронеж</a>
+              <a href="/">Нововоронеж</a>
+              <a href="/">Воронежская область</a>
+              <a href="/">Воронеж</a>
+              <a href="/">Нововоронеж</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  
-    <div class="footer__bottom">
-      <div class="container">
-        <p class="footer__copy">
-          © Интернет-магазин напольных покрытий Олимп Паркета, 2012 – 2019, Москва. Обращаясь в наш магазин, вы даете
-          согласие на обработку ваших персональных данных. <br>
-          Oбращаем вaше внимaние нa то, что пpиведеные цeны и хaрактеристики, а так же фотографии товаров нoсят
-          исключитeльно ознакомительный харaктер и не являютcя публичнoй офeртой, опрeделенной пунктoм 2 стaтьи 437
-          Граждaнского кoдекса Российской Федерации. Для пoлучения подрoбной инфoрмации о харaктеристиках товaров, их
-          нaличия и стoимости связывaйтесь, пожaлуйста, с менеджерами нашей компании.
-        </p>
+    </section>
+    <!-- Модальное окно: выбор региона-->
+    
+    
+    <!-- Модальное окно: статус заказа-->
+    <section class="modal-wrap" id="check-order" data-modal>
+      <div class="modal modal-info  w-100" data-modal-container>
+        <div class="modal__top">
+          <h2 class="modal__title">Номер заказа</h2>
+          <div class="modal__close">
+            <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
+              <svg width="15" height="15">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+    
+        <div class="modal__body">
+          <form class="form in-modal" action="/">
+            <div class="form__item">
+              <div class="input-line">
+                <span>ЗКл-</span>
+                <input type="text" placeholder="АБ00000" required>
+              </div>
+            </div>
+    
+            <button class="form__submit btn-orange w-100">Найти</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </footer>
-  
-  <div class="overlay"></div>
-  <button data-scroll-top class="btn-up" aria-hidden="true" aria-label="Вернуться к началу страницы">
-    <svg width="22" height="13">
-      <path d="M1 12L11 2L21 12" stroke-width="2" />
-    </svg>
-  </button>
-  
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="js/debounce.js"></script>
-  
-  <!-- Слайдеры и настройки -->
-  <script src="js/slick.js"></script>
-  <script src="js/sliders.js"></script>
-  
-  <!-- Fancybox -->
-  <script src="js/fancybox.js"></script>
-  <!-- <script src="js/range-slider.js"></script> -->
-  
-  
-  <!-- Основной файл -->
-  <script src="js/main.js"></script>
+    </section>
+    <!-- Модальное окно: статус заказа-->
+    </main>
+    
+    
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="row">
+            <div class="footer__column col-12 col-md-6 col-xl-3">
+              <div class="footer__head">
+                <div class="footer__logo">
+                  <img src="img/logo-white.svg" alt="">
+                </div>
+                <img src="img/footer-17.svg" alt="">
+              </div>
+    
+              <h2 class="footer__title">О компании</h2>
+    
+              <ul class="footer__list">
+                <li>
+                  <a href="">О нас</a>
+                </li>
+                <li>
+                  <a href="">Отзывы о компании</a>
+                </li>
+                <li>
+                  <a href="">Наши проекты</a>
+                </li>
+                <li>
+                  <a href="">Новости</a>
+                </li>
+                <li>
+                  <a href="">Стать партнером</a>
+                </li>
+                <li>
+                  <a href="">Гарантии</a>
+                </li>
+                <li>
+                  <a href="conf.html">Политика конфиденциальности</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column col-12 col-md-6 col-xl-3">
+              <h2 class="footer__title">Покупателям</h2>
+    
+              <ul class="footer__list">
+                <li>
+                  <a href="">Адреса магазинов</a>
+                </li>
+                <li>
+                  <a href="">Оплата</a>
+                </li>
+                <li>
+                  <a href="">Видео звонок</a>
+                </li>
+                <li>
+                  <a href="">Заказ образцов</a>
+                </li>
+                <li>
+                  <a href="">Консультация дизайнера</a>
+                </li>
+                <li>
+                  <a href="">Укладка</a>
+                </li>
+                <li>
+                  <a href="">Стяжка пола</a>
+                </li>
+                <li>
+                  <a href="">Доставка</a>
+                </li>
+                <li>
+                  <a href="">Рассрочка</a>
+                </li>
+                <li>
+                  <a href="">Блог</a>
+                </li>
+                <li>
+                  <button class="btn-def" data-open-modal="#mail-to-manager">Письмо руководителю</button>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column col-12 col-md-6 col-xl-3">
+              <h2 class="footer__title">Каталог</h2>
+    
+              <ul class="footer__list">
+                <li>
+                  <a href="">Напольные покрытия</a>
+                </li>
+                <li>
+                  <a href="">Стеновые панели</a>
+                </li>
+                <li>
+                  <a href="">Сопутствующие товары</a>
+                </li>
+                <li>
+                  <a href="">Специальное оборудование</a>
+                </li>
+                <li>
+                  <a href="">Бренды</a>
+                </li>
+                <li>
+                  <a href="">Дизайнерам</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column col-12 col-md-6 col-xl-3">
+              <h2 class="footer__title">Контакты</h2>
+    
+              <ul class="footer__list">
+                <li class="footer__cont cont">
+                  <svg width="30" height="30">
+                    <use xlink:href="#tel"></use>
+                  </svg>
+                  <div class="cont__body">
+                    <a href="tel:+74957750077">+7 495 775-00-07</a>
+                  </div>
+                </li>
+                <li class="footer__cont cont">
+                  <svg width="30" height="30">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                  <div class="cont__body">
+                    <a href="mailto:info@olimp-parketa.ru">info@olimp-parketa.ru</a>
+                  </div>
+                </li>
+                <li class="footer__cont cont">
+                  <svg width="30" height="30">
+                    <use xlink:href="#icon-location"></use>
+                  </svg>
+                  <button class="cont__body btn-def" data-open-modal="#select-region">
+                    Москва
+                  </button>
+                </li>
+              </ul>
+    
+              <div class="footer__payment">
+                <span>Принимаем к оплате</span>
+                <img src="img/payments.png" alt="Способы оплаты: MasterCard, Visa">
+              </div>
+    
+              <div class="footer__social">
+                <p>Мы в соцсетях:</p>
+                <ul class="social">
+                  <li>
+                    <a href="index.html" aria-label="Перейти в инстаграм">
+                      <svg width="20" height="20">
+                        <use xlink:href="#icon-inst"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html" aria-label="Перейти во Вконтакте">
+                      <svg width="20" height="20">
+                        <use xlink:href="#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html" aria-label="Перейти в фейсбук">
+                      <svg width="20" height="20">
+                        <use xlink:href="#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="footer__copy">
+            © Интернет-магазин напольных покрытий Олимп Паркета, 2012 – 2019, Москва. Обращаясь в наш магазин, вы даете
+            согласие на обработку ваших персональных данных. <br>
+            Oбращаем вaше внимaние нa то, что пpиведеные цeны и хaрактеристики, а так же фотографии товаров нoсят
+            исключитeльно ознакомительный харaктер и не являютcя публичнoй офeртой, опрeделенной пунктoм 2 стaтьи 437
+            Граждaнского кoдекса Российской Федерации. Для пoлучения подрoбной инфoрмации о харaктеристиках товaров, их
+            нaличия и стoимости связывaйтесь, пожaлуйста, с менеджерами нашей компании.
+          </p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <div class="overlay"></div>
+    <button data-scroll-top class="btn-up" aria-hidden="true" aria-label="Вернуться к началу страницы">
+      <svg width="22" height="13">
+        <path d="M1 12L11 2L21 12" stroke-width="2" />
+      </svg>
+    </button>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/debounce.js"></script>
+    
+    <!-- Слайдеры и настройки -->
+    <script src="js/slick.js"></script>
+    <script src="js/sliders.js"></script>
+    
+    <!-- Fancybox -->
+    <script src="js/fancybox.js"></script>
+    <!-- <script src="js/range-slider.js"></script> -->
+    
+    
+    <!-- Основной файл -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
