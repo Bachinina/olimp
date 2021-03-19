@@ -767,14 +767,14 @@ hr {
 }
 .btn-orange:hover,
 .btn-orange:focus,
-.btn-orange .active {
+.btn-orange.active {
   color: #FFFFFF;
   background-color: #F49300;
   border-color: #F49300;
 }
 .btn-orange:hover svg,
 .btn-orange:focus svg,
-.btn-orange .active svg {
+.btn-orange.active svg {
   fill: #FFFFFF;
 }
 .btn-l-orange {
@@ -2362,9 +2362,6 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
-.pag > * {
-  margin: 0 10px;
-}
 .pag svg {
   stroke: #252525;
 }
@@ -2699,14 +2696,14 @@ textarea {
 }
 .calc__btn:hover,
 .calc__btn:focus,
-.calc__btn .active {
+.calc__btn.active {
   color: #FFFFFF;
   background-color: #F49300;
   border-color: #F49300;
 }
 .calc__btn:hover svg,
 .calc__btn:focus svg,
-.calc__btn .active svg {
+.calc__btn.active svg {
   fill: #FFFFFF;
 }
 @media (max-width: 767px) {
@@ -3358,6 +3355,16 @@ textarea {
   padding: 5px;
   right: 10px;
 }
+.card__top .card__btn-compare.active {
+  background: #F49300;
+  border-color: #F49300;
+  opacity: 1;
+  color: #FFFFFF;
+  pointer-events: all;
+}
+.card__top .card__btn-compare.active svg {
+  fill: #FFFFFF;
+}
 @media (max-width: 767px) {
   .card__top .card__btn-compare {
     right: 5px;
@@ -3642,14 +3649,14 @@ textarea {
 }
 .card__btn-cart:hover,
 .card__btn-cart:focus,
-.card__btn-cart .active {
+.card__btn-cart.active {
   color: #FFFFFF;
   background-color: #F49300;
   border-color: #F49300;
 }
 .card__btn-cart:hover svg,
 .card__btn-cart:focus svg,
-.card__btn-cart .active svg {
+.card__btn-cart.active svg {
   fill: #FFFFFF;
 }
 .card__btns {
@@ -3664,6 +3671,17 @@ textarea {
 }
 .card__btns > * {
   font-size: 0.85rem;
+  outline: none;
+}
+.card__btns > *.active {
+  background: #F49300;
+  border-color: #F49300;
+  opacity: 1;
+  color: #FFFFFF;
+  pointer-events: all;
+}
+.card__btns > *.active svg {
+  fill: #FFFFFF;
 }
 @media (min-width: 1440px) {
   .card__btns > * {
@@ -5573,6 +5591,18 @@ textarea {
   border-top: 1px solid #EDEDED;
   border-bottom: 1px solid #EDEDED;
 }
+.content-page__pag a {
+  color: #808080;
+  margin: 0 10px;
+}
+.content-page__pag a:hover,
+.content-page__pag a:focus {
+  color: #808080;
+  opacity: 0.7;
+}
+.content-page__pag span {
+  margin: 0 10px;
+}
 .content-page__bottom {
   margin-top: 30px;
 }
@@ -5809,10 +5839,6 @@ input.prod__input {
   width: 100%;
   padding: 12px;
 }
-.prod__btn.active {
-  opacity: 0.6;
-  pointer-events: none;
-}
 .prod__btn-wrap {
   margin-bottom: 10px;
 }
@@ -6022,4 +6048,12 @@ input.prod__input {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+.show_more_catalog,
+.show_more_catalog_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }

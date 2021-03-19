@@ -434,4 +434,12 @@ $(window).on('load', (function () {
   });
   $(document).on('keydown', closeModalsByEsc);
 
+  $('[data-toggle-active]').each(function () {
+    if (!$(this).hasClass('active')) {
+      $(this).on('click', function () {
+        $(this).addClass('active');
+      });
+    }
+  });
+
 }));
