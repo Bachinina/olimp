@@ -9,6 +9,54 @@ $(window).on('load', (function () {
   };
 
 
+  $('[data-bottom-desc]').each(function () {
+    const block = $(this);
+    const tabs = [];
+    const tabsContent = [];
+    const img = [];
+    block.find('.right_tabs_seo > ul li').each(function () {
+      tabs.push($(this).html());
+    });
+    block.find('.right_tabs_seo > div').each(function () {
+      tabsContent.push($(this).html());
+    });
+    block.find('.left_img_seo > img').each(function () {
+      img.push($(this)[0].currentSrc);
+    });
+
+
+    block.find('.container').html(`
+        <div class="top">
+          <div class="tabs-wrap">
+            <ul class="tabs" data-tabs="tabs-bottom">
+            ${tabs.map(function (el, i) {
+              return `
+              <li class="tabs__toggle" data-tabs-toggle="tab-${i+1}"><button aria-hidden="true">${el}</button>
+              </li>`;
+            }).join('')}
+            </ul>
+          </div>
+        </div>
+
+        <div class="tabs-cont" data-tabs-content="tabs-bottom">
+        ${tabsContent.map(function (el, i) {
+          return `
+          <div class="tabs-cont__item" data-tabs-item="tab-${i+1}">
+            <div class="row">
+              <div class="col-12 col-md-4 mb-3">
+                <img alt="" src="${img[i]}">
+              </div>
+              <div class="col-12 col-lg-8">
+                ${el}
+              </div>
+            </div>
+          </div>`;
+        }).join('')}
+        </div>
+    `);
+  });
+
+
   // SCROLLING 
   $('.header').each(function () {
     const header = $(this);
@@ -393,6 +441,15 @@ $(window).on('load', (function () {
   };
 
 
+  // OPEN
+  $('[data-open]').on('click', function () {
+    const elem = $(`[data-opened=${$(this).attr('data-open')}]`);
+    $(this).addClass('d-none');
+    elem.addClass('active');
+  });
+
+
+
   // MODAL OPENING
   $('[data-open-modal]').on('click', function () {
     const modal = $($(this).attr('data-open-modal'));
@@ -441,5 +498,4 @@ $(window).on('load', (function () {
       });
     }
   });
-
 }));
