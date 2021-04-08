@@ -3054,6 +3054,7 @@ textarea {
   font-size: 1rem;
   outline: none;
   white-space: nowrap;
+  line-height: 1;
 }
 .tabs__toggle button:hover,
 .tabs__toggle a:hover,
@@ -6053,7 +6054,7 @@ textarea {
     display: none;
   }
 }
-.content-page__category-btns {
+.content-page__category-btns > * {
   margin-bottom: 20px;
 }
 @media (min-width: 992px) {
