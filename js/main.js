@@ -56,6 +56,17 @@ $(window).on('load', (function () {
     `);
   });
 
+  // REVIEWS
+  $('[data-review]').each(function () {
+    const review = $(this);
+    const text = review.find('[data-review-text]');
+
+    if (text.text().length > 375) {
+      review.addClass('long');
+    }
+  });
+
+
 
   // SCROLLING 
   $('.header').each(function () {
@@ -120,6 +131,7 @@ $(window).on('load', (function () {
       $('[data-menu-item]').not(item).removeClass('active');
     });
   });
+
 
 
   // TABS

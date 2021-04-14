@@ -191,6 +191,45 @@ $(document).ready(function () {
         }]
       });
     }
+
+
+    if (slider.hasAttr('data-catalog-slider')) {
+      $(this).slick({
+        accessibility: false,
+        speed: 600,
+        draggable: false,
+        dots: false,
+        arrows: true,
+        prevArrow: prevArrow,
+        swipeToSlide: true,
+        nextArrow: nextArrow,
+        infinite: !!slider.settings.isLooped,
+        appendArrows: slider.settings.buttonContainer,
+        rows: screenWidth <= 991 ? 1 : 2,
+        slidesPerRow: screenWidth <= 991 ? 1 : 3,
+        responsive: [{
+            breakpoint: 1199,
+            settings: {
+              draggable: true,
+              speed: 150,
+              slidesPerRow: 2,
+            }
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+        ]
+      });
+    }
   });
 
 
@@ -236,7 +275,5 @@ $(document).ready(function () {
       }]
     });
 
-  })
-
-
+  });
 });
