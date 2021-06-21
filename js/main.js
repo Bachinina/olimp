@@ -24,36 +24,41 @@ $(window).on('load', (function () {
       img.push($(this)[0].currentSrc);
     });
 
+    if (tabs.length > 0) {
+      block.html(`
+      <div class="container container--content pt-0">
+          <div class="top">
+            <div class="tabs-wrap">
+              <ul class="tabs" data-tabs="tabs-bottom">
+              ${tabs.map(function (el, i) {
+                return `
+                <li class="tabs__toggle" data-tabs-toggle="tab-${i+1}"><button aria-hidden="true">${el}</button>
+                </li>`;
+              }).join('')}
+              </ul>
+            </div>
+          </div>
 
-    block.find('.container').html(`
-        <div class="top">
-          <div class="tabs-wrap">
-            <ul class="tabs" data-tabs="tabs-bottom">
-            ${tabs.map(function (el, i) {
-              return `
-              <li class="tabs__toggle" data-tabs-toggle="tab-${i+1}"><button aria-hidden="true">${el}</button>
-              </li>`;
-            }).join('')}
-            </ul>
+          <div class="tabs-cont" data-tabs-content="tabs-bottom">
+          ${tabsContent.map(function (el, i) {
+            return `
+            <div class="tabs-cont__item" data-tabs-item="tab-${i+1}">
+              <div class="row">
+                <div class="col-12 col-md-4 mb-3">
+                  <img alt="" src="${img[i]}">
+                </div>
+                <div class="col-12 col-lg-8">
+                  ${el}
+                </div>
+              </div>
+            </div>`;
+          }).join('')}
           </div>
         </div>
-
-        <div class="tabs-cont" data-tabs-content="tabs-bottom">
-        ${tabsContent.map(function (el, i) {
-          return `
-          <div class="tabs-cont__item" data-tabs-item="tab-${i+1}">
-            <div class="row">
-              <div class="col-12 col-md-4 mb-3">
-                <img alt="" src="${img[i]}">
-              </div>
-              <div class="col-12 col-lg-8">
-                ${el}
-              </div>
-            </div>
-          </div>`;
-        }).join('')}
-        </div>
-    `);
+      `);
+    } else {
+      block.addClass('bg--gray');
+    }
   });
 
   // REVIEWS
@@ -126,9 +131,12 @@ $(window).on('load', (function () {
   $('[data-menu-item]').each(function () {
     const item = $(this);
     const toggle = item.find('[data-menu-item-toggle]');
-    toggle.on('click', function () {
-      item.toggleClass('active');
-      $('[data-menu-item]').not(item).removeClass('active');
+    toggle.on('click', function (event) {
+      if (screenWidth < media.XL) {
+        event.preventDefault();
+        item.toggleClass('active');
+        $('[data-menu-item]').not(item).removeClass('active');
+      }
     });
   });
 
@@ -204,10 +212,10 @@ $(window).on('load', (function () {
 
   // SCROLL ANCHOR
   $("a[href^='#']").on("click", function (e) {
-    var fixed_offset = 35;
-    if ($(window).width() <= 1199) {
-      fixed_offset = 35 + 65;
-    }
+    var fixed_offset = $('.header').outerHeight() + 30;
+    // if ($(window).width() <= 1199) {
+    // fixed_offset = 35 + 65;
+    // }
     $('html,body').stop().animate({
       scrollTop: $(this.hash).offset().top - fixed_offset
     }, 1000);
@@ -357,7 +365,7 @@ $(window).on('load', (function () {
       const block = container.find('[data-floating]');
 
       window.floating = function () {
-        let containerTop = container.offset().top - 20;
+        let containerTop = container.offset().top - $('header').height() - 20;
         let containerBottom = containerTop + container.height();
 
         let top = $(window).scrollTop();
@@ -410,9 +418,9 @@ $(window).on('load', (function () {
 
 
   //BTNS
-  $('[data-toggle]').on('click', function () {
+  $('[data-btn]').on('click', function () {
     $(this).toggleClass('active');
-    $('[data-toggle]').not($(this)).removeClass('active');
+    $('[data-btn]').not($(this)).removeClass('active');
   });
 
 
@@ -440,6 +448,7 @@ $(window).on('load', (function () {
     $('[data-toggle-modal]').blur();
     $('[data-open-modal]').blur();
     $('[data-modal]').find('form').trigger("reset");
+    $('[data-modal]').find('form .invalid').removeClass('invalid');
     $('body').css({
       'overflow': 'auto',
     });
@@ -454,10 +463,38 @@ $(window).on('load', (function () {
 
 
   // OPEN
-  $('[data-open]').on('click', function () {
-    const elem = $(`[data-opened=${$(this).attr('data-open')}]`);
-    $(this).addClass('d-none');
-    elem.addClass('active');
+  $('[data-open]').each(function () {
+    const btn = $(this);
+    const btnText = btn.html();
+    const elem = $(`[data-opened=${btn.attr('data-open')}]`);
+
+    btn.on('click', function () {
+      elem.toggleClass('active');
+
+      if (elem.hasClass('active')) {
+        $(this).html(`
+      <svg width="12" height="10" fill="none">
+        <use xlink:href="#icon-arrow-bottom-up"></use>
+      </svg>
+      <span>Свернуть</span>
+    `)
+      } else {
+        $(this).html(`${btnText}`);
+      }
+    });
+  });
+
+  // TOGGLE
+  $('[data-toggle]').on('click', function () {
+    const elem = $(`[data-toggled=${$(this).attr('data-toggle')}]`);
+    const otherBtns = $(`[data-toggle=${$(this).attr('data-toggle')}][data-toggle-hidden]`);
+    elem.toggleClass('active');
+
+    if (elem.hasClass('active')) {
+      otherBtns.addClass('d-none');
+    } else {
+      otherBtns.removeClass('d-none');
+    }
   });
 
 
@@ -504,10 +541,20 @@ $(window).on('load', (function () {
   $(document).on('keydown', closeModalsByEsc);
 
   $('[data-toggle-active]').each(function () {
-    if (!$(this).hasClass('active')) {
-      $(this).on('click', function () {
-        $(this).addClass('active');
-      });
-    }
+    $(this).on('click', function () {
+      $(this).toggleClass('active');
+    });
+  });
+
+  // VALIDATION
+  $('[required]').on("invalid", function (event) {
+    $(this).addClass('invalid');
+  });
+
+  // RELOAD ON CLICK
+  $('[data-reloader]').on('click', function () {
+    setTimeout(function () {
+      window.location.reload();
+    }, 500);
   });
 }));

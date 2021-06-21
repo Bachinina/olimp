@@ -19,6 +19,25 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/fancybox.css">
   <link rel="stylesheet" href="css/style.min.css">
+
+
+  <script type="text/javascript">
+    function MyCopyText() {
+      var target_text = window.getSelection(),
+        add_text = '<br> Источник: ' + document.location.href,
+        out_text = target_text + add_text,
+        fake = document.createElement('div');
+      fake.style.position = 'absolute';
+      fake.style.left = '-99999px';
+      document.body.appendChild(fake);
+      fake.innerHTML = out_text;
+      target_text.selectAllChildren(fake);
+      window.setTimeout(function () {
+        document.body.removeChild(fake);
+      }, 100);
+    }
+
+  </script>
 </head>
 
 <body>
@@ -66,6 +85,9 @@
       </symbol>
       <symbol id="icon-arrow-bottom" viewBox="0 0 12 7">
         <path d="M11 1L6 6L1 1" />
+      </symbol>
+      <symbol id="icon-arrow-bottom-up" viewBox="0 0 12 7">
+        <path d="M0.995605 6.00037L5.99561 1.00037L10.9956 6.00037" />
       </symbol>
       <symbol id="icon-mail" viewBox="0 0 30 25">
         <path
@@ -176,7 +198,10 @@
   
           <div class="header__logo">
             <a href="index.html">
-              <img src="img/logo.svg" alt="Олимп паркета">
+              <picture>
+                <source media="(min-width: 440px)" srcset="img/logo.svg">
+                <img src="img/logo-mini.svg" alt="Олимп паркета">
+              </picture>
             </a>
           </div>
   
@@ -195,6 +220,31 @@
   
   
         <div class="header__right">
+          <ul class="header__btns mob d-xl-none">
+            <li class="header__btn">
+              <button aria-label="Открыть поисковую строку" title="Открыть поисковую строку"
+                data-toggle-modal="#search-line">
+                <img src="img/icon-search-black.svg" alt="">
+              </button>
+            </li>
+            <li class="header__btn">
+              <button aria-label="Проверить статус заказа" title="Проверить статус заказа" data-open-modal="#check-order">
+                <img src="img/icon-order-black.svg" alt="">
+              </button>
+            </li>
+            <li class="header__btn">
+              <a href="compare.html" aria-label="Перейти к сравнения" title="Перейти на страницу сравнения">
+                <img src="img/icon-compare-black.svg" alt="">
+                <div class="count">1</div>
+              </a>
+            </li>
+            <li class="header__btn">
+              <a href="cart.html" aria-label="Открыть корзину">
+                <img src="img/icon-cart-black.svg" alt="">
+                <div class="count">3</div>
+              </a>
+            </li>
+          </ul>
           <div class="header__cont cont">
             <a href="tel:+74957750077">
               <svg width="25" height="25">
@@ -214,13 +264,13 @@
         <div class="header__left">
           <ul class="header__menu menu" data-menu-list>
             <li class="menu__item" data-menu-item>
-              <div class="menu__controls">
-                <a href="index.html">Каталог товаров</a>
-                <button class="menu__control-btn" aria-hidden="true" data-menu-item-toggle></button>
+              <div class="menu__controls" data-menu-item-toggle>
+                <a href="catalog.html">Каталог товаров</a>
+                <button class="menu__control-btn" aria-hidden="true"></button>
               </div>
   
-              <div class="menu__drop full">
-                <div class="menu__block">
+              <div class="menu__drop full row">
+                <div class="menu__block col-12 col-xl-3">
                   <a href="category.html" class="menu__title">Напольные покрытия</a>
                   <ul class="menu__list">
                     <li>
@@ -267,7 +317,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="menu__block">
+                <div class="menu__block col-12 col-xl-3">
                   <a href="category.html" class="menu__title">Сопутствующие товары</a>
                   <ul class="menu__list">
                     <li>
@@ -302,52 +352,72 @@
                     </li>
                   </ul>
                 </div>
-                <div class="menu__block">
-                  <a href="category.html" class="menu__title">Стеновые панели</a>
-                  <ul class="menu__list">
-                    <li>
-                      <a href="category.html">Потолочно-стеновые панели</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Деревянная мозаика</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Пробковое покрытие для стен</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Фасадная доска</a>
-                    </li>
-                  </ul>
+                <div class="col-12 col-xl-6">
+                  <div class="row">
+                    <div class="col-12 col-xl-6">
+                      <div class="menu__block">
+                        <a href="category.html" class="menu__title">Стеновые панели</a>
+                        <ul class="menu__list">
+                          <li>
+                            <a href="category.html">Потолочно-стеновые панели</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Деревянная мозаика</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Пробковое покрытие для стен</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Фасадная доска</a>
+                          </li>
+                        </ul>
   
-                  <div class="menu__banner">
-                    <a href="news-detail.html" aria-label="Перейти на страницу акции">
-                      <img src="img/discount.jpg" alt="">
-                    </a>
-                  </div>
-                </div>
-                <div class="menu__block">
-                  <a href="category.html" class="menu__title">Стеновые панели</a>
-                  <ul class="menu__list">
-                    <li>
-                      <a href="category.html">Увлажнители воздуха</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Инструмент паркетчика</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Паркетно-шлифовальные машины</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Абразивные материалы</a>
-                    </li>
-                  </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                      <div class="menu__block">
+                        <a href="category.html" class="menu__title">Стеновые панели</a>
+                        <ul class="menu__list">
+                          <li>
+                            <a href="category.html">Увлажнители воздуха</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Инструмент паркетчика</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Паркетно-шлифовальные машины</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Абразивные материалы</a>
+                          </li>
+                        </ul>
   
-                  <div class="menu__banner">
-                    <a href="news-detail.html" aria-label="Перейти на страницу акции">
-                      <img src="img/discount.jpg" alt="">
-                    </a>
+                      </div>
+                    </div>
+  
+                    <div class="col-12">
+                      <div class="menu__banners row no-gutters">
+                        <div class="menu__banner col-6">
+                          <a href="news-detail.html" aria-label="Перейти на страницу акции">
+                            <img src="img/discount.jpg" alt="">
+                          </a>
+                        </div>
+  
+  
+                        <div class="menu__banner col-6">
+                          <a href="news-detail.html" aria-label="Перейти на страницу акции">
+                            <img src="img/discount.jpg" alt="">
+                          </a>
+                        </div>
+  
+                      </div>
+  
+  
+                    </div>
                   </div>
+  
                 </div>
+  
               </div>
             </li>
             <li class="menu__item" data-menu-item>
@@ -380,6 +450,9 @@
                     </li>
                     <li>
                       <a href="credit.html">Рассрочка</a>
+                    </li>
+                    <li>
+                      <button class="btn-def" data-open-modal="#mail-to-manager">Письмо руководителю</button>
                     </li>
                   </ul>
                 </div>
@@ -1025,6 +1098,14 @@
     
     <!-- Основной файл -->
     <script src="js/main.js"></script>
+    
+    
+    <script>
+      document.querySelectorAll('.copy_protection').forEach(function (el) {
+        el.addEventListener('copy', MyCopyText);
+      });
+    
+    </script>
 
 </body>
 

@@ -19,6 +19,25 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/fancybox.css">
   <link rel="stylesheet" href="css/style.min.css">
+
+
+  <script type="text/javascript">
+    function MyCopyText() {
+      var target_text = window.getSelection(),
+        add_text = '<br> Источник: ' + document.location.href,
+        out_text = target_text + add_text,
+        fake = document.createElement('div');
+      fake.style.position = 'absolute';
+      fake.style.left = '-99999px';
+      document.body.appendChild(fake);
+      fake.innerHTML = out_text;
+      target_text.selectAllChildren(fake);
+      window.setTimeout(function () {
+        document.body.removeChild(fake);
+      }, 100);
+    }
+
+  </script>
 </head>
 
 <body>
@@ -66,6 +85,9 @@
       </symbol>
       <symbol id="icon-arrow-bottom" viewBox="0 0 12 7">
         <path d="M11 1L6 6L1 1" />
+      </symbol>
+      <symbol id="icon-arrow-bottom-up" viewBox="0 0 12 7">
+        <path d="M0.995605 6.00037L5.99561 1.00037L10.9956 6.00037" />
       </symbol>
       <symbol id="icon-mail" viewBox="0 0 30 25">
         <path
@@ -176,7 +198,10 @@
   
           <div class="header__logo">
             <a href="index.html">
-              <img src="img/logo.svg" alt="Олимп паркета">
+              <picture>
+                <source media="(min-width: 440px)" srcset="img/logo.svg">
+                <img src="img/logo-mini.svg" alt="Олимп паркета">
+              </picture>
             </a>
           </div>
   
@@ -195,6 +220,31 @@
   
   
         <div class="header__right">
+          <ul class="header__btns mob d-xl-none">
+            <li class="header__btn">
+              <button aria-label="Открыть поисковую строку" title="Открыть поисковую строку"
+                data-toggle-modal="#search-line">
+                <img src="img/icon-search-black.svg" alt="">
+              </button>
+            </li>
+            <li class="header__btn">
+              <button aria-label="Проверить статус заказа" title="Проверить статус заказа" data-open-modal="#check-order">
+                <img src="img/icon-order-black.svg" alt="">
+              </button>
+            </li>
+            <li class="header__btn">
+              <a href="compare.html" aria-label="Перейти к сравнения" title="Перейти на страницу сравнения">
+                <img src="img/icon-compare-black.svg" alt="">
+                <div class="count">1</div>
+              </a>
+            </li>
+            <li class="header__btn">
+              <a href="cart.html" aria-label="Открыть корзину">
+                <img src="img/icon-cart-black.svg" alt="">
+                <div class="count">3</div>
+              </a>
+            </li>
+          </ul>
           <div class="header__cont cont">
             <a href="tel:+74957750077">
               <svg width="25" height="25">
@@ -214,13 +264,13 @@
         <div class="header__left">
           <ul class="header__menu menu" data-menu-list>
             <li class="menu__item" data-menu-item>
-              <div class="menu__controls">
-                <a href="index.html">Каталог товаров</a>
-                <button class="menu__control-btn" aria-hidden="true" data-menu-item-toggle></button>
+              <div class="menu__controls" data-menu-item-toggle>
+                <a href="catalog.html">Каталог товаров</a>
+                <button class="menu__control-btn" aria-hidden="true"></button>
               </div>
   
-              <div class="menu__drop full">
-                <div class="menu__block">
+              <div class="menu__drop full row">
+                <div class="menu__block col-12 col-xl-3">
                   <a href="category.html" class="menu__title">Напольные покрытия</a>
                   <ul class="menu__list">
                     <li>
@@ -267,7 +317,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="menu__block">
+                <div class="menu__block col-12 col-xl-3">
                   <a href="category.html" class="menu__title">Сопутствующие товары</a>
                   <ul class="menu__list">
                     <li>
@@ -302,52 +352,72 @@
                     </li>
                   </ul>
                 </div>
-                <div class="menu__block">
-                  <a href="category.html" class="menu__title">Стеновые панели</a>
-                  <ul class="menu__list">
-                    <li>
-                      <a href="category.html">Потолочно-стеновые панели</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Деревянная мозаика</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Пробковое покрытие для стен</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Фасадная доска</a>
-                    </li>
-                  </ul>
+                <div class="col-12 col-xl-6">
+                  <div class="row">
+                    <div class="col-12 col-xl-6">
+                      <div class="menu__block">
+                        <a href="category.html" class="menu__title">Стеновые панели</a>
+                        <ul class="menu__list">
+                          <li>
+                            <a href="category.html">Потолочно-стеновые панели</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Деревянная мозаика</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Пробковое покрытие для стен</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Фасадная доска</a>
+                          </li>
+                        </ul>
   
-                  <div class="menu__banner">
-                    <a href="news-detail.html" aria-label="Перейти на страницу акции">
-                      <img src="img/discount.jpg" alt="">
-                    </a>
-                  </div>
-                </div>
-                <div class="menu__block">
-                  <a href="category.html" class="menu__title">Стеновые панели</a>
-                  <ul class="menu__list">
-                    <li>
-                      <a href="category.html">Увлажнители воздуха</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Инструмент паркетчика</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Паркетно-шлифовальные машины</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Абразивные материалы</a>
-                    </li>
-                  </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                      <div class="menu__block">
+                        <a href="category.html" class="menu__title">Стеновые панели</a>
+                        <ul class="menu__list">
+                          <li>
+                            <a href="category.html">Увлажнители воздуха</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Инструмент паркетчика</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Паркетно-шлифовальные машины</a>
+                          </li>
+                          <li>
+                            <a href="category.html">Абразивные материалы</a>
+                          </li>
+                        </ul>
   
-                  <div class="menu__banner">
-                    <a href="news-detail.html" aria-label="Перейти на страницу акции">
-                      <img src="img/discount.jpg" alt="">
-                    </a>
+                      </div>
+                    </div>
+  
+                    <div class="col-12">
+                      <div class="menu__banners row no-gutters">
+                        <div class="menu__banner col-6">
+                          <a href="news-detail.html" aria-label="Перейти на страницу акции">
+                            <img src="img/discount.jpg" alt="">
+                          </a>
+                        </div>
+  
+  
+                        <div class="menu__banner col-6">
+                          <a href="news-detail.html" aria-label="Перейти на страницу акции">
+                            <img src="img/discount.jpg" alt="">
+                          </a>
+                        </div>
+  
+                      </div>
+  
+  
+                    </div>
                   </div>
+  
                 </div>
+  
               </div>
             </li>
             <li class="menu__item" data-menu-item>
@@ -380,6 +450,9 @@
                     </li>
                     <li>
                       <a href="credit.html">Рассрочка</a>
+                    </li>
+                    <li>
+                      <button class="btn-def" data-open-modal="#mail-to-manager">Письмо руководителю</button>
                     </li>
                   </ul>
                 </div>
@@ -2140,6 +2213,14 @@
   
   <!-- Основной файл -->
   <script src="js/main.js"></script>
+  
+  
+  <script>
+    document.querySelectorAll('.copy_protection').forEach(function (el) {
+      el.addEventListener('copy', MyCopyText);
+    });
+  
+  </script>
   <!-- Если образцов нет - добавляется класс empty -->
   <div class="ex active" id="examples-result" data-modal>
     <div class="ex__panel">
@@ -2152,6 +2233,7 @@
         <span class="ml-2">5</span>
       </button>
     </div>
+  
   
     <div class="ex__info" data-modal-container>
       <div class="container">
@@ -2269,64 +2351,74 @@
           </div>
   
           <div class="ex__btn-wrap">
-            <button class="ex__btn-open btn-orange" data-open-modal="#order-examples">Заказать образцы</button>
+            <button class="ex__btn-open btn-orange" data-toggle="order-examples" data-toggle-hidden>Заказать
+              образцы</button>
           </div>
+          <div class="ex__opened" data-toggled="order-examples">
+            <form class="ex__form form" action="/">
+              <div class="form__top modal__top">
+                <p class="form__title h3">Заказать образцы выбранных товаров</p>
   
-          <form class="ex__form form" action="/">
-            <div class="form__top">
-              <p class="form__title h3">Заказать образцы выбранных товаров</p>
-            </div>
+                <div class="modal__close">
+                  <button class="btn-close pt-0" type="button" aria-hidden="true" data-toggle="order-examples">
+                    <svg width="15" height="15">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
   
-            <div class="row">
-              <div class="col-12 col-lg-4">
-                <div class="form__row">
+              <div class="row">
+                <div class="col-12 col-lg-4">
+                  <div class="form__row">
+                    <div class="form__item">
+                      <label for="fb-name">Имя</label>
+                      <input type="text" name="b-name" placeholder="ФИО*" id="fb-name" required>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__item">
+                      <label for="fb-tel">Телефон</label>
+                      <input type="tel" name="fb-tel" placeholder="Телефон*" id="fb-tel" required>
+                    </div>
+                  </div>
                   <div class="form__item">
-                    <label for="fb-name">Имя</label>
-                    <input type="text" name="b-name" placeholder="ФИО*" id="fb-name" required>
+                    <label for="fb-mail">E-mail</label>
+                    <input type="email" name="fb-mail" placeholder="E-mail*" id="fb-mail" required>
                   </div>
                 </div>
-                <div class="form__row">
+                <div class="col-12 col-lg-4 d-flex flex-column">
                   <div class="form__item">
-                    <label for="fb-tel">Телефон</label>
-                    <input type="tel" name="fb-tel" placeholder="Телефон*" id="fb-tel" required>
+                    <label for="fb-order-address">Адрес</label>
+                    <input type="text" name="fb-order-address" placeholder="Адрес" id="fb-order-address">
+                  </div>
+  
+  
+                  <div class="form__item flex-grow-1">
+                    <label for="fb-comment">Комментарий</label>
+                    <textarea name="fb-comment" id="fb-comment" placeholder="Комментарий"></textarea>
                   </div>
                 </div>
-                <div class="form__item">
-                  <label for="fb-mail">E-mail</label>
-                  <input type="email" name="fb-mail" placeholder="E-mail*" id="fb-mail" required>
+  
+                <div class="col-12 col-lg-4 d-flex flex-column">
+                  <div class="form__item">
+                    <label for="fb-sq">Планируемая площадь, м2</label>
+                    <input type="text" name="fb-sq" placeholder="Планируемая площадь, м2" id="fb-sq">
+                  </div>
+                  <div class="form__conf small mt-auto">
+                    <input type="checkbox" id="fb-conf" name="fb-conf" checked required>
+                    <label for="fb-conf">
+                      <span>
+                        Нажимая на кнопку «Заказать образцы», я даю согласие на обработку персональных
+                        данных и соглашаюсь c <a href="conf.html"> политикой конфиденциальности</a>.</span>
+                    </label>
+                  </div>
+  
+                  <button class="form__submit btn-orange">Заказать образцы</button>
                 </div>
               </div>
-              <div class="col-12 col-lg-4 d-flex flex-column">
-                <div class="form__item">
-                  <label for="fb-order-address">Адрес</label>
-                  <input type="text" name="fb-order-address" placeholder="Адрес" id="fb-order-address">
-                </div>
-  
-  
-                <div class="form__item flex-grow-1">
-                  <label for="fb-comment">Комментарий</label>
-                  <textarea name="fb-comment" id="fb-comment" placeholder="Комментарий"></textarea>
-                </div>
-              </div>
-  
-              <div class="col-12 col-lg-4 d-flex flex-column">
-                <div class="form__item">
-                  <label for="fb-sq">Планируемая площадь, м2</label>
-                  <input type="text" name="fb-sq" placeholder="Планируемая площадь, м2" id="fb-sq">
-                </div>
-                <div class="form__conf small mt-auto">
-                  <input type="checkbox" id="fb-conf" name="fb-conf" checked required>
-                  <label for="fb-conf">
-                    <span>
-                      Нажимая на кнопку «Заказать образцы», я даю согласие на обработку персональных
-                      данных и соглашаюсь c <a href="conf.html"> политикой конфиденциальности</a>.</span>
-                  </label>
-                </div>
-  
-                <button class="form__submit btn-orange">Заказать образцы</button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
       <button class="ex__btn-close def" data-modal-close>
@@ -2336,75 +2428,8 @@
         <span>Свернуть</span>
       </button>
     </div>
+  
   </div>
-  
-  
-  <!-- Модальное окно: заказ образцов -->
-  <section class="modal-wrap" id="order-examples" data-modal>
-    <div class="modal modal-form" data-modal-container>
-      <form class="form in-modal" action="/">
-        <div class="modal__top">
-          <h2 class="modal__title">Заказ образцов</h2>
-          <div class="modal__close">
-            <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
-              <svg width="15" height="15">
-                <use xlink:href="#icon-close"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-  
-        <div class="form__row">
-          <div class="form__item">
-            <label for="order-ex-name">Имя</label>
-            <input type="text" name="order-ex-name" placeholder="ФИО*" id="order-ex-name" required>
-          </div>
-        </div>
-  
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <div class="form__item">
-              <label for="order-ex-tel">Телефон</label>
-              <input type="tel" name="order-ex-tel" placeholder="Телефон*" id="order-ex-tel" required>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="form__item">
-              <label for="order-ex-mail">E-mail</label>
-              <input type="email" name="order-ex-mail" placeholder="E-mail*" id="order-ex-mail" required>
-            </div>
-          </div>
-        </div>
-  
-        <div class="form__item">
-          <label for="order-exr-address">Адрес</label>
-          <input type="text" name="order-ex-address" placeholder="Адрес" id="order-ex-address">
-        </div>
-  
-  
-        <div class="form__row">
-          <div class="form__item">
-            <label for="order-ex-comment">Сообщение</label>
-            <textarea name="order-ex-comment" id="order-ex-comment" placeholder="Сообщение*" required></textarea>
-          </div>
-        </div>
-  
-  
-        <div class="form__bottom">
-          <div class="form__conf">
-            <input type="checkbox" id="order-ex-conf" name="order-ex-conf" checked required>
-            <label for="order-ex-conf">
-              <span>Я даю согласие на обработку персональных
-                данных и соглашаюсь c <a href="conf.html"> политикой конфиденциальности</a>.</span>
-            </label>
-          </div>
-          <button class="form__submit btn-orange">Отправить</button>
-        </div>
-      </form>
-    </div>
-  
-  </section>
-  <!-- Модальное окно: заказ образцов -->
 
 </body>
 
