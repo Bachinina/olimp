@@ -641,6 +641,60 @@
 
    
 
+  <!-- Модальное окно: заказ текстур -->
+  <section class="modal-wrap" id="get-text" data-modal>
+    <div class="modal modal-form" data-modal-container>
+      <form class="form in-modal" action="/">
+        <div class="modal__top">
+          <h2 class="modal__title">Получить текстуры</h2>
+          <div class="modal__close">
+            <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
+              <svg width="15" height="15">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+  
+        <div class="form__row">
+          <div class="form__item">
+            <label for="manag-name">Имя</label>
+            <input type="text" name="b-name" placeholder="ФИО*" id="manag-name" required>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="form__item">
+              <label for="manag-tel">Телефон</label>
+              <input type="tel" name="manag-tel" placeholder="Телефон*" id="manag-tel" required>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form__item">
+              <label for="manag-mail">E-mail</label>
+              <input type="email" name="manag-mail" placeholder="E-mail*" id="manag-mail" required>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="form__bottom">
+          <div class="form__conf">
+            <input type="checkbox" id="manag-conf" name="manag-conf" checked required>
+            <label for="manag-conf">
+              <span>Я даю согласие на обработку персональных
+                данных и соглашаюсь c <a href="conf.html"> политикой конфиденциальности</a>.</span>
+            </label>
+          </div>
+          <button class="form__submit btn-orange">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- Модальное окно: заказ текстур -->
+  
+  
   <!-- Модальное окно: письмо руководителю -->
   <section class="modal-wrap" id="mail-to-manager" data-modal>
     <div class="modal modal-form" data-modal-container>
