@@ -8,6 +8,32 @@ $(window).on('load', (function () {
     XXL: 1439,
   };
 
+  // FILE
+  $('form input[type="file"]').change(function () {
+    let fileNames = [];
+    for (let i = 0; i < $(this).get(0).files.length; ++i) {
+      let name = $(this).get(0).files[i].name;
+
+      if (name.length > 25) {
+        const lastIndexOf = name.indexOf('.', 0);
+        const type = name.substr(lastIndexOf);
+
+        name = `${name.substr(0, 25)}...${type}`;
+      }
+      fileNames.push(name);
+    }
+
+    const result = fileNames.join(", ");
+    // $(this).next().text(`Выбрано файлов: ${fileNames.length}`);
+
+    if (result.length > 0) {
+      $(this).parent().find('span').text(result);
+    } else {
+      const placeholder = $(this).parent().attr('data-placeholder');
+      $(this).parent().find('span').text(placeholder);
+    }
+  });
+
 
   $('[data-bottom-desc]').each(function () {
     const block = $(this);
@@ -557,4 +583,53 @@ $(window).on('load', (function () {
       window.location.reload();
     }, 500);
   });
+
+
 }));
+
+$('[data-cont-tel]').each(function () {
+  const cont = $(this);
+  const btn = cont.find('[data-cont-btn]');
+  btn.on('click', function () {
+    cont.addClass('active');
+  })
+});
+
+
+$('[data-ukladka-card]').on('change', function () {
+  if ($(this).is(':checked')) {
+    yaCounter25949018.reachGoal('klick_ukladka_kartochka');
+  } else {
+    yaCounter25949018.reachGoal('klick_off_ukladka_kartochka');
+  }
+});
+
+$('[data-ukladka-basket]').on('change', function () {
+  if ($(this).is(':checked')) {
+    yaCounter25949018.reachGoal('klick_ukladka_korzina');
+  } else {
+    yaCounter25949018.reachGoal('klick_off_ukladka_korzin');
+  }
+});
+
+$('[data-open-step]').each(function () {
+  $(this).on('click', function () {
+    $('[data-modal-step]').removeClass('d-block');
+    $('[data-modal-step]').addClass('d-none');
+    $(`[data-modal-step=${$(this).attr('data-open-step')}]`).removeClass('d-none').addClass('d-block');
+  })
+});
+
+
+$('[data-del-btn]').on('click', function () {
+  $(this).closest('[data-del-parent]').remove();
+})
+
+
+
+// NEW MENU 
+$('[data-open-catalog]').on('click', function () {
+  $(this).toggleClass('active');
+  $('body').toggleClass('drop-opened');
+  $('[data-catalog]').toggleClass('active');
+});
