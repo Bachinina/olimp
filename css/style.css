@@ -923,8 +923,8 @@ hr {
   font-style: normal;
   font-weight: 400;
   background-color: #FFFFFF;
-  border: 2px solid #FAAA17;
-  color: #FAAA17;
+  border: 2px solid #F49300;
+  color: #F49300;
 }
 .btn-l-orange:hover,
 .btn-l-orange:focus {
@@ -954,13 +954,13 @@ hr {
   min-width: 120px;
 }
 .btn-l-orange svg {
-  fill: #FAAA17;
+  fill: #F49300;
 }
 .btn-l-orange:hover,
 .btn-l-orange:focus,
 .btn-l-orange.active {
   color: #FFFFFF;
-  background-color: #FAAA17;
+  background-color: #F49300;
 }
 .btn-l-orange:hover svg,
 .btn-l-orange:focus svg,
@@ -6956,8 +6956,8 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .h-n__loc {
   display: -webkit-box;
@@ -7041,8 +7041,8 @@ textarea {
   position: relative;
 }
 .h-n__menu .h-n__cont {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -7263,6 +7263,9 @@ textarea {
 .h-n__search-btn:hover {
   background: #E68F0E;
 }
+.h-n__menu {
+  border-bottom: 1px solid #EEEEEE;
+}
 .h-n__menu .h-n__cont {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -7293,7 +7296,7 @@ textarea {
 }
 .h-n__overlay {
   display: none;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
   height: 100%;
   position: absolute;
@@ -7317,12 +7320,13 @@ textarea {
   overflow: hidden;
 }
 .menu-d__categories-wrap {
-  min-width: 290px;
-  max-width: 300px;
+  min-width: 310px;
+  max-width: 310px;
   padding: 24px 0;
   overflow-y: auto;
   border-right: 1px solid #000000;
   padding-right: 10px;
+  padding-top: 12px;
 }
 .menu-d__categories {
   list-style: none;
@@ -7358,22 +7362,28 @@ textarea {
   line-height: 16px;
   padding: 10px;
 }
-.menu-d__item::before,
-.menu-d__link::before {
+.menu-d__item span,
+.menu-d__link span {
+  margin-right: 10px;
+}
+.menu-d__item::after,
+.menu-d__link::after {
   content: '';
-  position: absolute;
-  display: none;
-  height: 100%;
-  width: 100%;
-  background-color: #F8F8F8;
-  z-index: -1;
+  display: block;
+  height: 10px;
+  width: 10px;
+  margin-left: auto;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDcgMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDExTDYgNkwxIDEiIHN0cm9rZT0iIzI1MjUyNSIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .menu-d__item.active,
 .menu-d__item:hover {
   color: #252525;
   background-color: #F8F8F8;
   outline: 0;
-  text-shadow: 0 0 1px #252525;
+  text-shadow: 1px 0 0 #252525;
 }
 .menu-d__item.active::before,
 .menu-d__item:hover::before {
@@ -7397,6 +7407,7 @@ textarea {
   background-color: #fff;
 }
 .menu-d__list {
+  padding-top: 85px;
   padding-left: 40px;
   padding-bottom: 40px;
 }
@@ -7410,7 +7421,7 @@ textarea {
 }
 .menu-d__block {
   padding-right: 40px;
-  padding-top: 40px;
+  padding-bottom: 40px;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
        break-inside: avoid;
@@ -7431,6 +7442,9 @@ textarea {
   font-size: 16px;
   line-height: 22px;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #252525;
   text-decoration: none;
   margin-bottom: 5px;
@@ -7459,7 +7473,7 @@ textarea {
 }
 .menu-d__banner {
   margin-right: 40px;
-  margin-top: 40px;
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7469,6 +7483,26 @@ textarea {
 }
 .menu-d__banner a img {
   width: 100%;
+}
+.menu-d__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+.menu-d__btn {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 6px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.menu-d__btn:not(:last-of-type) {
+  margin-right: 10px;
+}
+.menu-d__link-main {
+  margin-bottom: 40px;
 }
 .footer {
   margin-top: auto;
