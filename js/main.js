@@ -628,8 +628,105 @@ $('[data-del-btn]').on('click', function () {
 
 
 // NEW MENU 
-$('[data-open-catalog]').on('click', function () {
-  $(this).toggleClass('active');
-  $('body').toggleClass('drop-opened');
-  $('[data-catalog]').toggleClass('active');
+$('[data-catalog]').each(function () {
+  // OPEN / CLOSE CATALOG
+  const catalog = $(this);
+  const btn = $('[data-catalog-btn]');
+  const overlay = $('[data-catalog-overlay]');
+
+  let isCatalogOpened = false;
+
+  const onOpen = function () {
+    isCatalogOpened = true;
+    btn.addClass('active');
+    $('body').addClass('drop-opened');
+    catalog.addClass('active');
+
+    overlay.on('click', onClose);
+    $(document).on('keydown', onCloseByEsc);
+  }
+
+  const onClose = function () {
+    isCatalogOpened = false;
+    btn.removeClass('active');
+    $('body').removeClass('drop-opened');
+    catalog.removeClass('active');
+    setFirstCatalogItemActive();
+    openedPanel.removeClass('active');
+
+    overlay.off('click', onClose);
+    $(document).off('keydown', onCloseByEsc);
+  }
+
+  window.onCloseMenu = onClose;
+
+  const onCloseByEsc = (evt) => {
+    if (evt.keyCode === 27) {
+      onClose();
+    }
+  };
+
+  btn.on('click', function () {
+    if (isCatalogOpened) {
+      onClose();
+    } else {
+      onOpen();
+    }
+  });
+
+  //CATALOG ITEMS
+  const catalogItems = catalog.find('[data-catalog-item]');
+  const catalogLists = catalogItems.map(function () {
+    return $($(this).attr('data-catalog-item'));
+  });
+
+  // CATALOG MOBILE
+  const openedPanel = $('[data-catalog-drop]');
+  const openedTitle = $('[data-catalog-opened-title]');
+  const btnBack = $('[data-catalog-btn-back]');
+  // ______________
+
+  const resetCatalogVisible = function () {
+    catalogItems.removeClass('active');
+    catalogLists.each(function () {
+      $(this).removeClass('active')
+    });
+  };
+
+  const openCatalogItem = function () {
+    const catalogList = $($(this).attr('data-catalog-item'));
+    // Замена заголовка в мобилке
+    const title = $(this).attr('data-catalog-item-title');
+    openedTitle.text(title);
+    // ______________
+
+    resetCatalogVisible();
+    $(this).addClass('active');
+    catalogList.addClass('active');
+
+    openedPanel.addClass('active');
+    $('.menu-d__container').addClass('active');
+  };
+
+  const setFirstCatalogItemActive = function () {
+    resetCatalogVisible();
+    const firstCatalogItem = catalog.find('[data-catalog-item]').first();
+    firstCatalogItem.addClass('active');
+    $(firstCatalogItem.attr('data-catalog-item')).addClass('active');
+  };
+
+  btnBack.on('click', function () {
+    openedPanel.removeClass('active');
+  });
+
+
+  catalogItems.each(function () {
+    $(this).on('mouseover', openCatalogItem);
+    $(this).on('focus', openCatalogItem);
+  });
+
+  setFirstCatalogItemActive();
+
+
+
 });
