@@ -233,16 +233,18 @@
           </button>
   
           <!-- Телефон  -->
-          <div class="h-n__tel" aria-label="Заказать звонок" data-open-modal="#">
+          <div class="h-n__tel" aria-label="Заказать звонок" data-open-modal="#call-me-back">
   
             <!-- КОЛТАЧ вставлять в этот span -->
-            <span>8 (800) 707-79-66</span>
+            <span class="h-n__tel-numb">8 (800) 707-79-66</span>
   
-            <!-- <button class="btn-def">
+            <button class="h-n__tel-btn btn-def" data-open-modal="#call-me-back">
               <svg width="12" height="7" fill="none">
                 <use xlink:href="#icon-arrow-bottom"></use>
               </svg>
-            </button> -->
+            </button>
+  
+            <span class="h-n__tel-sub">с 9:00 до 21:00</span>
           </div>
   
           <!-- Доверие -->
@@ -254,15 +256,33 @@
   
         <div class="h-n__right">
           <ul class="h-n__list">
-            <li><a href="#">О Компании</a></li>
-            <li><a href="#">Магазины</a></li>
-            <li><a href="#">Сотрудничество</a></li>
             <li>
-              <a href="#">Оплата и доставка</a>
+              <a>О Компании</a>
               <ul class="h-n__list-drop">
-                <li><a href="#">Оплата</a></li>
-                <li><a href="#">Доставка и хранение</a></li>
-                <li><a href="#">Рассрочка</a></li>
+                <li><a href="/about-company/">О нас</a></li>
+                <li><a href="/projects/">Наши проекты</a></li>
+                <li><a href="/news/">Новости</a></li>
+                <li><a href="/reviews/">Отзывы о компании</a></li>
+                <li><a href="/guaranty/">Гарантии</a></li>
+                <li><a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a></li>
+              </ul>
+            </li>
+            <li><a href="/vacancy/">Работа у нас</a></li>
+            <li><a href="/contacts/">Магазины</a></li>
+            <li>
+              <a>Сотрудничество</a>
+              <ul class="h-n__list-drop">
+                <li><a href="/sotrudnichestvo/">Оптовым клиентам (В2В)</a></li>
+                <li><a href="/designers/">Дизайнерам</a></li>
+                <li><a href="/partners/">Стать дилером</a></li>
+              </ul>
+            </li>
+            <li>
+              <a>Оплата и доставка</a>
+              <ul class="h-n__list-drop">
+                <li><a href="/pay/">Оплата</a></li>
+                <li><a href="/delivery/">Доставка и хранение</a></li>
+                <li><a href="/rassrochka/">Рассрочка</a></li>
               </ul>
             </li>
           </ul>
@@ -304,15 +324,13 @@
             <div class="search-line__result-wrap" id="resul_search">
               <div class="search-line__result">
   
-                <a class="search-line__result-item"
-                  href="#">
+                <a class="search-line__result-item" href="#">
                   <img src="https://olimp-parketa.ru/upload/iblock/b50/b50fd0ea4c64cbf1fc105a7041617c34.jpg" alt="">
                   <span>Инженерная доска KAHRS CD Серое масло (левая) Grey oil (2,16 м2)</span>
                 </a>
   
   
-                <a class="search-line__result-item"
-                  href="#">
+                <a class="search-line__result-item" href="#">
                   <img src="https://olimp-parketa.ru/upload/iblock/efa/efad294708704c4dc21aff3a25c96919.jpg" alt="">
                   <span>Паркетная доска PolarWood Дуб PREMIUM 138 COTTAGE 5G (2,2 м2)</span>
                 </a>
@@ -463,9 +481,7 @@
                 <svg class="h-n__icon-stroke-fill" width="23" height="24">
                   <use xlink:href="#hn-compare"></use>
                 </svg>
-  
-                <div class="count">1</div>
-  
+                <div class="count">3</div>
               </div>
               <span class="h-n__icon-txt">Сравнение</span>
             </a>
@@ -515,12 +531,9 @@
   
         <div class="h-n__col h-n__right">
           <div class="h-n__tel-mob">
-            <svg width="25" height="25">
-              <use xlink:href="#tel"></use>
-            </svg>
-            <div class="new_call_phone_1">
-              <p><a href="tel:+74951543713">+7 (495) 154 37 13</a></p>
-            </div>
+            <button class="btn-def" data-open-modal="#call-me-back">
+              <img src="img/icon-top-mob.svg" alt="">
+            </button>
           </div>
   
           <!-- <a href="tel:+74957750077" aria-label="Позвонить">
@@ -545,41 +558,45 @@
   
             <ul class="menu-d__categories with-arrows">
               <li class="menu-d__category">
-                <button class="menu-d__item active" data-catalog-item="#category-1" data-catalog-item-title="Напольные покрытия">
+                <button class="menu-d__item active" data-catalog-item="#category-1"
+                  data-catalog-item-title="Напольные покрытия">
                   <img src="img/cat-icon-1.svg" alt="Напольные покрытия">
                   <span>Напольные покрытия</span>
                 </button>
               </li>
               <li class="menu-d__category">
-                <button href="#" class="menu-d__item" data-catalog-item="#category-2" data-catalog-item-title="Паркетая химия">
-                  <img src="img/cat-icon-2.svg" alt="Паркетая химия">
-                  <span>Паркетая химия</span>
+                <button href="#" class="menu-d__item" data-catalog-item="#category-2"
+                  data-catalog-item-title="Сопутствующие товары">
+                  <img src="img/cat-icon-2.svg" alt="Сопутствующие товары">
+                  <span>Сопутствующие товары</span>
                 </button>
               </li>
-              <li class="menu-d__category">
+              <!-- <li class="menu-d__category">
                 <button href="#" class="menu-d__item" data-catalog-item="#category-3" data-catalog-item-title="Отделочные материалы">
                   <img src="img/cat-icon-3.svg" alt="Отделочные материалы">
                   <span>Отделочные материалы</span>
                 </button>
-              </li>
+              </li> -->
               <li class="menu-d__category">
-                <button href="#" class="menu-d__item" data-catalog-item="#category-4" data-catalog-item-title="Стеновые панели">
+                <button href="#" class="menu-d__item" data-catalog-item="#category-4"
+                  data-catalog-item-title="Стеновые панели">
                   <img src="img/cat-icon-4.svg" alt="Стеновые панели">
                   <span>Стеновые панели</span>
                 </button>
               </li>
               <li class="menu-d__category">
-                <button href="#" class="menu-d__item" data-catalog-item="#category-5" data-catalog-item-title="Инструменты паркетчика">
+                <button href="#" class="menu-d__item" data-catalog-item="#category-5"
+                  data-catalog-item-title="Инструменты паркетчика">
                   <img src="img/cat-icon-5.svg" alt="Инструменты паркетчика">
                   <span>Инструменты паркетчика</span>
                 </button>
               </li>
-              <!-- <li class="menu-d__category">
+              <li class="menu-d__category">
                 <a href="#" class="menu-d__item" data-catalog-item="#category-6">
                   <img src="img/cat-icon-6.svg" alt="Услуги">
                   <span>Услуги</span>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </div>
   
@@ -699,13 +716,13 @@
                 </div>
               </div>
   
-              <!-- Паркетная химия -->
+              <!-- Сопутствующие товары -->
               <div class="menu-d__list" id="category-2">
                 <!-- Ссылка на раздел -->
                 <a href="/catalog/soputstvuyushchie-tovary/" class="menu-d__link-main btn btn-l-orange">Все cопутствующие
                   товары</a>
                 <div class="menu-d__links">
-                  <div class="menu-d__block-wrap column-1">
+                  <div class="menu-d__block-wrap">
   
                     <!-- Блок с подкатегориями -->
                     <div class="menu-d__block">
@@ -722,19 +739,7 @@
                         <a class="menu__drop-header" href="/catalog/maslo-dlya-parketa/">Масло для паркета</a>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
   
-              <!-- Отделочные материалы -->
-              <div class="menu-d__list" id="category-3">
-                <!-- Ссылка на раздел -->
-                <a href="/catalog/soputstvuyushchie-tovary/" class="menu-d__link-main btn btn-l-orange">Все cопутствующие
-                  товары</a>
-                <div class="menu-d__links">
-                  <div class="menu-d__block-wrap column-1">
-  
-                    <!-- Блок с подкатегориями -->
                     <div class="menu-d__block">
                       <div class="menu__drop-group">
                         <a class="menu__drop-header" href="/catalog/podlozhka-pod-napolnye-pokrytiya/">Подложка под
@@ -764,11 +769,12 @@
                   </div>
                 </div>
               </div>
+  
               <!-- Инструмент паркетчика -->
               <div class="menu-d__list" id="category-5">
                 <!-- Ссылка на раздел -->
-                <a href="/catalog/spetsialnoe-oborudovanie/" class="menu-d__link-main btn btn-l-orange">Все cпециальное
-                  оборудование</a>
+                <!-- <a href="/catalog/spetsialnoe-oborudovanie/" class="menu-d__link-main btn btn-l-orange">Все cпециальное
+                  оборудование</a> -->
                 <div class="menu-d__links">
                   <div class="menu-d__block-wrap column-1">
   
@@ -776,6 +782,25 @@
                     <div class="menu-d__block">
                       <div class="menu__drop-group">
                         <a class="menu__drop-header" href="/catalog/instrument-parketchika/">Инструмент паркетчика</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Услуги -->
+              <div class="menu-d__list" id="category-6">
+                <!-- Ссылка на раздел -->
+                <!-- <a href="/catalog/spetsialnoe-oborudovanie/" class="menu-d__link-main btn btn-l-orange">Все cпециальное
+                  оборудование</a> -->
+                <div class="menu-d__links">
+                  <div class="menu-d__block-wrap column-1">
+  
+                    <!-- Блок с подкатегориями -->
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a class="menu__drop-header" href="/ukladka/">Укладка</a>
+                        <a class="menu__drop-header" href="/show-room/">Выездной шоурум</a>
                       </div>
                     </div>
                   </div>
@@ -795,86 +820,44 @@
           </div>
           <div class="h-n__sub-menu h-n__mob">
             <div class="container">
-              <div class="h-n__list">
-                <button class="h-n__loc btn-icon" aria-label="Выбрать регион" data-open-modal="#select-region"
-                  onClick="window.onCloseMenu();">
-                  <svg width="14" height="20">
-                    <use xlink:href="#icon-location"></use>
-                  </svg>
-                  <span>Москва</span>
-                </button>
-  
-                <a href="#">О Компании</a>
-                <a href="#">Работа у нас</a>
-                <a href="#">Магазины</a>
-                <a href="#">Сотрудничество</a>
-                <a href="#">Оплата и доставка</a>
-  
-                <div class="h-n__tel" aria-label="Заказать звонок" data-open-modal="#">
-  
-                  <!-- КОЛТАЧ вставлять в этот span -->
-                  <span>8 (800) 707-79-66</span>
-  
-                  <!-- <button class="btn-def">
-                    <svg width="12" height="7" fill="none">
-                      <use xlink:href="#icon-arrow-bottom"></use>
-                    </svg>
-                  </button> -->
-                </div>
-              </div>
+              <ul class="h-n__list" data-menu-list>
+                <li class="h-n__list-item" data-menu-item>
+                  <div class="h-n__list-item-btn menu-d__item" data-menu-item-toggle>
+                    <span>О Компании</span>
+                  </div>
+                  <ul class="h-n__list-drop">
+                    <li><a href="/about-company/">О нас</a></li>
+                    <li><a href="/projects/">Наши проекты</a></li>
+                    <li><a href="/news/">Новости</a></li>
+                    <li><a href="/reviews/">Отзывы о компании</a></li>
+                    <li><a href="/guaranty/">Гарантии</a></li>
+                    <li><a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a></li>
+                  </ul>
+                </li>
+                <li class="h-n__list-item"><a href="/vacancy/">Работа у нас</a></li>
+                <li class="h-n__list-item"><a href="/contacts/">Магазины</a></li>
+                <li class="h-n__list-item" data-menu-item>
+                  <div class="h-n__list-item-btn menu-d__item" data-menu-item-toggle>
+                    <span>Сотрудничество</span>
+                  </div>
+                  <ul class="h-n__list-drop">
+                    <li><a href="/sotrudnichestvo/">Оптовым клиентам (В2В)</a></li>
+                    <li><a href="/designers/">Дизайнерам</a></li>
+                    <li><a href="/partners/">Стать дилером</a></li>
+                  </ul>
+                </li>
+                <li class="h-n__list-item" data-menu-item>
+                  <div class="h-n__list-item-btn menu-d__item" data-menu-item-toggle>
+                    <span>Оплата и доставка</span>
+                  </div>
+                  <ul class="h-n__list-drop">
+                    <li><a href="/pay/">Оплата</a></li>
+                    <li><a href="/delivery/">Доставка и хранение</a></li>
+                    <li><a href="/rassrochka/">Рассрочка</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="h-n__mob-bottom">
-      <div class="container">
-        <div class="h-n__icons">
-          <div class="h-n__icon">
-            <button class="btn-def" data-toggle-modal="#search-line" onClick="window.onCloseMenu();">
-              <div class="h-n__icon-cont">
-                <svg width="30" height="30" fill="none">
-                  <use xlink:href="#hn-search"></use>
-                </svg>
-  
-              </div>
-              <span class="h-n__icon-txt">Поиск</span>
-            </button>
-          </div>
-          <div class="h-n__icon">
-            <button class="btn-def" data-open-modal="#check-order" onClick="window.onCloseMenu();">
-              <div class="h-n__icon-cont">
-                <svg class="h-n__icon-stroke" width="30" height="30" fill="none">
-                  <use xlink:href="#hn-pay"></use>
-                </svg>
-  
-              </div>
-              <span class="h-n__icon-txt">Оплата</span>
-            </button>
-          </div>
-          <div class="h-n__icon">
-            <a href="#">
-              <div class="h-n__icon-cont">
-                <svg class="h-n__icon-stroke-fill" width="23" height="24">
-                  <use xlink:href="#hn-compare"></use>
-                </svg>
-  
-              </div>
-              <span class="h-n__icon-txt">Сравнение</span>
-            </a>
-          </div>
-          <div class="h-n__icon">
-            <a href="#">
-              <div class="h-n__icon-cont">
-                <svg class="h-n__icon-fill" width="30" height="30">
-                  <use xlink:href="#hn-cart"></use>
-                </svg>
-  
-                <div class="count">1</div>
-              </div>
-              <span class="h-n__icon-txt">Корзина</span>
-            </a>
           </div>
         </div>
       </div>
@@ -885,7 +868,7 @@
     <div class="h-n__cont container">
       <ul class="h-n__list left">
         <li>
-          <a href="#">Напольные покрытия</a>
+          <a href="/catalog/napolnye-pokrytiya/">Напольные покрытия</a>
           <ul class="h-n__list-drop">
             <li>
               <a href="/catalog/parketnaya-doska/">Паркетная доска</a>
@@ -928,11 +911,60 @@
             </li>
           </ul>
         </li>
-        <li><a href="#">Паркетая химия</a></li>
-        <li><a href="#">Отделочные материалы</a></li>
-        <li><a href="#">Стеновые панели</a></li>
-        <li><a href="#">Инструменты паркетчика</a></li>
-        <li><a href="#">Услуги</a></li>
+        <li>
+          <a href="/catalog/soputstvuyushchie-tovary/">Сопутствующие товары</a>
+          <ul class="h-n__list-drop">
+            <li>
+              <a href="/catalog/podlozhka-pod-napolnye-pokrytiya/">Подложка под напольные покрытия</a>
+            </li>
+            <li>
+              <a href="/catalog/plintus-napolnyy/">Плинтус напольный</a>
+            </li>
+            <li>
+              <a href="/catalog/kley-dlya-napolnykh-pokrytiy/">Клей для напольных покрытий</a>
+            </li>
+            <li>
+              <a href="/catalog/gruntovka-dlya-osnovaniy/">Грунтовка для оснований</a>
+            </li>
+            <li>
+              <a href="/catalog/furnitura-dlya-parketa/">Фурнитура для паркета</a>
+            </li>
+            <li>
+              <a href="/catalog/sredstvo-po-ukhodu-napolnymi-pokrytiyami/">Средства по уходу</a>
+            </li>
+            <li>
+              <a href="/catalog/smes-dlya-remonta-i-vyravnivaniya-osnovaniya/">Смесь для выравнивания
+                основания</a>
+            </li>
+            <li>
+              <a href="/catalog/lak-dlya-parketa/">Лак для паркета</a>
+            </li>
+            <li>
+              <a href="/catalog/maslo-dlya-parketa/">Масло для паркета</a>
+            </li>
+          </ul>
+  
+        </li>
+        <li>
+          <a href="/catalog/stenovye-paneli/">Стеновые панели</a>
+          <ul class="h-n__list-drop">
+            <li>
+              <a href="/catalog/probkovoe-pokrytie-dlya-sten/">Пробковое покрытие для стен</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="/catalog/instrument-parketchika/">Инструменты паркетчика</a></li>
+        <li>
+          <a>Услуги</a>
+          <ul class="h-n__list-drop">
+            <li>
+              <a href="/ukladka/">Укладка</a>
+            </li>
+            <li>
+              <a href="/show-room/">Выездной шоурум</a>
+            </li>
+          </ul>
+        </li>
       </ul>
   
       <div class="h-n__list">
@@ -942,6 +974,59 @@
     </div>
   </div>
   <div class="h-n__overlay" data-catalog-overlay></div>
+  
+  <!-- Плашка в мобиле -->
+  <div class="h-n__mob-bottom">
+    <div class="container">
+      <div class="h-n__icons">
+        <div class="h-n__icon">
+          <button class="btn-def" data-toggle-modal="#search-line" onClick="window.onCloseMenu();">
+            <div class="h-n__icon-cont">
+              <svg width="30" height="30" fill="none">
+                <use xlink:href="#hn-search"></use>
+              </svg>
+  
+            </div>
+            <span class="h-n__icon-txt">Поиск</span>
+          </button>
+        </div>
+        <div class="h-n__icon">
+          <button class="btn-def" data-open-modal="#check-order" onClick="window.onCloseMenu();">
+            <div class="h-n__icon-cont">
+              <svg class="h-n__icon-stroke" width="30" height="30" fill="none">
+                <use xlink:href="#hn-pay"></use>
+              </svg>
+  
+            </div>
+            <span class="h-n__icon-txt">Оплата</span>
+          </button>
+        </div>
+        <div class="h-n__icon">
+          <a href="#">
+            <div class="h-n__icon-cont">
+              <svg class="h-n__icon-stroke-fill" width="23" height="24">
+                <use xlink:href="#hn-compare"></use>
+              </svg>
+  
+            </div>
+            <span class="h-n__icon-txt">Сравнение</span>
+          </a>
+        </div>
+        <div class="h-n__icon">
+          <a href="#">
+            <div class="h-n__icon-cont">
+              <svg class="h-n__icon-fill" width="30" height="30">
+                <use xlink:href="#hn-cart"></use>
+              </svg>
+  
+              <div class="count">1</div>
+            </div>
+            <span class="h-n__icon-txt">Корзина</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <main class="content-page">
     <div class="bc container">

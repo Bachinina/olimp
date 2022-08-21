@@ -132,7 +132,8 @@ $(document).ready(function () {
     let buttonContainer = $(this).closest('[data-slider-container]').find('[data-slider-btns]');
 
     // Если слайдер в табах, задаем обертки для кнопок. Они будут скрываться и открывать по очереди
-    const isInTab = $(this).closest('[data-tabs-item]').length > 0;
+    const isInTab = $(this).closest('[data-tabs-item]:not(".arrows-in")').not('.arrows-in').length > 0;
+
     if (isInTab) {
       var tabNumber = $(this).closest('[data-tabs-item]').attr('data-tabs-item');
       var wrapForBtns = $(`<div data-tabs-item='${tabNumber}'></div>`);
