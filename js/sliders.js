@@ -61,6 +61,7 @@ $(document).ready(function () {
     const isLooped = slider.hasAttr('data-loop') ? slider.attr('data-loop') === "true" : true;
     const isFaded = slider.hasAttr('data-fade') ? slider.attr('data-fade') === "true" : false;
     const isVariableWidth = slider.attr('data-variable') === 'true';
+    const isDotted = slider.attr('data-dots') === 'true';
     // _____________________________________
 
 
@@ -146,6 +147,7 @@ $(document).ready(function () {
     slider.settings.isLooped = isLooped;
     slider.settings.isFaded = isFaded;
     slider.settings.isVariableWidth = isVariableWidth;
+    slider.settings.isDotted = isDotted;
     slider.settings.buttonContainer = isInTab ? buttonContainer.find(`[data-tabs-item ='${tabNumber}']`) : buttonContainer.length > 0 ? buttonContainer : slider;
 
     // _____________________________________
@@ -170,6 +172,12 @@ $(document).ready(function () {
           settings: {
             draggable: true,
             speed: 150,
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            dots: isDotted,
+            arrows: !isDotted,
           }
         }]
       });
