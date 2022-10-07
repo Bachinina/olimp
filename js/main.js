@@ -327,7 +327,9 @@ $(window).on('load', (function () {
     };
 
     function onRankMouseout() {
-      items.removeClass('active');
+      if (screenWidth > media.XL) {
+        items.removeClass('active');
+      }
     };
 
     function onRankClick() {
@@ -614,9 +616,9 @@ $('[data-ukladka-basket]').on('change', function () {
 
 $('[data-open-step]').each(function () {
   $(this).on('click', function () {
-    $('[data-modal-step]').removeClass('d-block');
+    $('[data-modal-step]').removeClass('d-flex');
     $('[data-modal-step]').addClass('d-none');
-    $(`[data-modal-step=${$(this).attr('data-open-step')}]`).removeClass('d-none').addClass('d-block');
+    $(`[data-modal-step=${$(this).attr('data-open-step')}]`).removeClass('d-none').addClass('d-flex');
   })
 });
 

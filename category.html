@@ -81,6 +81,9 @@
         <path
           d="M11.0245 0.463525C11.1741 0.00286949 11.8259 0.00287008 11.9755 0.463525L14.1942 7.2918C14.2611 7.49781 14.4531 7.63729 14.6697 7.63729H21.8494C22.3337 7.63729 22.5351 8.2571 22.1433 8.5418L16.3348 12.7619C16.1595 12.8892 16.0862 13.1149 16.1531 13.3209L18.3718 20.1492C18.5215 20.6098 17.9942 20.9929 17.6024 20.7082L11.7939 16.4881C11.6186 16.3608 11.3814 16.3608 11.2061 16.4881L5.39763 20.7082C5.00578 20.9929 4.47854 20.6098 4.62821 20.1492L6.84685 13.3209C6.91379 13.1149 6.84046 12.8892 6.66522 12.7619L0.856742 8.54179C0.464885 8.25709 0.666273 7.63729 1.15064 7.63729H8.3303C8.54692 7.63729 8.73889 7.49781 8.80583 7.2918L11.0245 0.463525Z" />
       </symbol>
+      <symbol id="icon-star-big" viewBox="0 0 101 95">
+        <path d="M50.2622 1.15882C50.3371 0.928485 50.6629 0.928485 50.7378 1.15882L61.7982 35.1994L62.5115 34.9676L61.7982 35.1994C62.0325 35.9204 62.7044 36.4086 63.4626 36.4086H99.2549C99.4971 36.4086 99.5978 36.7185 99.4018 36.8608L70.4452 57.899C69.8319 58.3447 69.5752 59.1346 69.8095 59.8556L80.8699 93.8961C80.9448 94.1265 80.6812 94.318 80.4852 94.1757L51.5286 73.1374C50.9153 72.6918 50.0847 72.6918 49.4714 73.1374L20.5148 94.1757C20.3188 94.318 20.0552 94.1265 20.1301 93.8961L31.1905 59.8556C31.4248 59.1346 31.1681 58.3447 30.5548 57.899L1.59816 36.8608C1.40223 36.7185 1.50292 36.4086 1.7451 36.4086H37.5374C38.2956 36.4086 38.9675 35.9204 39.2018 35.1994L50.2622 1.15882Z" stroke="#F47321" stroke-width="1.5"/>
+      </symbol>
       <symbol id="icon-arrow-prev">
         <path d="M6 11L1 6L6 1" />
       </symbol>
@@ -580,31 +583,15 @@
             <span>Москва</span>
           </button>
   
-          <!-- Телефон  -->
-          <div class="h-n__tel" aria-label="Заказать звонок" data-open-modal="#call-me-back">
-  
-            <!-- КОЛТАЧ вставлять в этот span -->
-            <span class="h-n__tel-numb">8 (800) 707-79-66</span>
-  
-            <button class="h-n__tel-btn btn-def" data-open-modal="#call-me-back">
-              <svg width="12" height="7" fill="none">
-                <use xlink:href="#icon-arrow-bottom"></use>
-              </svg>
-            </button>
-  
-            <span class="h-n__tel-sub">с 9:00 до 21:00</span>
-          </div>
-  
           <!-- Доверие -->
-          <div class="h-n__count">
+          <!-- <div class="h-n__count">
             <span class="coun">20</span>
             <span class="txt">лет доверия</span>
-          </div>
-        </div>
+          </div> -->
   
-        <div class="h-n__right">
           <ul class="h-n__list">
-            <li>
+            <li><a href="/contacts/">Магазины</a></li>
+            <li class="h-n__li-with-drop">
               <a>О Компании</a>
               <ul class="h-n__list-drop">
                 <li><a href="/about-company/">О нас</a></li>
@@ -615,9 +602,8 @@
                 <li><a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a></li>
               </ul>
             </li>
-            <li><a href="/vacancy/">Работа у нас</a></li>
-            <li><a href="/contacts/">Магазины</a></li>
-            <li>
+            <!-- <li><a href="/vacancy/">Работа у нас</a></li> -->
+            <li class="h-n__li-with-drop">
               <a>Сотрудничество</a>
               <ul class="h-n__list-drop">
                 <li><a href="/sotrudnichestvo/">Оптовым клиентам (В2В)</a></li>
@@ -625,7 +611,7 @@
                 <li><a href="/partners/">Стать дилером</a></li>
               </ul>
             </li>
-            <li>
+            <li class="h-n__li-with-drop">
               <a>Оплата и доставка</a>
               <ul class="h-n__list-drop">
                 <li><a href="/pay/">Оплата</a></li>
@@ -635,6 +621,37 @@
             </li>
           </ul>
         </div>
+  
+        <div class="h-n__right">
+          <!-- Телефон  -->
+          <div class="h-n__tel">
+            <!-- КОЛТАЧ вставлять в этот span -->
+            <div class="h-n__tel-numb tel-hid" data-cont-tel>
+              <a href="tel:+74957750077">+7 (495) 445 00 07</a>
+              <p class="tel-hid__btn" data-cont-btn>
+                <span>..</span>
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.66663 8.83919C1.66663 8.83919 4.33329 3.50586 8.99996 3.50586C13.6666 3.50586 16.3333 8.83919 16.3333 8.83919C16.3333 8.83919 13.6666 14.1725 8.99996 14.1725C4.33329 14.1725 1.66663 8.83919 1.66663 8.83919Z"
+                    stroke="#F47321" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9 10.8398C10.1046 10.8398 11 9.94441 11 8.83984C11 7.73527 10.1046 6.83984 9 6.83984C7.89543 6.83984 7 7.73527 7 8.83984C7 9.94441 7.89543 10.8398 9 10.8398Z"
+                    stroke="#F47321" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+  
+              </p>
+            </div>
+  
+            <button class="h-n__tel-btn btn-def ml-3" data-open-modal="#call-me-back">
+              <!-- <svg width="12" height="7" fill="none">
+                <use xlink:href="#icon-arrow-bottom"></use>
+              </svg> -->
+              Связаться с нами
+            </button>
+  
+            <!-- <span class="h-n__tel-sub">с 9:00 до 21:00</span> -->
+          </div>
+        </div>
       </div>
       <div class="h-n__overlay" data-catalog-overlay></div>
     </div>
@@ -643,9 +660,14 @@
       <div class="h-n__cont container">
         <!-- Лого -->
   
-        <a class="h-n__logo" href="/">
+        <a class="h-n__logo mr-3" href="/">
           <img src="img/logo.svg" alt="Олимп паркета">
         </a>
+  
+        <div class="h-n__count mr-4">
+          <span class="coun">20</span>
+          <span class="txt">лет доверия</span>
+        </div>
   
         <!-- Кнопка открытия каталога -->
         <button class="h-n__btn-catalog btn btn-orange btn-upper" data-catalog-btn>
@@ -1162,7 +1184,18 @@
         <div class="h-n__mob-block">
           <div class="container">
             <div class="h-n__list">
-              <a href="#">Акции</a>
+              <a href="#" class="d-flex align-items-center">
+                <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                  fill="none">
+                  <rect y="15" width="20" height="2" rx="1" transform="rotate(-45 0 15)" fill="#f49300" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.5 7C5.43298 7 7 5.43298 7 3.5C7 1.56702 5.43298 0 3.5 0C1.56702 0 0 1.56702 0 3.5C0 5.43298 1.56702 7 3.5 7ZM3.5 5C4.32843 5 5 4.32843 5 3.5C5 2.67157 4.32843 2 3.5 2C2.67157 2 2 2.67157 2 3.5C2 4.32843 2.67157 5 3.5 5Z"
+                    fill="#f49300" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.5 17C14.433 17 16 15.433 16 13.5C16 11.567 14.433 10 12.5 10C10.567 10 9 11.567 9 13.5C9 15.433 10.567 17 12.5 17ZM12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
+                    fill="#f49300" />
+                </svg>
+                Акции</a>
               <a class="orange" href="#">Распродажа</a>
             </div>
           </div>
@@ -1213,9 +1246,33 @@
   </header>
   
   <div class="h-n__menu">
+  
     <div class="h-n__cont container">
+      <div class="h-n__list left mr-4">
+        <a href="#" class="d-flex align-items-center">
+          <svg class="mr-2" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.88002 12.0002L1.44002 10.5602L11.52 0.480234L12.96 1.93623L2.88002 12.0002ZM10.56 12.2402C10.032 12.2402 9.54936 12.1122 9.11202 11.8562C8.68002 11.5949 8.33336 11.2482 8.07202 10.8162C7.81069 10.3789 7.68002 9.89357 7.68002 9.36023C7.68002 8.83757 7.81336 8.35757 8.08002 7.92023C8.34669 7.4829 8.69869 7.13357 9.13602 6.87223C9.57336 6.6109 10.048 6.48023 10.56 6.48023C11.088 6.48023 11.5707 6.6109 12.008 6.87223C12.4454 7.12823 12.792 7.4749 13.048 7.91223C13.3094 8.34423 13.44 8.8269 13.44 9.36023C13.44 9.89357 13.3094 10.3789 13.048 10.8162C12.792 11.2482 12.4454 11.5949 12.008 11.8562C11.5707 12.1122 11.088 12.2402 10.56 12.2402ZM10.56 10.4002C10.7467 10.4002 10.9174 10.3522 11.072 10.2562C11.232 10.1602 11.36 10.0349 11.456 9.88023C11.552 9.72023 11.6 9.5469 11.6 9.36023C11.6 9.17357 11.552 9.0029 11.456 8.84823C11.36 8.68823 11.232 8.56023 11.072 8.46423C10.9174 8.36823 10.7467 8.32023 10.56 8.32023C10.3734 8.32023 10.2 8.36823 10.04 8.46423C9.88536 8.56023 9.76002 8.68823 9.66402 8.84823C9.56802 9.0029 9.52002 9.17357 9.52002 9.36023C9.52002 9.5469 9.56802 9.72023 9.66402 9.88023C9.76002 10.0349 9.88536 10.1602 10.04 10.2562C10.2 10.3522 10.3734 10.4002 10.56 10.4002ZM3.84002 6.00023C3.31202 6.00023 2.82936 5.87223 2.39202 5.61623C1.95469 5.3549 1.60536 5.00823 1.34402 4.57623C1.08802 4.1389 0.960022 3.65357 0.960022 3.12023C0.960022 2.59757 1.09336 2.11757 1.36002 1.68023C1.62669 1.2429 1.97869 0.893567 2.41602 0.632234C2.85336 0.370901 3.32802 0.240234 3.84002 0.240234C4.36802 0.240234 4.84802 0.370901 5.28002 0.632234C5.71736 0.888234 6.06669 1.2349 6.32802 1.67223C6.58936 2.10423 6.72002 2.5869 6.72002 3.12023C6.72002 3.65357 6.58936 4.1389 6.32802 4.57623C6.06669 5.00823 5.71736 5.3549 5.28002 5.61623C4.84802 5.87223 4.36802 6.00023 3.84002 6.00023ZM3.84002 4.16023C4.02669 4.16023 4.19736 4.11223 4.35202 4.01623C4.51202 3.92023 4.64002 3.7949 4.73602 3.64023C4.83202 3.48023 4.88002 3.3069 4.88002 3.12023C4.88002 2.93357 4.83202 2.7629 4.73602 2.60823C4.64002 2.44823 4.51202 2.32023 4.35202 2.22423C4.19736 2.12823 4.02669 2.08023 3.84002 2.08023C3.65336 2.08023 3.48002 2.12823 3.32002 2.22423C3.16536 2.32023 3.04002 2.44823 2.94402 2.60823C2.84802 2.7629 2.80002 2.93357 2.80002 3.12023C2.80002 3.3069 2.84802 3.48023 2.94402 3.64023C3.04002 3.7949 3.16536 3.92023 3.32002 4.01623C3.48002 4.11223 3.65336 4.16023 3.84002 4.16023Z"
+              fill="#F49300" />
+          </svg>
+  
+          Акции</a>
+        <a class="d-flex align-items-center" href="#">
+          <svg class="mr-2" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.4418 4.43137C10.3998 4.34921 10.3355 4.28058 10.2563 4.2334C10.177 4.18622 10.086 4.1624 9.99379 4.1647C9.90204 4.166 9.81241 4.1925 9.73469 4.24129C9.65698 4.29008 9.59417 4.3593 9.55312 4.44137C9.317 4.89577 8.99533 5.30029 8.60579 5.6327C8.52646 3.18137 6.45579 1.07937 6.35379 0.978033C6.26651 0.890927 6.15002 0.839299 6.02687 0.833141C5.90371 0.826984 5.78265 0.866735 5.68712 0.9447C1.43445 4.42403 -0.579545 8.7287 0.553788 11.9107C1.29112 13.9807 3.27646 15.1667 6.00046 15.1667C8.63446 15.1667 10.4338 14.3934 11.3491 12.868C13.2291 9.73337 10.5565 4.6467 10.4418 4.43137V4.43137Z"
+              fill="#F49300" />
+            <path
+              d="M6.37 9.06069C6.32642 9.00399 6.27039 8.95807 6.20623 8.92646C6.14208 8.89486 6.07152 8.87842 6 8.87842C5.92848 8.87842 5.85792 8.89486 5.79377 8.92646C5.72961 8.95807 5.67358 9.00399 5.63 9.06069C5.316 9.51536 3.75 11.8367 3.75 12.9167C3.75 13.5134 3.98705 14.0857 4.40901 14.5077C4.83097 14.9296 5.40326 15.1667 6 15.1667C6.59674 15.1667 7.16903 14.9296 7.59099 14.5077C8.01295 14.0857 8.25 13.5134 8.25 12.9167C8.25 11.8367 6.684 9.51536 6.37 9.06069Z"
+              fill="white" />
+          </svg>
+  
+          Распродажа
+        </a>
+      </div>
+  
       <ul class="h-n__list left">
-        <li>
+        <li class="h-n__li-with-drop">
           <a href="/catalog/napolnye-pokrytiya/">Напольные покрытия</a>
           <ul class="h-n__list-drop">
             <li>
@@ -1259,7 +1316,7 @@
             </li>
           </ul>
         </li>
-        <li>
+        <li class="h-n__li-with-drop">
           <a href="/catalog/soputstvuyushchie-tovary/">Сопутствующие товары</a>
           <ul class="h-n__list-drop">
             <li>
@@ -1294,15 +1351,21 @@
   
         </li>
         <li>
-          <a href="/catalog/stenovye-paneli/">Стеновые панели</a>
+          <a href="#">Выездной шоурум</a>
+        </li>
+        <li>
+          <a href="#">Укладка</a>
+        </li>
+        <!-- <li>
+          <a href="#">Стеновые панели</a>
           <ul class="h-n__list-drop">
             <li>
               <a href="/catalog/probkovoe-pokrytie-dlya-sten/">Пробковое покрытие для стен</a>
             </li>
           </ul>
-        </li>
-        <li><a href="/catalog/instrument-parketchika/">Инструменты паркетчика</a></li>
-        <li>
+        </li> -->
+        <!-- <li><a href="/catalog/instrument-parketchika/">Инструменты паркетчика</a></li> -->
+        <!-- <li>
           <a>Услуги</a>
           <ul class="h-n__list-drop">
             <li>
@@ -1312,12 +1375,19 @@
               <a href="/show-room/">Выездной шоурум</a>
             </li>
           </ul>
-        </li>
+        </li> -->
       </ul>
   
       <div class="h-n__list">
-        <a href="#">Акции</a>
-        <a class="orange" href="#">Распродажа</a>
+        <a href="#" class="d-flex align-items-center">
+          <svg class="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 0C3.58221 0 0 3.58221 0 8C0 12.4178 3.58221 16 8 16C8.73779 16 9.33333 15.4045 9.33333 14.6667C9.33333 14.32 9.20446 14.0089 8.98667 13.7733C8.77779 13.5378 8.65333 13.2311 8.65333 12.8889C8.65333 12.1511 9.24887 11.5555 9.98667 11.5555H11.5555C14.0089 11.5555 16 9.56442 16 7.11108C16 3.18221 12.4178 0 8 0ZM3.11112 8C2.37333 8 1.77779 7.40446 1.77779 6.66667C1.77779 5.92887 2.37333 5.33333 3.11112 5.33333C3.84892 5.33333 4.44446 5.92887 4.44446 6.66667C4.44446 7.40446 3.84888 8 3.11112 8ZM5.77779 4.44446C5.04 4.44446 4.44446 3.84892 4.44446 3.11112C4.44446 2.37333 5.04 1.77779 5.77779 1.77779C6.51558 1.77779 7.11113 2.37333 7.11113 3.11112C7.11113 3.84892 6.51554 4.44446 5.77779 4.44446ZM10.2222 4.44446C9.48442 4.44446 8.88888 3.84892 8.88888 3.11112C8.88888 2.37333 9.48442 1.77779 10.2222 1.77779C10.96 1.77779 11.5555 2.37333 11.5555 3.11112C11.5555 3.84892 10.96 4.44446 10.2222 4.44446ZM12.8889 8C12.1511 8 11.5555 7.40446 11.5555 6.66667C11.5555 5.92887 12.1511 5.33333 12.8889 5.33333C13.6267 5.33333 14.2222 5.92887 14.2222 6.66667C14.2222 7.40446 13.6267 8 12.8889 8Z"
+              fill="#F49300" />
+          </svg>
+  
+  
+          Для дизайнеров</a>
       </div>
     </div>
   </div>
@@ -2815,6 +2885,327 @@
                 </div>
               </div>
 
+              <div class="block-info bg--gray mt-4">
+                <p class="h3"><b>Люди также интересуются:</b></p>
+              </div>
+
+              <div class="row">
+                <div class="item-wrap col-6 col-md-4 col-lg-6 col-xl-4">
+                  <article class="card">
+                    <div class="card__top">
+                      <a class="card__img-wrap" href="prod.html" aria-label="Перейти в карточку товара">
+                        <div class="card__img">
+                          <picture>
+                            <!-- Декстоп -->
+                            <source media="(min-width: 768px)" srcset="img/card-2.jpg">
+                            <!-- Мобила -->
+                            <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                          </picture>
+                        </div>
+                        <div class="card__img">
+                          <img src="img/card-2.jpg" alt="Паркетная доска Kahrs дуб Tower текстура">
+                        </div>
+                      </a>
+
+                      <button class="card__btn-compare def active" data-toggle-active>
+                        <svg width="20" height="18">
+                          <use xlink:href="#icon-compare-btn"></use>
+                        </svg>
+                      </button>
+
+                      <div class="card__tag tag">Скидка 10%</div>
+                    </div>
+
+                    <h5 class="card__title">
+                      <a href="prod.html">
+                        Паркетная доска Kahrs дуб TOWER
+                      </a>
+                    </h5>
+
+                    <table class="card__options">
+                      <tbody>
+                        <tr>
+                          <th>Тон:</th>
+                          <td>Натуральный</td>
+                        </tr>
+                        <tr>
+                          <th>Порода дерева:</th>
+                          <td>Дуб</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Порода дерева:</th>
+                          <td>Дуб</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Толщина:</th>
+                          <td>14 мм</td>
+                        </tr>
+                        <tr>
+                          <th>Коллекция:</th>
+                          <td>Classic</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Толщина:</th>
+                          <td>14 мм</td>
+                        </tr>
+                        <tr>
+                          <th>Коллекция:</th>
+                          <td>Classic</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="card__bottom">
+                      <!-- Цена и выгода -->
+                      <div class="card__price-block">
+                        <div class="card__price price">
+                          ЦЕНА: <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                          </span>
+                        </div>
+                        <div class="card__benefit">
+                          ВАША ВЫГОДА: <span class="nobr">200 <i class="rub">i</i></span>
+                        </div>
+                      </div>
+                      <!-- Цена и выгода -->
+
+
+                      <!-- Кнопки -->
+                      <div class="card__btns">
+                        <button class="btn-orange btn-upper active" data-toggle-active>
+                          <svg width="25" height="20" viewBox="0 0 25 20">
+                            <use xlink:href="#icon-cart-btn"></use>
+                          </svg>
+                          <span>В корзине</span>
+                        </button>
+                        <button class="card__btn-ex active" data-toggle-active>
+                          <span>Образец добавлен</span>
+                        </button>
+                      </div>
+                      <!-- Кнопки -->
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item-wrap col-6 col-md-4 col-lg-6 col-xl-4">
+                  <article class="card">
+                    <div class="card__top">
+                      <a class="card__img-wrap" href="prod.html" aria-label="Перейти в карточку товара">
+                        <div class="card__img">
+                          <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                        </div>
+                        <div class="card__img">
+                          <img src="img/card-2.jpg" alt="Паркетная доска Kahrs дуб Tower текстура">
+                        </div>
+                      </a>
+
+                      <button class="card__btn-compare def" data-toggle-active>
+                        <svg width="20" height="18">
+                          <use xlink:href="#icon-compare-btn"></use>
+                        </svg>
+                      </button>
+
+                      <div class="card__tag tag black">
+                        Скидка 10%
+                        <span class="red">Black Friday</span>
+                      </div>
+                    </div>
+
+                    <h5 class="card__title">
+                      <a href="prod.html">
+                        Паркетная доска Kahrs дуб TOWER
+                      </a>
+                    </h5>
+
+                    <table class="card__options">
+                      <tbody>
+                        <tr>
+                          <th>Тон:</th>
+                          <td>Натуральный</td>
+                        </tr>
+                        <tr>
+                          <th>Порода дерева:</th>
+                          <td>Дуб</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Порода дерева:</th>
+                          <td>Дуб</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Толщина:</th>
+                          <td>14 мм</td>
+                        </tr>
+                        <tr>
+                          <th>Коллекция:</th>
+                          <td>Classic</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Толщина:</th>
+                          <td>14 мм</td>
+                        </tr>
+                        <tr>
+                          <th>Коллекция:</th>
+                          <td>Classic</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="card__bottom">
+                      <!-- Цена и выгода -->
+                      <div class="card__price-block">
+                        <div class="card__price price">
+                          ЦЕНА: <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                          </span>
+                        </div>
+                        <div class="card__benefit">
+                          ВАША ВЫГОДА: <span class="nobr">200 <i class="rub">i</i></span>
+                        </div>
+                      </div>
+                      <!-- Цена и выгода -->
+
+
+                      <!-- Кнопки -->
+                      <div class="card__btns">
+                        <button class="btn-orange btn-upper" data-toggle-active>
+                          <svg width="25" height="20" viewBox="0 0 25 20">
+                            <use xlink:href="#icon-cart-btn"></use>
+                          </svg>
+                          <span>Купить</span>
+                        </button>
+                        <button class="card__btn-ex" data-toggle-active>
+                          <span>Заказ образцов</span>
+                        </button>
+                      </div>
+                      <!-- Кнопки -->
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item-wrap col-6 col-md-4 col-lg-6 col-xl-4">
+                  <article class="card">
+                    <div class="card__top">
+                      <a class="card__img-wrap" href="prod.html" aria-label="Перейти в карточку товара">
+                        <div class="card__img">
+                          <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                        </div>
+                        <div class="card__img">
+                          <img src="img/card-2.jpg" alt="Паркетная доска Kahrs дуб Tower текстура">
+                        </div>
+                      </a>
+
+                      <button class="card__btn-compare def" data-toggle-active>
+                        <svg width="20" height="18">
+                          <use xlink:href="#icon-compare-btn"></use>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <h5 class="card__title">
+                      <a href="prod.html">
+                        Паркетная доска Kahrs дуб TOWER
+                      </a>
+                    </h5>
+
+                    <table class="card__options">
+                      <tbody>
+                        <tr>
+                          <th>Тон:</th>
+                          <td>Натуральный</td>
+                        </tr>
+                        <tr>
+                          <th>Порода дерева:</th>
+                          <td>Дуб</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Порода дерева:</th>
+                          <td>Дуб</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Толщина:</th>
+                          <td>14 мм</td>
+                        </tr>
+                        <tr>
+                          <th>Коллекция:</th>
+                          <td>Classic</td>
+                        </tr>
+                        <tr>
+                          <th>Покрытие:</th>
+                          <td>Лак</td>
+                        </tr>
+                        <tr>
+                          <th>Толщина:</th>
+                          <td>14 мм</td>
+                        </tr>
+                        <tr>
+                          <th>Коллекция:</th>
+                          <td>Classic</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="card__bottom">
+                      <!-- Цена и выгода -->
+                      <div class="card__price-block">
+                        <div class="card__price price">
+                          ЦЕНА: <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                          </span>
+                        </div>
+                        <div class="card__benefit">
+                          ВАША ВЫГОДА: <span class="nobr">200 <i class="rub">i</i></span>
+                        </div>
+                      </div>
+                      <!-- Цена и выгода -->
+
+
+                      <!-- Кнопки -->
+                      <div class="card__btns">
+                        <button class="btn-orange btn-upper" data-toggle-active>
+                          <svg width="25" height="20" viewBox="0 0 25 20">
+                            <use xlink:href="#icon-cart-btn"></use>
+                          </svg>
+                          <span>Купить</span>
+                        </button>
+                        <button class="card__btn-ex" data-toggle-active>
+                          <span>Заказ образцов</span>
+                        </button>
+                      </div>
+                      <!-- Кнопки -->
+                    </div>
+                  </article>
+                </div>
+              </div>
+
               <div class="content-page__bottom">
                 <button class="content-page__btn-more btn-more">Показать еще</button>
 
@@ -2978,6 +3369,105 @@
     </section>
 
 
+    <!-- Метка слева, открывающая попап -->
+    <button class="left-btn btn-def" data-open-modal="#star-the-shop">
+      <span>
+        <svg>
+          <use xlink:href="#icon-star"></use>
+        </svg>
+        Оценить магазин
+      </span>
+    </button>
+    
+    <!-- Модальное окно: оценить магазин -->
+    <section class="modal-wrap" id="star-the-shop" data-modal>
+      <div class="modal modal-form star" data-modal-container>
+        <div class="modal__left-btn left-btn">
+          <span>
+            <svg>
+              <use xlink:href="#icon-star"></use>
+            </svg>
+            Оценить магазин
+          </span>
+        </div>
+        <form class="form in-modal" action="/">
+          <div class="modal__top">
+            <h2 class="modal__title">Понравилось ли вам в интернет-магазине?</h2>
+            <div class="modal__close">
+              <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
+                <svg width="15" height="15">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="form__row">
+                <div class="form__item">
+                  <label for="star-comment">Оставить комментарий</label>
+                  <textarea name="star-comment" id="star-comment" placeholder="Оставить комментарий"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column">
+              <div class="modal__rank rank rank-big" data-rank-select data-rank-input="#rev-rank">
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="1" title="Очень плохо"
+    							aria-label="Поставить оценку: Очень плохо">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">1</span>
+    						</button>
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="2" title="Плохо"
+    							aria-label="Поставить оценку: Плохо">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">2</span>
+    						</button>
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="3" title="Нормально"
+    							aria-label="Поставить оценку: Нормально">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">3</span>
+    						</button>
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="4" title="Хорошо"
+    							aria-label="Поставить оценку: Хорошо">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">4</span>
+    						</button>
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="5" title="Отлично"
+    							aria-label="Поставить оценку: Отлично">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">5</span>
+    						</button>
+    
+    						<input data-rank-rank id="rev-rank" type="hidden" name="rev-rank" value="0">
+    					</div>
+              <div class="form__bottom">
+                <button class="form__submit btn-orange">Отправить</button>
+              </div>
+            </div>
+          </div>
+    
+          
+    
+    
+    
+          
+        </form>
+      </div>
+    </section>
+    <!-- Модальное окно: оценить магазин -->
+    
+    
     <!-- Модальное окно: звонок-->
     <section class="modal-wrap" id="call-me-back" data-modal>
       <div class="modal xs modal-form" data-modal-container>
@@ -3210,7 +3700,6 @@
       </div>
     </section>
     
-    
     <!-- Модальное окно: подбор аналога -->
     <section class="modal-wrap" id="analog" data-modal>
       <div class="modal modal-form" data-modal-container>
@@ -3264,6 +3753,7 @@
       </div>
     </section>
     <!-- Модальное окно: подбор аналога -->
+    
     
     <!-- Модальное окно: заказ текстур -->
     <section class="modal-wrap" id="get-text" data-modal>
@@ -3536,23 +4026,19 @@
     
     
     <div class="cookie">
-      <div class="block-hor card-hor">
-        <div class="block-hor__img">
-          <img class="lazyload" loading="lazy" src="img/cookie.png" alt="">
-        </div>
+      <span>Этот сайт использует Cookies, чтобы сделать пользование сайтом более удобным.</span>
     
-        <div class="card-hor__row row">
-          <div class="card-hor__column col-12">
-            <p>Этот сайт использует Cookies, чтобы сделать пользование сайта более удобным.</p>
+      <button class="cookie__btn btn btn-upper">
+        <span>Хорошо</span>
+      </button>
     
-            <div class="card-hor__bottom">
-              <button class="btn-orange btn-upper">
-                <span>Принять</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <button class="cookie__btn-close btn-def">
+        <span>
+          <svg width="15" height="15">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </span>
+      </button>
     </div>
     </main>
     

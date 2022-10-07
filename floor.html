@@ -81,6 +81,9 @@
         <path
           d="M11.0245 0.463525C11.1741 0.00286949 11.8259 0.00287008 11.9755 0.463525L14.1942 7.2918C14.2611 7.49781 14.4531 7.63729 14.6697 7.63729H21.8494C22.3337 7.63729 22.5351 8.2571 22.1433 8.5418L16.3348 12.7619C16.1595 12.8892 16.0862 13.1149 16.1531 13.3209L18.3718 20.1492C18.5215 20.6098 17.9942 20.9929 17.6024 20.7082L11.7939 16.4881C11.6186 16.3608 11.3814 16.3608 11.2061 16.4881L5.39763 20.7082C5.00578 20.9929 4.47854 20.6098 4.62821 20.1492L6.84685 13.3209C6.91379 13.1149 6.84046 12.8892 6.66522 12.7619L0.856742 8.54179C0.464885 8.25709 0.666273 7.63729 1.15064 7.63729H8.3303C8.54692 7.63729 8.73889 7.49781 8.80583 7.2918L11.0245 0.463525Z" />
       </symbol>
+      <symbol id="icon-star-big" viewBox="0 0 101 95">
+        <path d="M50.2622 1.15882C50.3371 0.928485 50.6629 0.928485 50.7378 1.15882L61.7982 35.1994L62.5115 34.9676L61.7982 35.1994C62.0325 35.9204 62.7044 36.4086 63.4626 36.4086H99.2549C99.4971 36.4086 99.5978 36.7185 99.4018 36.8608L70.4452 57.899C69.8319 58.3447 69.5752 59.1346 69.8095 59.8556L80.8699 93.8961C80.9448 94.1265 80.6812 94.318 80.4852 94.1757L51.5286 73.1374C50.9153 72.6918 50.0847 72.6918 49.4714 73.1374L20.5148 94.1757C20.3188 94.318 20.0552 94.1265 20.1301 93.8961L31.1905 59.8556C31.4248 59.1346 31.1681 58.3447 30.5548 57.899L1.59816 36.8608C1.40223 36.7185 1.50292 36.4086 1.7451 36.4086H37.5374C38.2956 36.4086 38.9675 35.9204 39.2018 35.1994L50.2622 1.15882Z" stroke="#F47321" stroke-width="1.5"/>
+      </symbol>
       <symbol id="icon-arrow-prev">
         <path d="M6 11L1 6L6 1" />
       </symbol>
@@ -256,6 +259,7 @@
   
         <div class="h-n__right">
           <ul class="h-n__list">
+            <li><a href="/contacts/">Магазины</a></li>
             <li>
               <a>О Компании</a>
               <ul class="h-n__list-drop">
@@ -267,8 +271,7 @@
                 <li><a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a></li>
               </ul>
             </li>
-            <li><a href="/vacancy/">Работа у нас</a></li>
-            <li><a href="/contacts/">Магазины</a></li>
+            <!-- <li><a href="/vacancy/">Работа у нас</a></li> -->
             <li>
               <a>Сотрудничество</a>
               <ul class="h-n__list-drop">
@@ -1285,6 +1288,105 @@
 
 
 
+    <!-- Метка слева, открывающая попап -->
+    <button class="left-btn btn-def" data-open-modal="#star-the-shop">
+      <span>
+        <svg>
+          <use xlink:href="#icon-star"></use>
+        </svg>
+        Оценить магазин
+      </span>
+    </button>
+    
+    <!-- Модальное окно: оценить магазин -->
+    <section class="modal-wrap" id="star-the-shop" data-modal>
+      <div class="modal modal-form star" data-modal-container>
+        <div class="modal__left-btn left-btn">
+          <span>
+            <svg>
+              <use xlink:href="#icon-star"></use>
+            </svg>
+            Оценить магазин
+          </span>
+        </div>
+        <form class="form in-modal" action="/">
+          <div class="modal__top">
+            <h2 class="modal__title">Понравилось ли вам в интернет-магазине?</h2>
+            <div class="modal__close">
+              <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
+                <svg width="15" height="15">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="form__row">
+                <div class="form__item">
+                  <label for="star-comment">Оставить комментарий</label>
+                  <textarea name="star-comment" id="star-comment" placeholder="Оставить комментарий"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column">
+              <div class="modal__rank rank rank-big" data-rank-select data-rank-input="#rev-rank">
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="1" title="Очень плохо"
+    							aria-label="Поставить оценку: Очень плохо">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">1</span>
+    						</button>
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="2" title="Плохо"
+    							aria-label="Поставить оценку: Плохо">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">2</span>
+    						</button>
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="3" title="Нормально"
+    							aria-label="Поставить оценку: Нормально">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">3</span>
+    						</button>
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="4" title="Хорошо"
+    							aria-label="Поставить оценку: Хорошо">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">4</span>
+    						</button>
+    						<button type="button" class="rank__item" data-rank-item data-rank-value="5" title="Отлично"
+    							aria-label="Поставить оценку: Отлично">
+    							<svg>
+    								<use xlink:href="#icon-star-big"></use>
+    							</svg>
+    							<span class="rank__num">5</span>
+    						</button>
+    
+    						<input data-rank-rank id="rev-rank" type="hidden" name="rev-rank" value="0">
+    					</div>
+              <div class="form__bottom">
+                <button class="form__submit btn-orange">Отправить</button>
+              </div>
+            </div>
+          </div>
+    
+          
+    
+    
+    
+          
+        </form>
+      </div>
+    </section>
+    <!-- Модальное окно: оценить магазин -->
+    
+    
     <!-- Модальное окно: звонок-->
     <section class="modal-wrap" id="call-me-back" data-modal>
       <div class="modal xs modal-form" data-modal-container>
@@ -1517,7 +1619,6 @@
       </div>
     </section>
     
-    
     <!-- Модальное окно: подбор аналога -->
     <section class="modal-wrap" id="analog" data-modal>
       <div class="modal modal-form" data-modal-container>
@@ -1571,6 +1672,7 @@
       </div>
     </section>
     <!-- Модальное окно: подбор аналога -->
+    
     
     <!-- Модальное окно: заказ текстур -->
     <section class="modal-wrap" id="get-text" data-modal>
@@ -1843,23 +1945,19 @@
     
     
     <div class="cookie">
-      <div class="block-hor card-hor">
-        <div class="block-hor__img">
-          <img class="lazyload" loading="lazy" src="img/cookie.png" alt="">
-        </div>
+      <span>Этот сайт использует Cookies, чтобы сделать пользование сайтом более удобным.</span>
     
-        <div class="card-hor__row row">
-          <div class="card-hor__column col-12">
-            <p>Этот сайт использует Cookies, чтобы сделать пользование сайта более удобным.</p>
+      <button class="cookie__btn btn btn-upper">
+        <span>Хорошо</span>
+      </button>
     
-            <div class="card-hor__bottom">
-              <button class="btn-orange btn-upper">
-                <span>Принять</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <button class="cookie__btn-close btn-def">
+        <span>
+          <svg width="15" height="15">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </span>
+      </button>
     </div>
     </main>
     
