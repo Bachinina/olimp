@@ -387,41 +387,42 @@ $(window).on('load', (function () {
 
 
   // FLOATING BLOCK
-  if (screenWidth > media.XL) {
+  // if (screenWidth > media.XL) {
     $('[data-floating-container]').each(function () {
       const container = $(this);
       const block = container.find('[data-floating]');
 
       window.floating = function () {
-        let containerTop = container.offset().top - $('header').height() - 20;
-        let containerBottom = containerTop + container.height();
+        block.css({
+          'top': $('.h-n').height() + 20,
+        });
 
-        let top = $(window).scrollTop();
-        if (top > containerTop) {
-          if (top >= containerBottom - block.height()) {
-            block.css({
-              'top': `${container.height() - block.height()}px`,
-            });
-          } else {
-            block.css({
-              'top': `${top -  containerTop}px`,
-            });
-          }
-        } else {
-          block.css({
-            'top': `0`,
-          });
-        }
+        // let containerTop = container.offset().top - $('header').height() - 20;
+        // let containerBottom = containerTop + container.height();
+
+        // let top = $(window).scrollTop();
+        // if (top > containerTop) {
+        //   if (top >= containerBottom - block.height()) {
+        //     block.css({
+        //       'top': `${container.height() - block.height()}px`,
+        //     });
+        //   } else {
+        //     block.css({
+        //       'top': `${top -  containerTop}px`,
+        //     });
+        //   }
+        // } else {
+        //   block.css({
+        //     'top': `0`,
+        //   });
+        // }
       };
 
       container.addClass('floating-container');
       block.addClass('floating');
 
-      $(window).on('scroll', $.debounce(100, function () {
-        window.floating();
-      }));
-
-      window.floating();
+      $(window).on('scroll', window.floating);
+      $(window).on('resize', window.floating);
 
 
 
@@ -442,7 +443,7 @@ $(window).on('load', (function () {
       //   block.removeClass('floating');
       // }
     });
-  }
+  // }
 
 
   //BTNS
@@ -732,3 +733,23 @@ $('[data-catalog]').each(function () {
 
 
 });
+
+
+// POINTS
+$('[data-points-block]').each(function () {
+  const block = $(this);
+  const points = block.find('[data-point]');
+  const info = block.find('[data-info]');
+
+  points.each(function () {
+    const point = $(this);
+    point.on('mouseover', function () {
+      points.removeClass('active');
+      info.removeClass('active');
+      point.addClass('active');
+      $(`[data-info=${point.attr('data-point')}]`).addClass('active');
+    });
+  });
+});
+
+

@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/fancybox.css">
+  <!-- <link rel="stylesheet" href="css/ion.rangeSlider.css"> -->
   <link rel="stylesheet" href="css/style.min.css">
 
 
@@ -223,354 +224,6 @@
     </svg>
     <!-- endinject -->
   </div>
-  <header class="header d-none">
-    <div class="header__top">
-      <div class="header__container container">
-        <div class="header__left">
-  
-          <button class="header__nav-btn" aria-label="Открыть каталог" data-open-menu>
-            <span class="btn-burger" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </button>
-  
-          <div class="header__logo">
-            <a href="index.html">
-              <picture>
-                <source media="(min-width: 440px)" srcset="img/logo.svg">
-                <img src="img/logo-mini.svg" alt="Олимп паркета">
-              </picture>
-            </a>
-          </div>
-  
-          <button class="header__loc btn-icon" aria-label="Выбрать регион" data-open-modal="#select-region">
-            <svg width="17" height="23">
-              <use xlink:href="#icon-location"></use>
-            </svg>
-            <span>Москва</span>
-          </button>
-        </div>
-  
-  
-        <div class="header__center">
-          <img src="img/header-17.svg" width="125" height="40" alt="17 доверия">
-        </div>
-  
-  
-        <div class="header__right">
-          <ul class="header__btns mob d-xl-none">
-            <li class="header__btn">
-              <button aria-label="Открыть поисковую строку" title="Открыть поисковую строку"
-                data-toggle-modal="#search-line">
-                <img src="img/icon-search-black.svg" alt="">
-              </button>
-            </li>
-            <li class="header__btn">
-              <button aria-label="Проверить статус заказа" title="Проверить статус заказа" data-open-modal="#check-order">
-                <img src="img/icon-order-black.svg" alt="">
-              </button>
-            </li>
-            <li class="header__btn">
-              <a href="compare.html" aria-label="Перейти к сравнения" title="Перейти на страницу сравнения">
-                <img src="img/icon-compare-black.svg" alt="">
-                <div class="count">1</div>
-              </a>
-            </li>
-            <li class="header__btn">
-              <a href="cart.html" aria-label="Открыть корзину">
-                <img src="img/icon-cart-black.svg" alt="">
-                <div class="count">3</div>
-              </a>
-            </li>
-          </ul>
-          <div class="header__cont cont">
-            <a href="tel:+74957750077">
-              <svg width="25" height="25">
-                <use xlink:href="#tel"></use>
-              </svg>
-            </a>
-            <!-- <div class="cont__body">
-              <a href="tel:+74957750077">+7 495 775-00-07</a>
-              <p class="d-none d-xxl-block">Ежедневно с 9:00 до 21:00</p>
-            </div> -->
-            <div class="cont__body hid d-none d-xl-block" data-cont-tel>
-              <a href="tel:+74957750077">+7 495 775-00-07</a>
-              <p class="" data-cont-btn>Показать номер</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="header__nav" data-menu data-modal>
-      <div class="header__menu-wrap header__container container">
-        <div class="header__left">
-          <ul class="header__menu menu" data-menu-list>
-            <li class="menu__item" data-menu-item>
-              <div class="menu__controls" data-menu-item-toggle>
-                <a href="catalog.html">Каталог товаров</a>
-                <button class="menu__control-btn" aria-hidden="true"></button>
-              </div>
-  
-              <div class="menu__drop full row">
-                <div class="menu__block col-12 col-xl-3">
-                  <a href="category.html" class="menu__title">Напольные покрытия</a>
-                  <ul class="menu__list">
-                    <li>
-                      <a href="category.html">Паркетная доска</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Инженерная доска</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Массивная доска</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Техномассив</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Ламинат</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Виниловый ламинат</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Пробковый пол</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Паркет елка</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Модульный паркет</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Штучный паркет</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Мозаичный паркет</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Художественный паркет</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Спортивный паркет</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Террасная доска</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="menu__block col-12 col-xl-3">
-                  <a href="category.html" class="menu__title">Сопутствующие товары</a>
-                  <ul class="menu__list">
-                    <li>
-                      <a href="category.html">Подложка под напольные покрытия</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Плинтус напольный</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Ступени для лестниц</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Клей для напольных покрытий</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Грунтовка для оснований</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Фурнитура для паркета</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Средство по уходу</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Смесь для выравнивания основания</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Лак для паркета</a>
-                    </li>
-                    <li>
-                      <a href="category.html">Масло для паркета</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-12 col-xl-6">
-                  <div class="row">
-                    <div class="col-12 col-xl-6">
-                      <div class="menu__block">
-                        <a href="category.html" class="menu__title">Стеновые панели</a>
-                        <ul class="menu__list">
-                          <li>
-                            <a href="category.html">Потолочно-стеновые панели</a>
-                          </li>
-                          <li>
-                            <a href="category.html">Деревянная мозаика</a>
-                          </li>
-                          <li>
-                            <a href="category.html">Пробковое покрытие для стен</a>
-                          </li>
-                          <li>
-                            <a href="category.html">Фасадная доска</a>
-                          </li>
-                        </ul>
-  
-                      </div>
-                    </div>
-                    <div class="col-12 col-xl-6">
-                      <div class="menu__block">
-                        <a href="category.html" class="menu__title">Стеновые панели</a>
-                        <ul class="menu__list">
-                          <li>
-                            <a href="category.html">Увлажнители воздуха</a>
-                          </li>
-                          <li>
-                            <a href="category.html">Инструмент паркетчика</a>
-                          </li>
-                          <li>
-                            <a href="category.html">Паркетно-шлифовальные машины</a>
-                          </li>
-                          <li>
-                            <a href="category.html">Абразивные материалы</a>
-                          </li>
-                        </ul>
-  
-                      </div>
-                    </div>
-  
-                    <div class="col-12">
-                      <div class="menu__banners row no-gutters">
-                        <div class="menu__banner col-6">
-                          <a href="news-detail.html" aria-label="Перейти на страницу акции">
-                            <img src="img/discount.jpg" alt="">
-                          </a>
-                        </div>
-  
-  
-                        <div class="menu__banner col-6">
-                          <a href="news-detail.html" aria-label="Перейти на страницу акции">
-                            <img src="img/discount.jpg" alt="">
-                          </a>
-                        </div>
-  
-                      </div>
-  
-  
-                    </div>
-                  </div>
-  
-                </div>
-  
-              </div>
-            </li>
-            <li class="menu__item" data-menu-item>
-              <div class="menu__controls">
-                <a href="about.html">О Компании</a>
-              </div>
-            </li>
-            <li class="menu__item" data-menu-item>
-              <div class="menu__controls">
-                <a href="index.html">Покупателям</a>
-                <button class="menu__control-btn" aria-hidden="true" data-menu-item-toggle></button>
-              </div>
-              <div class="menu__drop">
-                <div class="menu__block">
-                  <ul class="menu__list">
-                    <li>
-                      <a href="delivery.html">Доставка</a>
-                    </li>
-                    <li>
-                      <a href="payment.html">Оплата</a>
-                    </li>
-                    <li>
-                      <a href="news.html">Новости</a>
-                    </li>
-                    <li>
-                      <a href="news.html">Новости</a>
-                    </li>
-                    <li>
-                      <a href="news.html">Блог</a>
-                    </li>
-                    <li>
-                      <a href="credit.html">Рассрочка</a>
-                    </li>
-                    <li>
-                      <button class="btn-def" data-open-modal="#mail-to-manager">Письмо руководителю</button>
-                    </li>
-                  </ul>
-                </div>
-  
-              </div>
-            </li>
-            <li class="menu__item" data-menu-item>
-              <div class="menu__controls">
-                <a href="address.html">Адреса салонов</a>
-              </div>
-            </li>
-            <li class="menu__item" data-menu-item>
-              <div class="menu__controls">
-                <a href="brands.html">Бренды</a>
-              </div>
-            </li>
-            <li class="menu__item" data-menu-item>
-              <div class="menu__controls">
-                <a href="actions.html">Акции</a>
-              </div>
-            </li>
-            <li class="menu__item" data-menu-item>
-              <div class="menu__controls">
-                <a href="floor.html">Укладка</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-  
-        <div class="header__right">
-          <button class="header__nav-btn active" aria-label="Открыть меню" data-close-menu>
-            <span class="btn-burger white" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </button>
-          <ul class="header__btns">
-            <li class="header__btn">
-              <button aria-label="Открыть поисковую строку" title="Открыть поисковую строку"
-                data-toggle-modal="#search-line">
-                <img src="img/icon-search.svg" alt="">
-              </button>
-            </li>
-            <li class="header__btn">
-              <button aria-label="Проверить статус заказа" title="Проверить статус заказа" data-open-modal="#check-order">
-                <img src="img/icon-order.svg" alt="">
-              </button>
-            </li>
-            <li class="header__btn">
-              <a href="compare.html" aria-label="Перейти к сравнения" title="Перейти на страницу сравнения">
-                <img src="img/icon-compare.svg" alt="">
-              </a>
-            </li>
-            <li class="header__btn">
-              <a href="cart.html" aria-label="Открыть корзину">
-                <img src="img/icon-cart.svg" alt="">
-                <div class="count">1</div>
-              </a>
-            </li>
-          </ul>
-        </div>
-  
-        <div class="header__bottom" data-menu-bottom>
-          <div class=" header__container container">
-            <a href="mailto:info@olimp-parketa.ru">info@olimp-parketa.ru</a>
-            <a href="tel:+74957750077">+7 495 775-00-07</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  
-  
   <header class="h-n">
     <div class="h-n__top">
       <div class="h-n__cont container">
@@ -664,7 +317,7 @@
           <img src="img/logo.svg" alt="Олимп паркета">
         </a>
   
-        <div class="h-n__count mr-4">
+        <div class="h-n__count mr-4 d-none d-xl-flex">
           <span class="coun">20</span>
           <span class="txt">лет доверия</span>
         </div>
@@ -921,53 +574,92 @@
           <!-- Категории -->
           <div class="menu-d__categories-wrap">
             <!-- Кнопки для переключения табов -->
-            <!-- <div class="menu-d__btns">
-              <button class="menu-d__btn btn-gray active">Каталог</button>
-              <button class="menu-d__btn btn-gray">Комнаты</button>
-            </div> -->
+            <div class="menu-d__btns" data-tabs="tabs-menu">
+              <button class="menu-d__btn btn-gray active" data-tabs-toggle="tab-1">Каталог</button>
+              <button class="menu-d__btn btn-gray" data-tabs-toggle="tab-2">Комнаты</button>
+            </div>
   
-            <ul class="menu-d__categories with-arrows">
-              <li class="menu-d__category">
-                <button class="menu-d__item active" data-catalog-item="#category-1"
-                  data-catalog-item-title="Напольные покрытия">
-                  <img src="img/cat-icon-1.svg" alt="Напольные покрытия">
-                  <span>Напольные покрытия</span>
-                </button>
-              </li>
-              <li class="menu-d__category">
-                <button href="#" class="menu-d__item" data-catalog-item="#category-2"
-                  data-catalog-item-title="Сопутствующие товары">
-                  <img src="img/cat-icon-2.svg" alt="Сопутствующие товары">
-                  <span>Сопутствующие товары</span>
-                </button>
-              </li>
-              <!-- <li class="menu-d__category">
+            <div data-tabs-content="tabs-menu">
+              <ul class="menu-d__categories with-arrows" data-tabs-item="tab-1">
+                <li class="menu-d__category">
+                  <button class="menu-d__item active" data-catalog-item="#category-1"
+                    data-catalog-item-title="Напольные покрытия">
+                    <img src="img/cat-icon-1.svg" alt="Напольные покрытия">
+                    <span>Напольные покрытия</span>
+                  </button>
+                </li>
+                <li class="menu-d__category">
+                  <button href="#" class="menu-d__item" data-catalog-item="#category-2"
+                    data-catalog-item-title="Сопутствующие товары">
+                    <img src="img/cat-icon-2.svg" alt="Сопутствующие товары">
+                    <span>Сопутствующие товары</span>
+                  </button>
+                </li>
+                <!-- <li class="menu-d__category">
                 <button href="#" class="menu-d__item" data-catalog-item="#category-3" data-catalog-item-title="Отделочные материалы">
                   <img src="img/cat-icon-3.svg" alt="Отделочные материалы">
                   <span>Отделочные материалы</span>
                 </button>
               </li> -->
-              <li class="menu-d__category">
-                <button href="#" class="menu-d__item" data-catalog-item="#category-4"
-                  data-catalog-item-title="Стеновые панели">
-                  <img src="img/cat-icon-4.svg" alt="Стеновые панели">
-                  <span>Стеновые панели</span>
-                </button>
-              </li>
-              <li class="menu-d__category">
-                <button href="#" class="menu-d__item" data-catalog-item="#category-5"
-                  data-catalog-item-title="Инструменты паркетчика">
-                  <img src="img/cat-icon-5.svg" alt="Инструменты паркетчика">
-                  <span>Инструменты паркетчика</span>
-                </button>
-              </li>
-              <li class="menu-d__category">
-                <a href="#" class="menu-d__item" data-catalog-item="#category-6">
-                  <img src="img/cat-icon-6.svg" alt="Услуги">
-                  <span>Услуги</span>
-                </a>
-              </li>
-            </ul>
+                <li class="menu-d__category">
+                  <button href="#" class="menu-d__item" data-catalog-item="#category-4"
+                    data-catalog-item-title="Стеновые панели">
+                    <img src="img/cat-icon-4.svg" alt="Стеновые панели">
+                    <span>Стеновые панели</span>
+                  </button>
+                </li>
+                <li class="menu-d__category">
+                  <button href="#" class="menu-d__item" data-catalog-item="#category-5"
+                    data-catalog-item-title="Инструменты паркетчика">
+                    <img src="img/cat-icon-5.svg" alt="Инструменты паркетчика">
+                    <span>Инструменты паркетчика</span>
+                  </button>
+                </li>
+                <li class="menu-d__category">
+                  <a href="#" class="menu-d__item" data-catalog-item="#category-6">
+                    <img src="img/cat-icon-6.svg" alt="Услуги">
+                    <span>Услуги</span>
+                  </a>
+                </li>
+              </ul>
+  
+              <ul class="menu-d__categories with-arrows" data-tabs-item="tab-2">
+                <li class="menu-d__category">
+                  <button class="menu-d__item active" data-catalog-item="#category-room-1"
+                    data-catalog-item-title="Детская комната">
+                    <img src="img/cat-icon-1.svg" alt="Детская комната">
+                    <span>Детская комната</span>
+                  </button>
+                </li>
+                <li class="menu-d__category">
+                  <button href="#" class="menu-d__item" data-catalog-item="#category-room-2"
+                    data-catalog-item-title="Спальная комната">
+                    <img src="img/cat-icon-2.svg" alt="Спальная комната">
+                    <span>Спальная комната</span>
+                  </button>
+                </li>
+                <li class="menu-d__category">
+                  <button href="#" class="menu-d__item" data-catalog-item="#category-room-4"
+                    data-catalog-item-title="Коридор">
+                    <img src="img/cat-icon-4.svg" alt="Коридор">
+                    <span>Коридор</span>
+                  </button>
+                </li>
+                <li class="menu-d__category">
+                  <button href="#" class="menu-d__item" data-catalog-item="#category-room-5"
+                    data-catalog-item-title="Ванная">
+                    <img src="img/cat-icon-5.svg" alt="Ванная">
+                    <span>Ванная</span>
+                  </button>
+                </li>
+                <li class="menu-d__category">
+                  <a href="#" class="menu-d__item" data-catalog-item="#category-room-6">
+                    <img src="img/cat-icon-6.svg" alt="Детская">
+                    <span>Детская</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
   
           <div class="h-n__list-wrap menu-d__list-wrap" data-catalog-drop>
@@ -997,7 +689,7 @@
                   <div class="menu-d__block-wrap">
   
                     <!-- Блок с подкатегориями -->
-                    <div class="menu-d__block">
+                    <!-- <div class="menu-d__block">
                       <div class="menu__drop-group">
                         <a class="menu__drop-header" href="/catalog/parketnaya-doska/">Паркетная доска</a>
                         <a class="menu__drop-header" href="/catalog/inzhenernaya-doska/">Инженерная доска</a>
@@ -1022,66 +714,126 @@
                       <a href="#">
                         <img src="img/banner-hn.jpg" alt="">
                       </a>
-                      <!-- <a href="#">
-                      <img src="img/banner-hn.jpg" alt="">
-                    </a> -->
+                      <a href="#">
+                        <img src="img/banner-hn.jpg" alt="">
+                      </a>
+                    </div> -->
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска дуб</a>
+                        <a href="#" class="menu__drop-link marked">Паркетная доска ясень</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска орех</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
                     </div>
-                    <!-- <div class="menu-d__block">
-                    <div class="menu__drop-group">
-                      <a href="#" class="menu__drop-header">Паркетная доска</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска дуб</a>
-                      <a href="#" class="menu__drop-link marked">Паркетная доска ясень</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска орех</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                      <a href="#" class="menu__drop-link last">Смотреть все</a>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="menu-d__block">
-                    <div class="menu__drop-group">
-                      <a href="#" class="menu__drop-header">Паркетная доска</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                      <a href="#" class="menu__drop-link last">Смотреть все</a>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="menu-d__block">
-                    <div class="menu__drop-group">
-                      <a href="#" class="menu__drop-header">Паркетная доска</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                      <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                      <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                      <a href="#" class="menu__drop-link last">Смотреть все</a>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="menu-d__block">
-                    <div class="menu__drop-group">
-                      <a href="#" class="menu__drop-header">Паркетная доска</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                      <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                      <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
-                      <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                      <a href="#" class="menu__drop-link last">Смотреть все</a>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="menu-d__banner">
-                    <a href="#">
-                      <img src="img/banner-hn.jpg" alt="">
-                    </a>
-                  </div> -->
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
+                    </div>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
+                    </div>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
+                    </div>
+                    <div class="menu-d__banner">
+                      <a href="#">
+                        <img src="img/banner-hn.jpg" alt="">
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1093,30 +845,50 @@
                   товары</a>
                 <div class="menu-d__links">
                   <div class="menu-d__block-wrap">
-  
                     <!-- Блок с подкатегориями -->
                     <div class="menu-d__block">
                       <div class="menu__drop-group">
-                        <a class="menu__drop-header" href="/catalog/kley-dlya-napolnykh-pokrytiy/">Клей для напольных
-                          покрытий</a>
-                        <a class="menu__drop-header" href="/catalog/gruntovka-dlya-osnovaniy/">Грунтовка для оснований</a>
-                        <a class="menu__drop-header" href="/catalog/sredstvo-po-ukhodu-napolnymi-pokrytiyami/">Средства по
-                          уходу</a>
-                        <a class="menu__drop-header" href="/catalog/smes-dlya-remonta-i-vyravnivaniya-osnovaniya/">Смесь
-                          для
-                          выравнивания&nbsp;основания</a>
-                        <a class="menu__drop-header" href="/catalog/lak-dlya-parketa/">Лак для паркета</a>
-                        <a class="menu__drop-header" href="/catalog/maslo-dlya-parketa/">Масло для паркета</a>
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска дуб</a>
+                        <a href="#" class="menu__drop-link marked">Паркетная доска ясень</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
                       </div>
                     </div>
-  
                     <div class="menu-d__block">
                       <div class="menu__drop-group">
-                        <a class="menu__drop-header" href="/catalog/podlozhka-pod-napolnye-pokrytiya/">Подложка под
-                          напольные покрытия</a>
-                        <a class="menu__drop-header" href="/catalog/plintus-napolnyy/">Плинтус напольный</a>
-                        <a class="menu__drop-header" href="/catalog/furnitura-dlya-parketa/">Фурнитура для паркета</a>
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
                       </div>
+                    </div>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
+                    </div>
+                    <div class="menu-d__banner">
+                      <a href="#">
+                        <img src="img/banner-hn.jpg" alt="">
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1143,15 +915,39 @@
               <!-- Инструмент паркетчика -->
               <div class="menu-d__list" id="category-5">
                 <!-- Ссылка на раздел -->
-                <!-- <a href="/catalog/spetsialnoe-oborudovanie/" class="menu-d__link-main btn btn-l-orange">Все cпециальное
-                  оборудование</a> -->
+                <a href="#" class="menu-d__link-main btn btn-l-orange">Все инструменты паркетчика</a>
                 <div class="menu-d__links">
-                  <div class="menu-d__block-wrap column-1">
-  
+                  <div class="menu-d__block-wrap">
                     <!-- Блок с подкатегориями -->
                     <div class="menu-d__block">
                       <div class="menu__drop-group">
-                        <a class="menu__drop-header" href="/catalog/instrument-parketchika/">Инструмент паркетчика</a>
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска дуб</a>
+                        <a href="#" class="menu__drop-link marked">Паркетная доска ясень</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
+                    </div>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
+                      </div>
+                    </div>
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
                       </div>
                     </div>
                   </div>
@@ -1161,8 +957,7 @@
               <!-- Услуги -->
               <div class="menu-d__list" id="category-6">
                 <!-- Ссылка на раздел -->
-                <!-- <a href="/catalog/spetsialnoe-oborudovanie/" class="menu-d__link-main btn btn-l-orange">Все cпециальное
-                  оборудование</a> -->
+                <!-- <a href="/catalog/spetsialnoe-oborudovanie/" class="menu-d__link-main btn btn-l-orange">Все услуги</a> -->
                 <div class="menu-d__links">
                   <div class="menu-d__block-wrap column-1">
   
@@ -1171,6 +966,35 @@
                       <div class="menu__drop-group">
                         <a class="menu__drop-header" href="/ukladka/">Укладка</a>
                         <a class="menu__drop-header" href="/show-room/">Выездной шоурум</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+  
+              <!-- Напольные покрытия -->
+              <div class="menu-d__list active" id="category-room-1">
+                <!-- Ссылка на раздел -->
+                <!-- <a href="#" class="menu-d__link-main btn btn-l-orange">Все напольные
+                  покрытия</a> -->
+                <div class="menu-d__links">
+                  <div class="menu-d__block-wrap">
+  
+                    <!-- Блок с подкатегориями -->
+                    <div class="menu-d__block">
+                      <div class="menu__drop-group">
+                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
+                        <a href="#" class="menu__drop-link last">Смотреть все</a>
                       </div>
                     </div>
                   </div>
@@ -1631,59 +1455,495 @@
             </div>
             <div class="col-12 col-md-6 d-flex flex-column">
               <div class="modal__rank rank rank-big" data-rank-select data-rank-input="#rev-rank">
-    						<button type="button" class="rank__item" data-rank-item data-rank-value="1" title="Очень плохо"
-    							aria-label="Поставить оценку: Очень плохо">
-    							<svg>
-    								<use xlink:href="#icon-star-big"></use>
-    							</svg>
-    							<span class="rank__num">1</span>
-    						</button>
-    						<button type="button" class="rank__item" data-rank-item data-rank-value="2" title="Плохо"
-    							aria-label="Поставить оценку: Плохо">
-    							<svg>
-    								<use xlink:href="#icon-star-big"></use>
-    							</svg>
-    							<span class="rank__num">2</span>
-    						</button>
-    						<button type="button" class="rank__item" data-rank-item data-rank-value="3" title="Нормально"
-    							aria-label="Поставить оценку: Нормально">
-    							<svg>
-    								<use xlink:href="#icon-star-big"></use>
-    							</svg>
-    							<span class="rank__num">3</span>
-    						</button>
-    						<button type="button" class="rank__item" data-rank-item data-rank-value="4" title="Хорошо"
-    							aria-label="Поставить оценку: Хорошо">
-    							<svg>
-    								<use xlink:href="#icon-star-big"></use>
-    							</svg>
-    							<span class="rank__num">4</span>
-    						</button>
-    						<button type="button" class="rank__item" data-rank-item data-rank-value="5" title="Отлично"
-    							aria-label="Поставить оценку: Отлично">
-    							<svg>
-    								<use xlink:href="#icon-star-big"></use>
-    							</svg>
-    							<span class="rank__num">5</span>
-    						</button>
+                <button type="button" class="rank__item" data-rank-item data-rank-value="1" title="Очень плохо"
+                  aria-label="Поставить оценку: Очень плохо">
+                  <svg>
+                    <use xlink:href="#icon-star-big"></use>
+                  </svg>
+                  <span class="rank__num">1</span>
+                </button>
+                <button type="button" class="rank__item" data-rank-item data-rank-value="2" title="Плохо"
+                  aria-label="Поставить оценку: Плохо">
+                  <svg>
+                    <use xlink:href="#icon-star-big"></use>
+                  </svg>
+                  <span class="rank__num">2</span>
+                </button>
+                <button type="button" class="rank__item" data-rank-item data-rank-value="3" title="Нормально"
+                  aria-label="Поставить оценку: Нормально">
+                  <svg>
+                    <use xlink:href="#icon-star-big"></use>
+                  </svg>
+                  <span class="rank__num">3</span>
+                </button>
+                <button type="button" class="rank__item" data-rank-item data-rank-value="4" title="Хорошо"
+                  aria-label="Поставить оценку: Хорошо">
+                  <svg>
+                    <use xlink:href="#icon-star-big"></use>
+                  </svg>
+                  <span class="rank__num">4</span>
+                </button>
+                <button type="button" class="rank__item" data-rank-item data-rank-value="5" title="Отлично"
+                  aria-label="Поставить оценку: Отлично">
+                  <svg>
+                    <use xlink:href="#icon-star-big"></use>
+                  </svg>
+                  <span class="rank__num">5</span>
+                </button>
     
-    						<input data-rank-rank id="rev-rank" type="hidden" name="rev-rank" value="0">
-    					</div>
+                <input data-rank-rank id="rev-rank" type="hidden" name="rev-rank" value="0">
+              </div>
               <div class="form__bottom">
                 <button class="form__submit btn-orange">Отправить</button>
               </div>
             </div>
           </div>
     
-          
     
     
     
-          
+    
+    
         </form>
       </div>
     </section>
     <!-- Модальное окно: оценить магазин -->
+    
+    
+    
+    <!-- Модальное окно: подбор пола -->
+    <section class="modal-wrap" id="podbor-pola" data-modal>
+      <div class="modal modal-form xl" data-modal-container>
+        <div class="modal__top mb-0">
+          <div class="modal__close ml-auto">
+            <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
+              <svg width="15" height="15">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+    
+        <!-- В этот блок грузится контент -->
+        <form class="mont-form mont-form-2" action="">
+    
+          <!-- Шаг 1 -->
+          <div class="mont-form-step" data-modal-step="1">
+            <p class="mb-4">Шаг 1 из 7</p>
+    
+            <p class="h3">В какое помещение Вам нужен пол?</p>
+    
+            <div class="row mont-form-list">
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-190" value="Кухня" checked>
+                  <label for="fb-pay-190"><span>Кухня</span>
+    
+                    <img src="img/kv-podbor-1-1.jpg" alt="Кухня">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5691" value="Спальня">
+                  <label for="fb-pay-5691"><span>Спальня</span>
+    
+                    <img src="img/kv-podbor-1-2.jpg" alt="Спальня">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5692" value="Прихожая">
+                  <label for="fb-pay-5692"><span>Прихожая</span>
+    
+                    <img src="img/kv-podbor-1-3.jpg" alt="Прихожая">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5693" value="Квартира">
+                  <label for="fb-pay-5693"><span>Квартира</span>
+    
+                    <img src="img/kv-podbor-1-4.jpg" alt="Квартира">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5694" value="Гостиная">
+                  <label for="fb-pay-5694"><span>Гостиная</span>
+    
+                    <img src="img/kv-podbor-1-5.jpg" alt="Гостиная">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5695" value="Детская">
+                  <label for="fb-pay-5695"><span>Детская</span>
+    
+                    <img src="img/kv-podbor-1-6.jpg" alt="Детская">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5696" value="Офис">
+                  <label for="fb-pay-5696"><span>Офис</span>
+    
+                    <img src="img/kv-podbor-1-7.jpg" alt="Офис">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5697" value="Частный дом">
+                  <label for="fb-pay-5697"><span>Частный дом</span>
+    
+                    <img src="img/kv-podbor-1-8.jpg" alt="Частный дом">
+                  </label>
+                </div>
+              </div>
+            </div>
+    
+            <div class="form__bottom">
+              <button class="form__submit btn-orange mt-5" type="button" data-open-step="2">Далее</button>
+            </div>
+          </div>
+    
+          <!-- Шаг 2 -->
+          <div class="mont-form-step d-none" data-modal-step="2">
+            <p class="mb-4">Шаг 2 из 7</p>
+    
+            <p class="h3">Предпочтения по тону</p>
+    
+            <div class="row mont-form-list centred">
+              <!-- Элемент -->
+              <div class=" col-6 col-xl-5 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5791" value="Светлый">
+                  <label for="fb-pay-5791"><span>Светлый</span>
+    
+                    <img src="img/kv-podbor-2-1.jpg" alt="Светлый">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-xl-5 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5792" value="Натуральный" checked>
+                  <label for="fb-pay-5792"><span>Натуральный</span>
+    
+                    <img src="img/kv-podbor-2-2.jpg" alt="Натуральный">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-xl-5 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5793" value="Темный">
+                  <label for="fb-pay-5793"><span>Темный</span>
+    
+                    <img src="img/kv-podbor-2-3.jpg" alt="Темный">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-xl-5 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5794" value="Серый">
+                  <label for="fb-pay-5794"><span>Серый</span>
+    
+                    <img src="img/kv-podbor-2-4.jpg" alt="Серый">
+                  </label>
+                </div>
+              </div>
+            </div>
+    
+            <div class="form__bottom">
+              <button class="form__submit btn-l-orange mt-5 mr-4" type="button" data-open-step="1">Назад</button>
+              <button class="form__submit btn-orange mt-5" type="button" data-open-step="3">Далее</button>
+            </div>
+          </div>
+    
+          <!-- Шаг 3 -->
+          <div class="mont-form-step d-none" data-modal-step="3">
+            <p class="mb-4">Шаг 3 из 7</p>
+    
+            <p class="h3">Вид напольного покрытия</p>
+    
+            <div class="row mont-form-list">
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5891" value="Паркетная доска" checked>
+                  <label for="fb-pay-5891"><span>Паркетная доска</span>
+    
+                    <img src="img/kv-podbor-3-1.jpg" alt="Паркетная доска">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5892" value="Массивная доска" checked>
+                  <label for="fb-pay-5892"><span>Массивная доска</span>
+    
+                    <img src="img/kv-podbor-3-2.jpg" alt="Массивная доска">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5893" value="Ламинат">
+                  <label for="fb-pay-5893"><span>Ламинат</span>
+    
+                    <img src="img/kv-podbor-3-3.jpg" alt="Ламинат">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5894" value="Паркет елка">
+                  <label for="fb-pay-5894"><span>Паркет елка</span>
+    
+                    <img src="img/kv-podbor-3-4.jpg" alt="Паркет елка">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5895" value="Инженерная доска">
+                  <label for="fb-pay-5895"><span>Инженерная доска</span>
+    
+                    <img src="img/kv-podbor-3-5.jpg" alt="Инженерная доска">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5896" value="Виниловый ламинат">
+                  <label for="fb-pay-5896"><span>Виниловый ламинат</span>
+    
+                    <img src="img/kv-podbor-3-6.jpg" alt="Виниловый ламинат">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5897" value="Пробковый пол">
+                  <label for="fb-pay-5897"><span>Пробковый пол</span>
+    
+                    <img src="img/kv-podbor-3-7.jpg" alt="Пробковый пол">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-4 col-xl-3 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5898" value="Модульный паркет">
+                  <label for="fb-pay-5898"><span>Модульный паркет</span>
+    
+                    <img src="img/kv-podbor-3-8.jpg" alt="Модульный паркет">
+                  </label>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="form__bottom">
+              <button class="form__submit btn-l-orange mt-5 mr-4" type="button" data-open-step="2">Назад</button>
+              <button class="form__submit btn-orange mt-5" type="button" data-open-step="4">Далее</button>
+            </div>
+          </div>
+    
+          <!-- Шаг 4 -->
+          <div class="mont-form-step d-none" data-modal-step="4">
+            <p class="mb-4">Шаг 4 из 7</p>
+    
+            <p class="h3">Порода дерева или декор</p>
+    
+            <div class="row mont-form-list centred">
+              <!-- Элемент -->
+              <div class=" col-6 col-md-5 col-xl-4 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5990" value="Дуб" checked>
+                  <label for="fb-pay-5990"><span>Дуб</span>
+    
+                    <img src="img/kv-podbor-4-1.jpg" alt="Дуб">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-5 col-xl-4 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5991" value="Орех">
+                  <label for="fb-pay-5991"><span>Орех</span>
+    
+                    <img src="img/kv-podbor-4-2.jpg" alt="Орех">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-5 col-xl-4 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5992" value="Под камень">
+                  <label for="fb-pay-5992"><span>Под камень</span>
+    
+                    <img src="img/kv-podbor-4-3.jpg" alt="Под камень">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-5 col-xl-4 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5993" value="Ясень">
+                  <label for="fb-pay-5993"><span>Ясень</span>
+    
+                    <img src="img/kv-podbor-4-4.jpg" alt="Ясень">
+                  </label>
+                </div>
+              </div>
+              <!-- Элемент -->
+              <div class=" col-6 col-md-5 col-xl-4 mont-form-item">
+                <div class="checkbox">
+                  <input type="checkbox" id="fb-pay-5994" value="Под плитку">
+                  <label for="fb-pay-5994"><span>Под плитку</span>
+    
+                    <img src="img/kv-podbor-4-5.jpg" alt="Под плитку">
+                  </label>
+                </div>
+              </div>
+            </div>
+    
+            <div class="form__bottom">
+              <button class="form__submit btn-l-orange mt-5 mr-4" type="button" data-open-step="3">Назад</button>
+              <button class="form__submit btn-orange mt-5" type="button" data-open-step="5">Далее</button>
+            </div>
+          </div>
+    
+          <!-- Шаг 5 -->
+          <div class="mont-form-step d-none" data-modal-step="5">
+            <p class="mb-4">Шаг 5 из 7</p>
+    
+            <p class="h3">Введите площадь вашего помещения (м2)</p>
+    
+            <div class="d-flex align-items-center flex-wrap ">
+              <input data-range type="text" placeholder="20" class="mr-4"> <small class="mt-2 mb-2"> Если не знаете точную
+                площадь,
+                <br class="d-none d-md-inline-block"> укажите
+                приблизительную.</small>
+            </div>
+    
+            <div class="form__bottom">
+              <button class="form__submit btn-l-orange mt-5 mr-4" type="button" data-open-step="4">Назад</button>
+              <button class="form__submit btn-orange mt-5" type="button" data-open-step="6">Далее</button>
+            </div>
+          </div>
+    
+          <!-- Шаг 6 -->
+          <div class="mont-form-step d-none" data-modal-step="6">
+            <p class="mb-4">Шаг 6 из 7</p>
+    
+            <p class="h3">Необходима укладка напольного покрытия?</p>
+    
+            <div class="">
+              <div class="checkbox radio-roll">
+                <input type="radio" id="fb-pay-5091" name="radio-btn-b" value="Да" checked>
+                <label for="fb-pay-5091">Да</label>
+              </div>
+              <div class="checkbox radio-roll">
+                <input type="radio" id="fb-pay-5092" name="radio-btn-b" value="Нет">
+                <label for="fb-pay-5092">Нет</label>
+              </div>
+            </div>
+    
+    
+            <div class="form__bottom">
+              <button class="form__submit btn-l-orange mt-5 mr-4" type="button" data-open-step="5">Назад</button>
+              <button class="form__submit btn-orange mt-5" type="button" data-open-step="7">Далее</button>
+            </div>
+          </div>
+    
+          <!-- Шаг 7 -->
+          <div class="mont-form-step d-none" data-modal-step="7">
+            <p class="mb-4">Шаг 7 из 7</p>
+    
+            <p class="h3">Оставьте контакты и получите скидку 10%</p>
+    
+            <p>Наши менеджеры рассчитают полную стоимость и перезвонят вам</p>
+    
+            <div class="row mt-md-4" style="max-width: 400px;">
+              <div class="col-12">
+                <div class="form__item">
+                  <label for="podbor-name">Имя*</label>
+                  <input type="text" name="podbor-name" placeholder="Имя*" id="podbor-name" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form__item">
+                  <label for="podbor-tel">Телефон*</label>
+                  <input type="text" name="podbor-tel" placeholder="Телефон*" id="podbor-tel" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form__item">
+                  <label for="podbor-mail">Электронная почта*</label>
+                  <input type="mail" name="podbor-mail" placeholder="Электронная почта*" id="podbor-mail" required>
+                </div>
+              </div>
+            </div>
+    
+            <div class="form__conf mt-4 mt-md-5">
+              <input type="checkbox" id="podbor-conf" name="podbor-conf" checked required>
+              <label for="podbor-conf">
+                <span>
+                  Нажимая на кнопку «Далее», я даю согласие на обработку персональных данных <br> и соглашаюсь c политикой
+                  конфиденциальности.</span>
+              </label>
+            </div>
+    
+    
+            <div class="form__bottom">
+              <button class="form__submit btn-l-orange mt-5 mr-4" type="button" data-open-step="6">Назад</button>
+              <button class="form__submit btn-orange mt-5" type="submit">Далее</button>
+            </div>
+          </div>
+        </form>
+    
+    
+    
+        <!-- Форма отправлена -->
+        <div class="mont-form mont-form-2 d-none">
+          <div class="mont-form-step">
+            <div class="mont-form-info">
+              <p class="h3 text-center">Спасибо!, мы получили заявку! В ближайшее время мы вам перезвоним</p>
+    
+              <button class="mont-form-info-btn btn-orange btn-upper" type="button" aria-hidden="true" data-modal-close>
+                Хорошо
+              </button>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Модальное окно: подбор пола -->
     
     
     <!-- Модальное окно: звонок-->
@@ -1748,7 +2008,7 @@
                 <input type="tel" name="manag-tel" placeholder="Телефон*" id="manag-tel" required>
               </div>
             </div>
-      
+    
             <div class="form__bottom flex-wrap">
               <div class="form__conf">
                 <input type="checkbox" id="manag-conf" name="manag-conf" checked required>
@@ -1781,6 +2041,8 @@
         </div>
       </div>
     </section>
+    <!-- Модальное окно: звонок-->
+    
     
     <!-- Модальное окно: поиск-->
     <section class="modal-wrap" id="search-line" data-modal>
@@ -1917,6 +2179,8 @@
         </form>
       </div>
     </section>
+    <!-- Модальное окно: поиск-->
+    
     
     <!-- Модальное окно: подбор аналога -->
     <section class="modal-wrap" id="analog" data-modal>
@@ -2531,6 +2795,9 @@
     <script src="js/fancybox.js"></script>
     <!-- <script src="js/range-slider.js"></script> -->
     
+    
+    <!--Ползунок -->
+    <!-- <script src="js/ion.rangeSlider.min.js"></script> -->
     
     <!-- Основной файл -->
     <script src="js/main.js"></script>
