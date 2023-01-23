@@ -5544,6 +5544,11 @@ textarea {
   padding-left: 0;
   padding-right: 0;
 }
+@media (max-width: 767px) {
+  .filter .acc__body {
+    padding-bottom: 5px;
+  }
+}
 .bx_filter_popup_result {
   background: #FAAA17;
   border-radius: 5px;
