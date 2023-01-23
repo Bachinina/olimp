@@ -752,4 +752,29 @@ $('[data-points-block]').each(function () {
   });
 });
 
+// REVIEWS
+$('[data-text-wrap]').each(function () {
+  if($(this).closest('[data-slider-reviews]').length > 0) {
+    return;
+  }
+	const wrap = $(this);
+	const text = wrap.find('[data-text]');
+	const btn = wrap.find('[data-text-btn]');
+
+	if (text.outerHeight() > 51) {
+		wrap.addClass('show-more');
+	}
+
+	btn.on('click', function () {
+		wrap.toggleClass('visible');
+	});
+
+	$(window).on('resize', function () {
+    wrap.removeClass('show-more');
+		if (text.outerHeight() > 51) {
+			wrap.addClass('show-more');
+		}
+	})
+});
+
 

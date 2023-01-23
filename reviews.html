@@ -579,7 +579,7 @@
               <button class="menu-d__btn btn-gray" data-tabs-toggle="tab-2">Комнаты</button>
             </div>
   
-            <div data-tabs-content="tabs-menu">
+            <div class="menu-d__tabs-menu" data-tabs-content="tabs-menu">
               <ul class="menu-d__categories with-arrows" data-tabs-item="tab-1">
                 <li class="menu-d__category">
                   <button class="menu-d__item active" data-catalog-item="#category-1"
@@ -763,7 +763,7 @@
                         <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
                         <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
                         <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
-                        <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
+                        <a href="#" class="menu__drop-link">Паркетная доска св��тлый тон</a>
                         <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
                         <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
                         <a href="#" class="menu__drop-link last">Смотреть все</a>
@@ -1180,6 +1180,9 @@
         <li>
           <a href="#">Укладка</a>
         </li>
+        <li>
+          <a data-open-modal="#podbor-pola">Подбор пола</a>
+        </li>
         <!-- <li>
           <a href="#">Стеновые панели</a>
           <ul class="h-n__list-drop">
@@ -1287,11 +1290,11 @@
         <h1 class="main-title">Отзывы о компании</h1>
         <div class="row mini">
           <div class="item-wrap col-12 col-xl-6">
-            <div class="block-hor review">
+            <div class="block-hor review" data-review>
               <a class="block-hor__img" href="prod.html">
                 <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
               </a>
-              <div class="block-hor__body">
+              <div class="review__body block-hor__body">
                 <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER</a></h3>
                 <div class="review__top">
                   <div class="review__rank rank" data-rank data-rank-value="4">
@@ -1324,10 +1327,21 @@
                   <p class="review__date"> 19.08.2019</p>
                 </div>
                 <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text">Очень понравилось обслуживание, большой ассортимент, огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны.
-                </p>
+
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                    <span class="on-show">Свернуть</span></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1369,31 +1383,38 @@
                   <p class="review__date"> 19.08.2019</p>
                 </div>
                 <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text" data-opened="text-1" data-review-text>Очень понравилось обслуживание, большой
-                  ассортимент,
-                  огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны. Очень понравилось
-                  обслуживание, большой ассортимент, огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны.
-                </p>
 
-                <button class="review__btn-more btn-icon-gray def" data-open="text-1">
-                  <svg width="12" height="7" fill="none">
-                    <use xlink:href="#icon-arrow-bottom"></use>
-                  </svg>
-                  <span>Подробнее</span>
-                </button>
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                    <span class="on-show">Свернуть</span></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="item-wrap col-12 col-xl-6">
-            <div class="block-hor review">
+            <div class="block-hor review" data-review>
               <a class="block-hor__img" href="prod.html">
                 <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
               </a>
-              <div class="block-hor__body">
+              <div class="review__body block-hor__body">
                 <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER</a></h3>
                 <div class="review__top">
                   <div class="review__rank rank" data-rank data-rank-value="4">
@@ -1426,19 +1447,38 @@
                   <p class="review__date"> 19.08.2019</p>
                 </div>
                 <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text">Очень понравилось обслуживание, большой ассортимент, огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны.
-                </p>
+
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                    <span class="on-show">Свернуть</span></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="item-wrap col-12 col-xl-6">
-            <div class="block-hor review">
+            <div class="block-hor review" data-review>
               <a class="block-hor__img" href="prod.html">
                 <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
               </a>
-              <div class="block-hor__body">
+              <div class="review__body block-hor__body">
                 <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER</a></h3>
                 <div class="review__top">
                   <div class="review__rank rank" data-rank data-rank-value="4">
@@ -1471,10 +1511,29 @@
                   <p class="review__date"> 19.08.2019</p>
                 </div>
                 <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text">Очень понравилось обслуживание, большой ассортимент, огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны.
-                </p>
+
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                    <span class="on-show">Свернуть</span></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1613,7 +1672,7 @@
 
 
     <!-- Метка слева, открывающая попап -->
-    <button class="left-btn btn-def" data-open-modal="#star-the-shop">
+    <button class="left-btn btn-def d-none d-xl-flex" data-open-modal="#star-the-shop">
       <span>
         <svg>
           <use xlink:href="#icon-star"></use>
@@ -2786,7 +2845,7 @@
                   <a href="">Сопутствующие товары</a>
                 </div>
     
-                <!-- Текст, который откроется при клике на к��опку -->
+                <!-- Текст, который откроется при клике на кнопку -->
                 <div class="opened" data-opened="text-block-12">
                   <div>
                     <a href="">Специальное оборудование</a>

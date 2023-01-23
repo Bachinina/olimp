@@ -579,7 +579,7 @@
               <button class="menu-d__btn btn-gray" data-tabs-toggle="tab-2">Комнаты</button>
             </div>
   
-            <div data-tabs-content="tabs-menu">
+            <div class="menu-d__tabs-menu" data-tabs-content="tabs-menu">
               <ul class="menu-d__categories with-arrows" data-tabs-item="tab-1">
                 <li class="menu-d__category">
                   <button class="menu-d__item active" data-catalog-item="#category-1"
@@ -786,7 +786,7 @@
                     </div>
                     <div class="menu-d__block">
                       <div class="menu__drop-group">
-                        <a href="#" class="menu__drop-header">Паркетная доска</a>
+                        <a href="#" class="menu__drop-header">Па��кетная доска</a>
                         <a href="#" class="menu__drop-link">Паркетная доска светлый тон</a>
                         <a href="#" class="menu__drop-link">Паркетная доска Tarkett</a>
                         <a href="#" class="menu__drop-link">Паркетная доска Coswick </a>
@@ -1180,6 +1180,9 @@
         <li>
           <a href="#">Укладка</a>
         </li>
+        <li>
+          <a data-open-modal="#podbor-pola">Подбор пола</a>
+        </li>
         <!-- <li>
           <a href="#">Стеновые панели</a>
           <ul class="h-n__list-drop">
@@ -1282,7 +1285,7 @@
    
 
   <!-- Метка слева, открывающая попап -->
-  <button class="left-btn btn-def" data-open-modal="#star-the-shop">
+  <button class="left-btn btn-def d-none d-xl-flex" data-open-modal="#star-the-shop">
     <span>
       <svg>
         <use xlink:href="#icon-star"></use>

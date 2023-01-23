@@ -152,6 +152,32 @@ $(document).ready(function () {
 
     // _____________________________________
     // Индивидуальные настройки слайдеров
+    
+    if (slider.hasAttr('data-slider-reviews')) {
+      $(this).on('init', function () {
+        $(this).find($('[data-text-wrap]')).each(function () {
+          const wrap = $(this);
+          const text = wrap.find('[data-text]');
+          const btn = wrap.find('[data-text-btn]');
+
+          if (text.outerHeight() > 51) {
+            wrap.addClass('show-more');
+          }
+
+          btn.on('click', function () {
+            wrap.toggleClass('visible');
+          });
+
+          $(window).on('resize', function () {
+            wrap.removeClass('show-more');
+            if (text.outerHeight() > 51) {
+              wrap.addClass('show-more');
+            }
+          })
+        })
+      })
+    }
+
     if (slider.hasAttr('data-simple-slider')) {
       $(this).slick({
         accessibility: false,
@@ -219,6 +245,38 @@ $(document).ready(function () {
             }
           },
         ]
+      });
+    }
+
+    if (slider.hasAttr('data-compl-slider')) {
+      $(this).slick({
+        accessibility: false,
+        speed:  600,
+        draggable: false,
+        dots: false,
+        arrows: true,
+        prevArrow: prevArrow,
+        swipeToSlide: true,
+        nextArrow: nextArrow,
+        variableWidth: true,
+        infinite: !!slider.settings.isLooped,
+        appendArrows: slider.settings.buttonContainer,
+        responsive: [{
+          breakpoint: 1199,
+          settings: {
+            draggable: true,
+            speed: 150,
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            dots: isDotted,
+            arrows: !isDotted,
+            variableWidth: false,
+            slideCount: 1,
+            adaptiveHeight: true
+          }
+        }]
       });
     }
   });

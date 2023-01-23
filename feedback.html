@@ -579,7 +579,7 @@
               <button class="menu-d__btn btn-gray" data-tabs-toggle="tab-2">Комнаты</button>
             </div>
   
-            <div data-tabs-content="tabs-menu">
+            <div class="menu-d__tabs-menu" data-tabs-content="tabs-menu">
               <ul class="menu-d__categories with-arrows" data-tabs-item="tab-1">
                 <li class="menu-d__category">
                   <button class="menu-d__item active" data-catalog-item="#category-1"
@@ -1180,6 +1180,9 @@
         <li>
           <a href="#">Укладка</a>
         </li>
+        <li>
+          <a data-open-modal="#podbor-pola">Подбор пола</a>
+        </li>
         <!-- <li>
           <a href="#">Стеновые панели</a>
           <ul class="h-n__list-drop">
@@ -1275,57 +1278,68 @@
     <section class="empty-block">
       <div class="empty-block__container container container--content big">
 
-        <div class="empty-block__body text-center">
+        <form class="empty-block__body text-center" action="">
           <h1>Для нас важно Ваше мнение!</h1>
           <p class="empty-block__text mb-4">Понравилось ли Вам в магазине?</p>
 
-					<div class="rank rank-big" data-rank-select data-rank-input="#rev-rank">
-						<button type="button" class="rank__item" data-rank-item data-rank-value="1" title="Очень плохо"
-							aria-label="Поставить оценку: Очень плохо">
-							<svg>
-								<use xlink:href="#icon-star-big"></use>
-							</svg>
-							<span class="rank__num">1</span>
-						</button>
-						<button type="button" class="rank__item" data-rank-item data-rank-value="2" title="Плохо"
-							aria-label="Поставить оценку: Плохо">
-							<svg>
-								<use xlink:href="#icon-star-big"></use>
-							</svg>
-							<span class="rank__num">2</span>
-						</button>
-						<button type="button" class="rank__item" data-rank-item data-rank-value="3" title="Нормально"
-							aria-label="Поставить оценку: Нормально">
-							<svg>
-								<use xlink:href="#icon-star-big"></use>
-							</svg>
-							<span class="rank__num">3</span>
-						</button>
-						<button type="button" class="rank__item" data-rank-item data-rank-value="4" title="Хорошо"
-							aria-label="Поставить оценку: Хорошо">
-							<svg>
-								<use xlink:href="#icon-star-big"></use>
-							</svg>
-							<span class="rank__num">4</span>
-						</button>
-						<button type="button" class="rank__item" data-rank-item data-rank-value="5" title="Отлично"
-							aria-label="Поставить оценку: Отлично">
-							<svg>
-								<use xlink:href="#icon-star-big"></use>
-							</svg>
-							<span class="rank__num">5</span>
-						</button>
+          <div class="rank rank-big" data-rank-select data-rank-input="#rev-rank">
+            <button type="button" class="rank__item" data-rank-item data-rank-value="1" title="Очень плохо"
+              aria-label="Поставить оценку: Очень плохо">
+              <svg>
+                <use xlink:href="#icon-star-big"></use>
+              </svg>
+              <span class="rank__num">1</span>
+            </button>
+            <button type="button" class="rank__item" data-rank-item data-rank-value="2" title="Плохо"
+              aria-label="Поставить оценку: Плохо">
+              <svg>
+                <use xlink:href="#icon-star-big"></use>
+              </svg>
+              <span class="rank__num">2</span>
+            </button>
+            <button type="button" class="rank__item" data-rank-item data-rank-value="3" title="Нормально"
+              aria-label="Поставить оценку: Нормально">
+              <svg>
+                <use xlink:href="#icon-star-big"></use>
+              </svg>
+              <span class="rank__num">3</span>
+            </button>
+            <button type="button" class="rank__item" data-rank-item data-rank-value="4" title="Хорошо"
+              aria-label="Поставить оценку: Хорошо">
+              <svg>
+                <use xlink:href="#icon-star-big"></use>
+              </svg>
+              <span class="rank__num">4</span>
+            </button>
+            <button type="button" class="rank__item" data-rank-item data-rank-value="5" title="Отлично"
+              aria-label="Поставить оценку: Отлично">
+              <svg>
+                <use xlink:href="#icon-star-big"></use>
+              </svg>
+              <span class="rank__num">5</span>
+            </button>
 
-						<input data-rank-rank id="rev-rank" type="hidden" name="rev-rank" value="0">
+            <input data-rank-rank id="rev-rank" type="hidden" name="rev-rank" value="0">
+          </div>
+
+					<div class="form__row w-100 mt-5">
+						<div class="form__item">
+							<label for="star-comment">Оставить комментарий</label>
+							<textarea name="star-comment" id="star-comment" placeholder="Оставить комментарий"></textarea>
+						</div>
 					</div>
-        </div>
+
+					<div class="form__bottom mt-0 mt-lg-4">
+						<button class="form__submit btn-orange btn-big">Отправить</button>
+					</div>
+        </form>
       </div>
     </section>
 
 
 
     <!-- Метка слева, открывающая попап -->
-    <button class="left-btn btn-def" data-open-modal="#star-the-shop">
+    <button class="left-btn btn-def d-none d-xl-flex" data-open-modal="#star-the-shop">
       <span>
         <svg>
           <use xlink:href="#icon-star"></use>

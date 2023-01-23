@@ -579,7 +579,7 @@
               <button class="menu-d__btn btn-gray" data-tabs-toggle="tab-2">Комнаты</button>
             </div>
   
-            <div data-tabs-content="tabs-menu">
+            <div class="menu-d__tabs-menu" data-tabs-content="tabs-menu">
               <ul class="menu-d__categories with-arrows" data-tabs-item="tab-1">
                 <li class="menu-d__category">
                   <button class="menu-d__item active" data-catalog-item="#category-1"
@@ -1180,6 +1180,9 @@
         <li>
           <a href="#">Укладка</a>
         </li>
+        <li>
+          <a data-open-modal="#podbor-pola">Подбор пола</a>
+        </li>
         <!-- <li>
           <a href="#">Стеновые панели</a>
           <ul class="h-n__list-drop">
@@ -1323,16 +1326,28 @@
           </div>
         </div>
 
-        <div class="prod__desc row">
-          <div class="col-12 col-xl-6 ">
+        <div class="prod__desc row" >
+          <div class="col-12 col-xl-6 " style="z-index: 1;">
             <div data-floating-container>
               <div class="prod__slider-wrap" data-floating>
-                <div class="prod__tag tag black">
-                  Скидка 10%
-                  <!-- <span class="red">Black Friday</span> -->
-                </div>
-                <div class="prod__tag tag">
-                  Скидка 10%
+                
+                <div class="prod__tag-wrap tag-wrap">
+                  <div class="card__tag-left tag-left">
+                    <div class="prod__tag tag l-green">в наличии</div>
+                    <div class="prod__tag tag">cкидка 10%</div>
+                  </div>
+                  <div class="card__tag-right tag-right">
+                    <div class="prod__tag tag right d-none d-xl-flex">
+                      <span class="tick-wrap">держим цену
+                        <span class="tick">
+                          <img src="img/info-tick.svg" alt="">
+                          <div class="tick-text">
+                            Повышение цены 01.01.2023
+                          </div>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="prod__slider slider-prod slider-simple arrows-hidden floating-container" data-prod-slider>
@@ -1438,15 +1453,16 @@
                     <label for="fb-ukladka">
                       <span class="prod__acc-top">
                         <img class="prod__acc-img" src="img/icon-feat-2.svg" alt="">
-    
+
                         <div>
                           <div class="prod__acc-title">Укладка напольных покрытий</div>
-                          <div class="prod__acc-title-mini">Профессиональная укладка с учетом требований производителей и особенностей помещения. Стоимость укладки рассчитывается после замера.</div>
+                          <div class="prod__acc-title-mini">Профессиональная укладка с учетом требований производителей
+                            и особенностей помещения. Стоимость укладки рассчитывается после замера.</div>
                         </div>
                       </span>
                     </label>
                   </div>
-                  
+
                 </div>
               </li>
             </ul>
@@ -1480,8 +1496,8 @@
             <div class="prod__btns-sm row">
               <div class="prod__btn-wrap col-auto">
                 <button class="prod__btn prod__compare btn-icon-gray" data-toggle-active>
-                  <svg width="25" height="25">
-                    <use xlink:href="#icon-compare-btn"></use>
+                  <svg class="h-n__icon-stroke-fill" width="23" height="24">
+                    <use xlink:href="#hn-compare"></use>
                   </svg>
                   <span>В сравнение</span>
                 </button>
@@ -1690,6 +1706,217 @@
         </div>
       </div>
     </section>
+
+
+    <!-- Выгодные комплекты -->
+    <section class="block" id="analogii">
+      <div class="container container--content pt-0" data-slider-container>
+        <div class="block__top top">
+          <div class="left">
+            <h2 class="title">Выгодные комплекты</h2>
+          </div>
+
+          <div class="block__btns tabs-cont" data-tabs-content="tabs-1">
+            <div class="slider-btns" data-slider-btns></div>
+          </div>
+        </div>
+
+        <div class="prod__compl-slider slider-simple" data-slider data-variable="true" data-compl-slider>
+          <div class="slide">
+            <div class="prod__compl">
+              <div class="prod__compl-head">
+                Подложка со скидкой 10%
+              </div>
+              <div class="prod__compl-cards">
+                <!-- Товар -->
+                <div class="prod__compl-card">
+                  <a class="prod__compl-link" href="#">
+                    <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                  </a>
+                  <div class="prod__compl-cont">
+                    <a class="prod__compl-tit" href="#">
+                      Паркетная доска KAHRS Дуб Натур Линнея 7 мм 3х пол СЛ (2,84)
+                    </a>
+
+                    <div class="prod__compl-price price">
+                      <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Товар -->
+                <div class="prod__compl-card">
+                  <a class="prod__compl-link" href="#">
+                    <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                  </a>
+                  <div class="prod__compl-cont">
+                    <a class="prod__compl-tit" href="#">
+                      Паркетная доска KAHRS Дуб
+                    </a>
+
+                    <div class="prod__compl-price price">
+                      <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod__compl-bottom">
+                <div class="prod__compl-res">
+                  <p class="prod__compl-disc">
+                    Выгода: 1 765 ₽
+                  </p>
+                  <p class="prod__compl-total h3">51 765 ₽</p>
+                </div>
+                <button class="prod__compl-btn btn-orange btn-upper" data-open-modal="#buy-compl">
+                  Купить комплект
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="prod__compl">
+              <div class="prod__compl-head">
+                Плинтус и подложка со скидкой 15%
+              </div>
+              <div class="prod__compl-cards">
+                <!-- Товар -->
+                <div class="prod__compl-card">
+                  <a class="prod__compl-link" href="#">
+                    <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                  </a>
+                  <div class="prod__compl-cont">
+                    <a class="prod__compl-tit" href="#">
+                      Паркетная доска KAHRS 3х пол СЛ (2,84)
+                    </a>
+
+                    <div class="prod__compl-price price">
+                      <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Товар -->
+                <div class="prod__compl-card">
+                  <a class="prod__compl-link" href="#">
+                    <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                  </a>
+                  <div class="prod__compl-cont">
+                    <a class="prod__compl-tit" href="#">
+                      Паркетная доска KAHRS Дуб Натур Линнея 7 мм 3х пол СЛ (2,84)
+                    </a>
+
+                    <div class="prod__compl-price price">
+                      <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Товар -->
+                <div class="prod__compl-card">
+                  <a class="prod__compl-link" href="#">
+                    <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                  </a>
+                  <div class="prod__compl-cont">
+                    <a class="prod__compl-tit" href="#">
+                      Паркетная доска KAHRS Дуб Натур Линнея 7 мм 3х пол СЛ (2,84)
+                    </a>
+
+                    <div class="prod__compl-price price">
+                      <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Товар -->
+                <div class="prod__compl-card">
+                  <a class="prod__compl-link" href="#">
+                    <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                  </a>
+                  <div class="prod__compl-cont">
+                    <a class="prod__compl-tit" href="#">
+                      Паркетная доска KAHRS Дуб Натур Линнея 7 мм 3х пол СЛ (2,84)
+                    </a>
+
+                    <div class="prod__compl-price price">
+                      <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod__compl-bottom">
+                <div class="prod__compl-res">
+                  <p class="prod__compl-disc">
+                    Выгода: 1 765 ₽
+                  </p>
+                  <p class="prod__compl-total h3">51 765 ₽</p>
+                </div>
+                <button class="prod__compl-btn btn-orange btn-upper" data-open-modal="#buy-compl">
+                  Купить комплект
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="prod__compl">
+              <div class="prod__compl-head">
+                Подложка со скидкой 10%
+              </div>
+              <div class="prod__compl-cards">
+                <!-- Товар -->
+                <div class="prod__compl-card">
+                  <a class="prod__compl-link" href="#">
+                    <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                  </a>
+                  <div class="prod__compl-cont">
+                    <a class="prod__compl-tit" href="#">
+                      Паркетная доска KAHRS Дуб Натур Линнея 7 мм 3х пол СЛ (2,84)
+                    </a>
+
+                    <div class="prod__compl-price price">
+                      <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Товар -->
+                <div class="prod__compl-card">
+                  <a class="prod__compl-link" href="#">
+                    <img src="img/card-1.jpg" alt="Паркетная доска Kahrs дуб Tower в интерьере">
+                  </a>
+                  <div class="prod__compl-cont">
+                    <a class="prod__compl-tit" href="#">
+                      Паркетная доска KAHRS Дуб Натур Линнея 7 мм 3х пол СЛ (2,84)
+                    </a>
+
+                    <div class="prod__compl-price price">
+                      <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod__compl-bottom">
+                <div class="prod__compl-res">
+                  <p class="prod__compl-disc">
+                    Выгода: 1 765 ₽
+                  </p>
+                  <p class="prod__compl-total h3">51 765 ₽</p>
+                </div>
+                <button class="prod__compl-btn btn-orange btn-upper" data-open-modal="#buy-compl">
+                  Купить комплект
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Выгодные комплекты -->
 
 
     <!-- Сопутствующие товары -->
@@ -3228,7 +3455,7 @@
 
     <!-- Отзывы -->
     <section class="block">
-      <div class="container" data-slider-container>
+      <div class="container container--content pt-0" data-slider-container>
         <div class="block__top top">
           <div class="left">
             <h2 class="title">Отзывы о товаре</h2>
@@ -3238,13 +3465,13 @@
         </div>
 
         <div class="slider-simple slider-shadow def" data-slider data-simple-slider data-slide-count="1"
-          data-slide-xl-count="2">
+          data-slide-xl-count="2" data-slider-reviews>
           <div class="slide">
-            <div class="block-hor review">
+            <div class="block-hor review" data-review>
               <a class="block-hor__img" href="prod.html">
                 <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
               </a>
-              <div class="block-hor__body">
+              <div class="review__body block-hor__body">
                 <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER</a></h3>
                 <div class="review__top">
                   <div class="review__rank rank" data-rank data-rank-value="4">
@@ -3277,67 +3504,31 @@
                   <p class="review__date"> 19.08.2019</p>
                 </div>
                 <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text">Очень понравилось обслуживание, большой ассортимент, огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="block-hor review">
-              <a class="block-hor__img" href="prod.html">
-                <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
-              </a>
-              <div class="block-hor__body">
-                <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER 2567GHTY678 tyui</a>
-                </h3>
-                <div class="review__top">
-                  <div class="review__rank rank" data-rank data-rank-value="5">
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <p class="review__date"> 19.08.2019</p>
+
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                      <span class="on-show">Свернуть</span></span>
+                  </button>
                 </div>
-                <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text">Хочу поблагодарить замечательную компанию «Олимп паркета», в которой приобрели
-                  отличное напольное покрытие и великолепные двери. Так случилось, что начала я свой выбор дверей, зайдя
-                  в магазин в «Олмп паркета» г. Сочи, Адлерского района. Меня встретила замечательная
-                </p>
               </div>
             </div>
           </div>
           <div class="slide">
-            <div class="block-hor review">
+            <div class="block-hor review" data-review>
               <a class="block-hor__img" href="prod.html">
                 <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
               </a>
-              <div class="block-hor__body">
-                <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER 2567GHTY678 tyui</a>
-                </h3>
+              <div class="review__body block-hor__body">
+                <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER</a></h3>
                 <div class="review__top">
                   <div class="review__rank rank" data-rank data-rank-value="4">
                     <div class="rank__item" data-rank-item>
@@ -3369,114 +3560,157 @@
                   <p class="review__date"> 19.08.2019</p>
                 </div>
                 <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text">Хочу поблагодарить замечательную компанию «Олимп паркета», в которой приобрели
-                  отличное напольное покрытие и великолепные двери. Так случилось, что начала я свой выбор дверей, зайдя
-                  в магазин в «Олмп паркета» г. Сочи, Адлерского района. Меня встретила замечательная
-                </p>
+
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                      <span class="on-show">Свернуть</span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="block-hor review" data-review>
+              <a class="block-hor__img" href="prod.html">
+                <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
+              </a>
+              <div class="review__body block-hor__body">
+                <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER</a></h3>
+                <div class="review__top">
+                  <div class="review__rank rank" data-rank data-rank-value="4">
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <p class="review__date"> 19.08.2019</p>
+                </div>
+                <p class="review__name"> Игорь Плотников</p>
+
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                      <span class="on-show">Свернуть</span></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <!-- Отзывы -->
 
-      <div class="container container--content">
-        <form class="form" action="/">
-          <div class="form__top">
-            <h2 class="form__title">Оставить отзыв о товаре</h2>
-            <div class="form__rank rank" data-rank-select data-rank-input="#rev-rank">
-              <button type="button" class="rank__item" data-rank-item data-rank-value="1" title="Очень плохо"
-                aria-label="Поставить оценку товару: Очень плохо">
-                <svg>
-                  <use xlink:href="#icon-star"></use>
-                </svg>
-              </button>
-              <button type="button" class="rank__item" data-rank-item data-rank-value="2" title="Плохо"
-                aria-label="Поставить оценку товару: Плохо">
-                <svg>
-                  <use xlink:href="#icon-star"></use>
-                </svg>
-              </button>
-              <button type="button" class="rank__item" data-rank-item data-rank-value="3" title="Нормально"
-                aria-label="Поставить оценку товару: Нормально">
-                <svg>
-                  <use xlink:href="#icon-star"></use>
-                </svg>
-              </button>
-              <button type="button" class="rank__item" data-rank-item data-rank-value="4" title="Хорошо"
-                aria-label="Поставить оценку товару: Хорошо">
-                <svg>
-                  <use xlink:href="#icon-star"></use>
-                </svg>
-              </button>
-              <button type="button" class="rank__item" data-rank-item data-rank-value="5" title="Отлично"
-                aria-label="Поставить оценку товару: Отлично">
-                <svg>
-                  <use xlink:href="#icon-star"></use>
-                </svg>
-              </button>
 
-              <input data-rank-rank id="rev-rank" type="hidden" name="rev-rank" value="0">
+    <!-- Модальное окно: комплект -->
+    <section class="modal-wrap" id="buy-compl" data-modal>
+      <div class="modal modal-form sm" data-modal-container>
+        <form class="form in-modal" action="/">
+          <div class="modal__top">
+            <h2 class="modal__title">Купить комплект</h2>
+            <div class="modal__close">
+              <button class="btn-close" type="button" aria-hidden="true" data-modal-close>
+                <svg width="15" height="15">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-12 col-lg-4">
-              <div class="form__row">
-                <div class="form__item">
-                  <label for="fb-name">Имя</label>
-                  <input type="text" name="b-name" placeholder="ФИО*" id="fb-name" required>
-                </div>
-              </div>
-              <div class="form__row">
-                <div class="form__item">
-                  <label for="fb-tel">Телефон</label>
-                  <input type="tel" name="fb-tel" placeholder="Телефон*" id="fb-tel" required>
-                </div>
-              </div>
-              <div class="form__item">
-                <label for="fb-mail">E-mail</label>
-                <input type="email" name="fb-mail" placeholder="E-mail*" id="fb-mail" required>
-              </div>
-            </div>
-            <div class="col-12 col-lg-8 d-flex flex-column">
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <div class="form__item">
-                    <label for="fb-order-number">№ заказа</label>
-                    <input type="text" name="fb-order-number" placeholder="№ заказа" id="fb-order-number">
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="form__item">
-                    <label for="fb-article">Код сайта товара</label>
-                    <input type="text" name="fb-article" placeholder="Код сайта товара" id="fb-article">
-                  </div>
-                </div>
-              </div>
+          <p>Название товара и комплекта</p>
 
-              <div class="form__item flex-grow-1">
-                <label for="fb-comment12">Комментарий</label>
-                <textarea name="fb-comment" id="fb-comment12" placeholder="Комментарий"></textarea>
-              </div>
+          <div class="form__row">
+            <div class="form__item">
+              <label for="buy-compl-name">Имя</label>
+              <input type="text" name="buy-compl-name" placeholder="ФИО*" id="buy-compl-name" required>
             </div>
           </div>
+          <div class="form__item">
+            <label for="buy-compl-tel">Телефон</label>
+            <input type="tel" name="buy-compl-tel" placeholder="Телефон*" id="buy-compl-tel" required>
+          </div>
+          <div class="form__row">
+            <div class="form__item">
+              <label for="buy-compl-sq">Площадь</label>
+              <input type="text" name="buy-compl-sq" placeholder="Площадь" id="buy-compl-sq" required>
+            </div>
+          </div>
+
+
+          <!-- Скрытое поле с названием товара -->
+          <input type="hidden" name="buy-compl-prod"
+            value="Паркетная доска KAHRS Дуб Натур Линнея 7 мм 3х пол СЛ (2,84)">
+          <!-- Скрытое поле с названием товара -->
 
           <div class="form__bottom">
             <div class="form__conf">
-              <input type="checkbox" id="fb-conf" name="fb-conf" checked required>
-              <label for="fb-conf">
-                <span>
-                  Нажимая на кнопку «Оставить отзыв», я даю согласие на обработку персональных
-                  данных и соглашаюсь c <a href="conf.html"> политикой конфиденциальности</a>.</span>
+              <input type="checkbox" id="buy-compl-conf12" name="buy-compl-conf" checked required>
+              <label for="buy-compl-conf12">
+                <span>Я даю согласие на обработку персональных
+                  данных и соглашаюсь c <a href="#"> политикой конфиденциальности</a>.</span>
               </label>
             </div>
-
-            <button class="form__submit btn-orange">Оставить отзыв</button>
+            <button class="form__submit btn-orange">Купить</button>
           </div>
         </form>
       </div>
     </section>
-    <!-- Отзывы -->
+    <!-- Модальное окно: комплект -->
+
 
 
     <!-- Модальное окно: купить в 1 клик -->
@@ -3584,7 +3818,7 @@
 
 
     <!-- Метка слева, открывающая попап -->
-    <button class="left-btn btn-def" data-open-modal="#star-the-shop">
+    <button class="left-btn btn-def d-none d-xl-flex" data-open-modal="#star-the-shop">
       <span>
         <svg>
           <use xlink:href="#icon-star"></use>

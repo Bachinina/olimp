@@ -579,7 +579,7 @@
               <button class="menu-d__btn btn-gray" data-tabs-toggle="tab-2">Комнаты</button>
             </div>
   
-            <div data-tabs-content="tabs-menu">
+            <div class="menu-d__tabs-menu" data-tabs-content="tabs-menu">
               <ul class="menu-d__categories with-arrows" data-tabs-item="tab-1">
                 <li class="menu-d__category">
                   <button class="menu-d__item active" data-catalog-item="#category-1"
@@ -1180,6 +1180,9 @@
         <li>
           <a href="#">Укладка</a>
         </li>
+        <li>
+          <a data-open-modal="#podbor-pola">Подбор пола</a>
+        </li>
         <!-- <li>
           <a href="#">Стеновые панели</a>
           <ul class="h-n__list-drop">
@@ -1295,7 +1298,7 @@
           <h1 class="title">Паркетная доска из дуба</h1>
 
           <div class="content-page__desc">
-            <div class="content-page__desc-acc acc row" data-acc data-acc-one="false">
+            <div class="content-page__desc-acc acc row d-none" data-acc data-acc-one="false">
               <div class="acc__item-wrap col-xl-4">
                 <div class="acc__item " data-acc-item>
                   <button class="acc__title " type="button" aria-hidden="true" data-acc-title>
@@ -1403,15 +1406,36 @@
                 </div>
               </div>
             </div>
-            <p>Паркетная доска дуб – классическое дополнение интерьера. Выпускается в привычном бежевом и выбеленном
-              оттенке, а также оригинальном цвете мокко, темном угольно-черном и даже роскошном красном исполнении. </p>
-            <p>У нас представлен широкий ассортимент дубовой паркетной доски разного типа: одно-, двух-, трехполосной, с
-              фаской и без таковой, узкие и широкие ламели. Вы сможете купить продукцию ведущих брендов <a
-                href="index.html">Royal Parket</a> , <a href="index.html">«Карелия»</a> , <a
-                href="index.html">Quick-Step</a> , <a href="index.html">Tarkett</a> , <a
-                href="index.html">«Поларвуд»</a> , <a href="index.html">Lab Arte</a> , <a href="index.html">Kahrs</a> ,
-              а
-              также других с любыми размерными и конструктивными особенностями.</p>
+
+            <div class="top_seo_text pos-relative">
+              <p>Паркетная доска - один из наиболее востребованных видов напольных покрытий, благодаря своей
+                экологичности, износостойкости и приятному внешнему виду, подобное покрытие может конкурировать с
+                массивом дерева ценных пород, при этом отличаясь значительно более привлекательной стоимостью.</p>
+
+              <div class="opened" data-opened="text-block-1">
+                <p>Покрытие является полностью натуральным отделочным материалом, состоящим чаще всего из трех слоев
+                  древесины различных сортов. Слои подогнаны таким образом, чтобы деформация в процессе эксплуатации
+                  была исключена.</p>
+                <p>Свое начало производство подобного вида настила берет из 1941 года, однако именно сейчас его
+                  популярность достигла своего расцвета.</p>
+                <p>При производстве паркетного пола для первого слоя нередко используется ценная порода древесины.
+                  Остальные слои, чаще всего, производится из хвои или иных стойких, но менее дорогостоящих пород.
+                  Чередование направления волокон трех слоев значительно увеличивает прочность материала.</p>
+                <h2>Где купить паркетную доску</h2>
+                <p>Заказать качественное напольное покрытие вы можете на сайте Олимп Пакета. Удобный расширенный фильтр
+                  поможет определиться с выбором даже при отсутствии профильного опыта. Гарантия до 25 лет и собственная
+                  сервисная служба дают уверенность в качестве. Большой выбор доски, созданной в разных стилях и
+                  представляющей различную ценовую категорию, позволяет каждому подобрать оптимальный вариант
+                  соответствии со своими предпочтениями. А беспроцентная рассрочка и услуга бесплатного выездного
+                  шоурума может расширить возможность выбора.</p>
+              </div>
+              <button class="btn-open blur" data-open="text-block-1">
+                <!-- <svg width="12" height="7" fill="none">
+                  <use xlink:href="#icon-arrow-bottom"></use>
+                </svg> -->
+                <span>Читать подробнее</span>
+              </button>
+            </div>
 
 
 
@@ -1583,8 +1607,8 @@
 
 
           <div class="content-page__slider">
-            <div class="slider-simple arrows-hidden" data-slider data-simple-slider data-slide-count="2"
-              data-slide-md-count="3" data-slide-lg-count="4" data-slide-xl-count="5" data-slide-xxl-count="6">
+            <div class="slider-simple" data-slider data-simple-slider data-slide-count="2" data-slide-md-count="3"
+              data-slide-lg-count="3" data-slide-xl-count="4" data-slide-xxl-count="5">
 
               <div class="slide">
                 <a href="index.html" class="part" aria-label="Перейти в категорию">
@@ -1649,8 +1673,8 @@
             <h2 class="d-lg-none">Фильтр</h2>
             <!-- Фильтр -->
             <form class="filter">
-              <ul class="filter__list acc" data-acc data-acc-one="false">
-                <li class="acc__item" data-acc-item>
+              <div class="filter__list acc" data-acc-one="false">
+                <!-- <div class="acc__item" data-acc-item>
                   <button class="acc__title active" type="button" aria-hidden="true" data-acc-title>
                     <span>Цена</span>
                   </button>
@@ -1674,123 +1698,179 @@
                       </datalist>
                     </div>
                   </div>
-                </li>
-                <li class="acc__item" data-acc-item>
+                </div> -->
+                <div class="acc__item" data-acc-item>
                   <button class="acc__title active" type="button" aria-hidden="true" data-acc-title>
-                    <span>Порода дерева</span>
+                    <span>Порода дерева
+
+                      <!-- Уточняющий текст, если есть-->
+                      <span class="tick-wrap">
+                        <span class="tick">
+                          <img src="img/info-tick.svg" alt="">
+                          <div class="tick-text">
+                            В зависимости от требуемого ремонта нужно обратить внимание на определленную породу дерева
+                          </div>
+                        </span>
+                      </span>
+
+                    </span>
                   </button>
 
-                  <div class="acc__body" data-acc-body>
-                    <ul class="checkboxes">
-                      <li class="checkbox">
+                  <div class="acc__body">
+                    <div class="checkboxes">
+                      <div class="checkbox">
                         <input type="checkbox" id="check-1" checked>
                         <label for="check-1">Дуб <span class="count">(70)</span></label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" name="Ясень" id="check-2" checked>
                         <label for="check-2">Ясень <span class="count">(20)</span></label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" name="Мербау" id="check-3">
                         <label for="check-3">Мербау <span class="count">(23)</span></label>
-                      </li>
+                      </div>
 
-                      <li class="checkbox">
+                      <div class="checkbox">
                         <input type="checkbox" name="Орех" id="check-4">
                         <label for="check-4">Орех <span class="count">(170)</span></label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" name="Американский орех" id="check-5">
                         <label for="check-5">Американский орех <span class="count">(1)</span></label>
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </div>
-                </li>
+                </div>
 
-                <li class="acc__item" data-acc-item>
+                <div class="acc__item" data-acc-item>
                   <button class="acc__title active" type="button" aria-hidden="true" data-acc-title>
-                    <span>Тон</span>
+                    <span>Тон
+
+                      <!-- Уточняющий текст, если есть-->
+                      <span class="tick-wrap">
+                        <span class="tick">
+                          <img src="img/info-tick.svg" alt="">
+                          <div class="tick-text">
+                            В зависимости от требуемого ремонта нужно обратить внимание на определленную породу дерева
+                          </div>
+                        </span>
+                      </span>
+                    </span>
                   </button>
 
-                  <div class="acc__body" data-acc-body>
-                    <ul class="checkboxes">
-                      <li class="checkbox">
+                  <div class="acc__body">
+                    <div class="checkboxes">
+                      <div class="checkbox">
                         <input type="checkbox" id="check-10">
                         <label for="check-10"> <img src="img/filter-img.jpg" alt=""> Коричневый
                           <span class="count">(70)</span></label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" id="check-11">
                         <label for="check-11"> <img src="img/filter-img.jpg" alt=""> Серый <span
                             class="count">(40)</span></label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" id="check-12">
                         <label for="check-12"> <img src="img/filter-img.jpg" alt=""> Светлый <span
                             class="count">(7)</span></label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" id="check-13">
                         <label for="check-13"> <img src="img/filter-img.jpg" alt=""> Темный <span
                             class="count">(75)</span></label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" id="check-14">
                         <label for="check-14"> <img src="img/filter-img.jpg" alt=""> Серо-Бежевый
                           <span class="count">(11)</span></label>
-                      </li>
-                      <li class="checkbox">
-                        <input type="checkbox" id="check-15">
-                        <label for="check-15"> <img src="img/filter-img.jpg" alt=""> Бежевый <span
-                            class="count">(11)</span></label>
-                      </li>
+                      </div>
+                      <!-- Если пунктов больше 5, то добавляется обертка для следующих и кнопка -->
+                      <div class="checkbox opened" data-opened="filter-1">
+                        <!-- Тут пункты, которые не влезли -->
+                        <div class="checkbox">
+                          <input type="checkbox" id="check-15">
+                          <label for="check-15"> <img src="img/filter-img.jpg" alt=""> Бежевый <span
+                              class="count">(11)</span></label>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-open blur mt-4" data-open="filter-1">
+                        <span>Посмотреть все</span>
+                      </button>
 
-                    </ul>
+
+
+                    </div>
                   </div>
-                </li>
-                <li class="acc__item" data-acc-item>
-                  <button class="acc__title" type="button" aria-hidden="true" data-acc-title>
+                </div>
+                <div class="acc__item" data-acc-item>
+                  <div class="acc__title" type="button" aria-hidden="true" data-acc-title>
                     <span>Толщина</span>
-                  </button>
+                  </div>
 
-                  <div class="acc__body" data-acc-body>
-                    <ul class="checkboxes">
-                      <li class="checkbox">
+                  <div class="acc__body">
+                    <div class="checkboxes">
+                      <div class="checkbox">
                         <input type="checkbox" id="check-100">
                         <label for="check-100"> 15мм <span class="count">(70)</span></label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" id="check-110">
                         <label for="check-110"> 19мм <span class="count">(40)</span></label>
-                      </li>
+                      </div>
 
-                    </ul>
+                    </div>
                   </div>
-                </li>
-                <li class="acc__item" data-acc-item>
-                  <button class="acc__title" type="button" aria-hidden="true" data-acc-title>
+                </div>
+                <div class="acc__item" data-acc-item>
+                  <div class="acc__title" type="button" aria-hidden="true" data-acc-title>
                     <span>Покрытие</span>
-                  </button>
+                  </div>
 
-                  <div class="acc__body" data-acc-body>
-                    <ul class="checkboxes">
-                      <li class="checkbox">
+                  <div class="acc__body">
+                    <div class="checkboxes">
+                      <div class="checkbox">
                         <input type="checkbox" id="check-1000">
                         <label for="check-1000"> Лак</label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" id="check-1100">
                         <label for="check-1100"> Масло</label>
-                      </li>
-                      <li class="checkbox">
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" id="check-1200">
                         <label for="check-1200"> Без покрытия</label>
-                      </li>
+                      </div>
 
-                    </ul>
+                    </div>
                   </div>
-                </li>
-              </ul>
+                </div>
+
+                <div class="acc__item" data-acc-item>
+                  <div class="acc__title" type="button" aria-hidden="true" data-acc-title>
+                    <span>Скидки</span>
+
+                    <div class="checkbox checkbox-roll">
+                      <input type="checkbox" id="filter-skidki" value="Скидки">
+                      <label for="filter-skidki"></label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="acc__item" data-acc-item>
+                  <div class="acc__title pt-0" type="button" aria-hidden="true" data-acc-title>
+                    <span>Распродажа</span>
+
+                    <div class="checkbox checkbox-roll">
+                      <input type="checkbox" id="filter-raspr" value="Распродажа">
+                      <label for="filter-raspr"></label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
 
               <div class="filter__bottom d-none d-lg-flex">
                 <button class="btn-orange" type="button">Показать</button>
@@ -1863,93 +1943,83 @@
                       </a>
 
                       <button class="card__btn-compare def active" data-toggle-active>
-                        <svg width="20" height="18">
-                          <use xlink:href="#icon-compare-btn"></use>
+                        <svg class="h-n__icon-stroke-fill" width="23" height="24">
+                          <use xlink:href="#hn-compare"></use>
                         </svg>
                       </button>
 
-                      <div class="card__tag tag">Скидка 10%</div>
+                      <a href="#" class="card__tag-wrap tag-wrap">
+                        <div class="card__tag-left tag-left">
+                          <div class="card__tag tag l-green">в наличии</div>
+                          <div class="card__tag tag">cкидка 10%</div>
+                        </div>
+                        <div class="card__tag-right tag-right">
+                          <div class="card__tag tag right d-none d-xl-flex">
+                            <span class="tick-wrap">держим цену
+                              <span class="tick">
+                                <img src="img/info-tick.svg" alt="">
+                                <div class="tick-text">
+                                  Повышение цены 01.01.2023
+                                </div>
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
                     </div>
 
-                    <h5 class="card__title">
+                    <p class="card__title">
                       <a href="prod.html">
                         Паркетная доска Kahrs дуб TOWER
                       </a>
-                    </h5>
+                      </з>
 
-                    <table class="card__options">
-                      <tbody>
-                        <tr>
-                          <th>Тон:</th>
-                          <td>Натуральный</td>
-                        </tr>
-                        <tr>
-                          <th>Порода дерева:</th>
-                          <td>Дуб</td>
-                        </tr>
-                        <tr>
-                          <th>Покрытие:</th>
-                          <td>Лак</td>
-                        </tr>
-                        <tr>
-                          <th>Порода дерева:</th>
-                          <td>Дуб</td>
-                        </tr>
-                        <tr>
-                          <th>Покрытие:</th>
-                          <td>Лак</td>
-                        </tr>
-                        <tr>
-                          <th>Толщина:</th>
-                          <td>14 мм</td>
-                        </tr>
-                        <tr>
-                          <th>Коллекция:</th>
-                          <td>Classic</td>
-                        </tr>
-                        <tr>
-                          <th>Покрытие:</th>
-                          <td>Лак</td>
-                        </tr>
-                        <tr>
-                          <th>Толщина:</th>
-                          <td>14 мм</td>
-                        </tr>
-                        <tr>
-                          <th>Коллекция:</th>
-                          <td>Classic</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                      <table class="card__options">
+                        <tbody>
+                          <tr>
+                            <th>Тон:</th>
+                            <td>Натуральный</td>
+                          </tr>
+                          <tr>
+                            <th>Порода дерева:</th>
+                            <td>Дуб</td>
+                          </tr>
+                          <tr>
+                            <th>Покрытие:</th>
+                            <td>Лак</td>
+                          </tr>
+                          <tr>
+                            <th>Бренд:</th>
+                            <td>Coswick</td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-                    <div class="card__bottom">
-                      <!-- Цена и выгода -->
-                      <div class="card__price-block">
-                        <div class="card__price price">
-                          ЦЕНА: <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
-                          </span>
+                      <div class="card__bottom">
+                        <!-- Цена и выгода -->
+                        <div class="card__price-block">
+                          <div class="card__price price"> <span class="old nobr">2 616</span> <span class="nobr"> 2 224
+                              <i class="rub">i</i> за м2
+                            </span>
+                          </div>
                         </div>
-                        <div class="card__benefit">
-                          ВАША ВЫГОДА: <span class="nobr">200 <i class="rub">i</i></span>
+                        <!-- Цена и выгода -->
+
+
+                        <!-- Кнопки -->
+                        <div class="card__btns">
+                          <button class="btn-orange  active" data-toggle-active>
+                            <svg width="24" height="20" viewBox="0 0 25 20">
+                              <use xlink:href="#icon-cart-btn"></use>
+                            </svg>
+                            <span>В корзине</span>
+                          </button>
+                          <button class="card__btn-ex active" data-toggle-active>
+                            <span>Образец добавлен</span>
+                          </button>
                         </div>
+                        <!-- Кнопки -->
                       </div>
-                      <!-- Цена и выгода -->
-
-
-                      <!-- Кнопки -->
-                      <div class="card__btns">
-                        <button class="btn-orange btn-upper active" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
-                            <use xlink:href="#icon-cart-btn"></use>
-                          </svg>
-                          <span>В корзине</span>
-                        </button>
-                        <button class="card__btn-ex active" data-toggle-active>
-                          <span>Образец добавлен</span>
-                        </button>
-                      </div>
-                      <!-- Кнопки -->
-                    </div>
                   </article>
                 </div>
 
@@ -1966,15 +2036,33 @@
                       </a>
 
                       <button class="card__btn-compare def" data-toggle-active>
-                        <svg width="20" height="18">
-                          <use xlink:href="#icon-compare-btn"></use>
+                        <svg class="h-n__icon-stroke-fill" width="23" height="24">
+                          <use xlink:href="#hn-compare"></use>
                         </svg>
                       </button>
 
-                      <div class="card__tag tag black">
-                        Скидка 10%
-                        <span class="red">Black Friday</span>
-                      </div>
+                      <a href="#" class="card__tag-wrap tag-wrap">
+                        <div class="card__tag-left tag-left">
+                          <div class="card__tag tag black">
+                            скидка 10%
+                            <span class="red">Black Friday</span>
+                          </div>
+                        </div>
+                        <div class="card__tag-right tag-right">
+                          <div class="card__tag tag right d-none d-xl-flex">
+                            <span class="tick-wrap">держим цену
+                              <span class="tick">
+                                <img src="img/info-tick.svg" alt="">
+                                <div class="tick-text">
+                                  Повышение цены 01.01.2023
+                                </div>
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+
+
                     </div>
 
                     <h5 class="card__title">
@@ -1998,32 +2086,8 @@
                           <td>Лак</td>
                         </tr>
                         <tr>
-                          <th>Порода дерева:</th>
-                          <td>Дуб</td>
-                        </tr>
-                        <tr>
-                          <th>Покрытие:</th>
-                          <td>Лак</td>
-                        </tr>
-                        <tr>
-                          <th>Толщина:</th>
-                          <td>14 мм</td>
-                        </tr>
-                        <tr>
-                          <th>Коллекция:</th>
-                          <td>Classic</td>
-                        </tr>
-                        <tr>
-                          <th>Покрытие:</th>
-                          <td>Лак</td>
-                        </tr>
-                        <tr>
-                          <th>Толщина:</th>
-                          <td>14 мм</td>
-                        </tr>
-                        <tr>
-                          <th>Коллекция:</th>
-                          <td>Classic</td>
+                          <th>Бренд:</th>
+                          <td>Coswick</td>
                         </tr>
                       </tbody>
                     </table>
@@ -2032,11 +2096,8 @@
                       <!-- Цена и выгода -->
                       <div class="card__price-block">
                         <div class="card__price price">
-                          ЦЕНА: <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                          <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
                           </span>
-                        </div>
-                        <div class="card__benefit">
-                          ВАША ВЫГОДА: <span class="nobr">200 <i class="rub">i</i></span>
                         </div>
                       </div>
                       <!-- Цена и выгода -->
@@ -2044,8 +2105,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange " data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>Купить</span>
@@ -2072,8 +2133,8 @@
                       </a>
 
                       <button class="card__btn-compare def" data-toggle-active>
-                        <svg width="20" height="18">
-                          <use xlink:href="#icon-compare-btn"></use>
+                        <svg class="h-n__icon-stroke-fill" width="23" height="24">
+                          <use xlink:href="#hn-compare"></use>
                         </svg>
                       </button>
                     </div>
@@ -2099,32 +2160,8 @@
                           <td>Лак</td>
                         </tr>
                         <tr>
-                          <th>Порода дерева:</th>
-                          <td>Дуб</td>
-                        </tr>
-                        <tr>
-                          <th>Покрытие:</th>
-                          <td>Лак</td>
-                        </tr>
-                        <tr>
-                          <th>Толщина:</th>
-                          <td>14 мм</td>
-                        </tr>
-                        <tr>
-                          <th>Коллекция:</th>
-                          <td>Classic</td>
-                        </tr>
-                        <tr>
-                          <th>Покрытие:</th>
-                          <td>Лак</td>
-                        </tr>
-                        <tr>
-                          <th>Толщина:</th>
-                          <td>14 мм</td>
-                        </tr>
-                        <tr>
-                          <th>Коллекция:</th>
-                          <td>Classic</td>
+                          <th>Бренд:</th>
+                          <td>Coswick</td>
                         </tr>
                       </tbody>
                     </table>
@@ -2133,11 +2170,8 @@
                       <!-- Цена и выгода -->
                       <div class="card__price-block">
                         <div class="card__price price">
-                          ЦЕНА: <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
+                          <span class="nobr"><span class="old">2 616</span> 2 224 <i class="rub">i</i> за м2
                           </span>
-                        </div>
-                        <div class="card__benefit">
-                          ВАША ВЫГОДА: <span class="nobr">200 <i class="rub">i</i></span>
                         </div>
                       </div>
                       <!-- Цена и выгода -->
@@ -2145,8 +2179,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange " data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>Купить</span>
@@ -2317,8 +2351,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper active" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange  active" data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span> В корзине</span>
@@ -2412,8 +2446,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange " data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>Купить</span>
@@ -2512,8 +2546,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange " data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>Купить</span>
@@ -2599,8 +2633,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange " data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>Купить</span>
@@ -2693,8 +2727,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange " data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>Купить</span>
@@ -2731,7 +2765,7 @@
                         </div>
                       </a>
 
-                      <button class="card__btn-compare def active" data-toggle-active>
+                      <button class="card__btn-compare def" data-toggle-active>
                         <svg width="20" height="18">
                           <use xlink:href="#icon-compare-btn"></use>
                         </svg>
@@ -2807,8 +2841,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper active" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange  active" data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>В корзине</span>
@@ -2835,8 +2869,8 @@
                       </a>
 
                       <button class="card__btn-compare def" data-toggle-active>
-                        <svg width="20" height="18">
-                          <use xlink:href="#icon-compare-btn"></use>
+                        <svg class="h-n__icon-stroke-fill" width="23" height="24">
+                          <use xlink:href="#hn-compare"></use>
                         </svg>
                       </button>
 
@@ -2913,8 +2947,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange " data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>Купить</span>
@@ -2941,8 +2975,8 @@
                       </a>
 
                       <button class="card__btn-compare def" data-toggle-active>
-                        <svg width="20" height="18">
-                          <use xlink:href="#icon-compare-btn"></use>
+                        <svg class="h-n__icon-stroke-fill" width="23" height="24">
+                          <use xlink:href="#hn-compare"></use>
                         </svg>
                       </button>
                     </div>
@@ -3014,8 +3048,8 @@
 
                       <!-- Кнопки -->
                       <div class="card__btns">
-                        <button class="btn-orange btn-upper" data-toggle-active>
-                          <svg width="25" height="20" viewBox="0 0 25 20">
+                        <button class="btn-orange " data-toggle-active>
+                          <svg width="24" height="20" viewBox="0 0 25 20">
                             <use xlink:href="#icon-cart-btn"></use>
                           </svg>
                           <span>Купить</span>
@@ -3204,7 +3238,7 @@
         </div>
 
         <div class="slider-simple slider-shadow def" data-slider data-simple-slider data-slide-count="1"
-          data-slide-xl-count="2">
+          data-slide-xl-count="2" data-slider-reviews>
           <div class="slide">
             <div class="block-hor review" data-review>
               <a class="block-hor__img" href="prod.html">
@@ -3243,79 +3277,31 @@
                   <p class="review__date"> 19.08.2019</p>
                 </div>
                 <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text" data-opened="text-1" data-review-text>Очень понравилось обслуживание, большой
-                  ассортимент,
-                  огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны. Очень понравилось
-                  обслуживание, большой ассортимент, огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны.
-                </p>
 
-                <button class="review__btn-more btn-icon-gray def" data-open="text-1">
-                  <svg width="12" height="7" fill="none">
-                    <use xlink:href="#icon-arrow-bottom"></use>
-                  </svg>
-                  <span>Подробнее</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="block-hor review">
-              <a class="block-hor__img" href="prod.html">
-                <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
-              </a>
-              <div class="block-hor__body">
-                <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER 2567GHTY678 tyui</a>
-                </h3>
-                <div class="review__top">
-                  <div class="review__rank rank" data-rank data-rank-value="5">
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                    <div class="rank__item" data-rank-item>
-                      <svg>
-                        <use xlink:href="#icon-star"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <p class="review__date"> 19.08.2019</p>
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                      <span class="on-show">Свернуть</span></span>
+                  </button>
                 </div>
-                <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text">Хочу поблагодарить замечательную компанию «Олимп паркета», в которой приобрели
-                  отличное напольное покрытие и великолепные двери. Так случилось, что начала я свой выбор дверей, зайдя
-                  в магазин в «Олмп паркета» г. Сочи, Адлерского района. Меня встретила замечательная
-                </p>
               </div>
             </div>
           </div>
           <div class="slide">
-            <div class="block-hor review">
+            <div class="block-hor review" data-review>
               <a class="block-hor__img" href="prod.html">
                 <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
               </a>
-              <div class="block-hor__body">
-                <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER 2567GHTY678 tyui</a>
-                </h3>
+              <div class="review__body block-hor__body">
+                <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER</a></h3>
                 <div class="review__top">
                   <div class="review__rank rank" data-rank data-rank-value="4">
                     <div class="rank__item" data-rank-item>
@@ -3347,22 +3333,93 @@
                   <p class="review__date"> 19.08.2019</p>
                 </div>
                 <p class="review__name"> Игорь Плотников</p>
-                <p class="review__text" data-opened="text-2" data-review-text>Очень понравилось обслуживание, большой
-                  ассортимент,
-                  огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны. Очень понравилось
-                  обслуживание, большой ассортимент, огромный выбор Паркетной
-                  Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые. Пришли за Ламинатом, но
-                  остановили свой выбор на Паркетной Доске. Качеством и работой Довольны.
-                </p>
 
-                <button class="review__btn-more btn-icon-gray def" data-open="text-2">
-                  <svg width="12" height="7" fill="none">
-                    <use xlink:href="#icon-arrow-bottom"></use>
-                  </svg>
-                  <span>Подробнее</span>
-                </button>
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                      <span class="on-show">Свернуть</span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="block-hor review" data-review>
+              <a class="block-hor__img" href="prod.html">
+                <img class="lazyload" loading="lazy" src="img/prod.jpg" alt="Паркетная доска Kahrs дуб TOWER">
+              </a>
+              <div class="review__body block-hor__body">
+                <h3 class="block-hor__title"><a href="prod.html">Паркетная доска Kahrs дуб TOWER</a></h3>
+                <div class="review__top">
+                  <div class="review__rank rank" data-rank data-rank-value="4">
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rank__item" data-rank-item>
+                      <svg>
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <p class="review__date"> 19.08.2019</p>
+                </div>
+                <p class="review__name"> Игорь Плотников</p>
+
+                <div class="review__text text-hidden-wrap" data-text-wrap>
+                  <p class="text-hidden" data-text>Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                    Очень понравилось обслуживание, большой
+                    ассортимент,
+                    огромный выбор Паркетной
+                    Доски. Очень вежливые менеджеры. Сроки поставки также достаточно приемлемые.
+                  </p>
+                  <button class="review__btn-more text-hidden-btn  btn-icon-gray def" data-text-btn>
+                    <svg width="12" height="7" fill="none">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    <span><span class="def">Подробнее</span>
+                      <span class="on-show">Свернуть</span></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -3373,7 +3430,7 @@
 
 
     <!-- Метка слева, открывающая попап -->
-    <button class="left-btn btn-def" data-open-modal="#star-the-shop">
+    <button class="left-btn btn-def d-none d-xl-flex" data-open-modal="#star-the-shop">
       <span>
         <svg>
           <use xlink:href="#icon-star"></use>
