@@ -238,7 +238,7 @@ $(window).on('load', (function () {
 
   // SCROLL ANCHOR
   $("a[href^='#']").on("click", function (e) {
-    var fixed_offset = $('.header').outerHeight() + 30;
+    var fixed_offset = $('.h-n').outerHeight() + 30;
     // if ($(window).width() <= 1199) {
     // fixed_offset = 35 + 65;
     // }
